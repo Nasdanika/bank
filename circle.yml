@@ -17,7 +17,7 @@ test:
     
   post:
     - pwd
-    - java -jar winstone-0.9.10.jar --webroot=org.nasdanika.repository/target/repository --controlPort=8081
+    - java -jar winstone-0.9.10.jar --webroot=org.nasdanika.repository/target/repository --controlPort=8081:
         background: true
     - sleep 5
     - cd org.nasdanika.bank.product && mvn package
