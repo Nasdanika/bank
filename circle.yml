@@ -25,4 +25,4 @@ deployment:
   staging:
     branch: master
     commands:
-    - mv org.nasdanika.bank.repository/target/products/org.nasdanika.bank.product-*.zip $CIRCLE_ARTIFACTS    
+    - mv org.nasdanika.bank.product/target/products/org.nasdanika.bank.product-*.zip $CIRCLE_ARTIFACTS    
