@@ -46,181 +46,174 @@
          id="org.pegdown"
          download-size="427"
          install-size="475"
-         version="1.6.0.201606170929"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="net.sourceforge.plantuml"
          download-size="4705"
          install-size="5108"
-         version="8042.0.0.201606170929"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.nasdanika.icons"
          download-size="11684"
          install-size="11020"
-         version="1.0.0.201606170929"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.web.resources"
          download-size="1286"
          install-size="4519"
-         version="1.0.0.201606170929"
+         version="0.0.0"
          unpack="false"/>
          
    <plugin
          id="org.nasdanika.core"
          download-size="84"
          install-size="184"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.cdo"
          download-size="36"
          install-size="72"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.cdo.h2"
          download-size="4"
          install-size="5"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.web"
          download-size="212"
          install-size="426"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.web.resources"
          download-size="1286"
          install-size="4519"
-         version="1.0.0.201606170929"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.html"
          download-size="277"
          install-size="573"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.cdo.security"
          download-size="72"
          install-size="199"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.cdo.web"
          download-size="363"
          install-size="699"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.cdo.web.doc"
          download-size="505"
          install-size="1351"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.lang3"
          download-size="403"
          install-size="875"
-         version="3.3.2"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.jsoup"
          download-size="307"
          install-size="587"
-         version="1.8.3"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.lucene.analyzers-common"
          download-size="1527"
          install-size="3439"
-         version="5.1.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.lucene.core"
          download-size="2288"
          install-size="4405"
-         version="5.1.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.lucene.queries"
          download-size="210"
          install-size="417"
-         version="5.1.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.lucene.queryparser"
          download-size="397"
          install-size="794"
-         version="5.1.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.pegdown"
-         download-size="427"
-         install-size="475"
-         version="1.6.0.201606170929"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.apache.commons.codec"
          download-size="277"
          install-size="540"
-         version="1.10.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.story"
          download-size="157"
          install-size="447"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.osgi.model"
          download-size="28"
          install-size="60"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="json"
          download-size="48"
          install-size="91"
-         version="20160212.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.nasdanika.webtest.model"
          download-size="120"
          install-size="505"
-         version="0.1.0.201607032332"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="javax.xml"
          download-size="246"
          install-size="413"
-         version="1.3.4.v201005080400"
+         version="0.0.0"
          unpack="false"/>
          
 
