@@ -18,7 +18,7 @@ test:
     - java -jar winstone-0.9.10.jar --webroot=org.nasdanika.bank.repository/target/repository --controlPort=8081:
         background: true
     - sleep 5
-    - cd org.nasdanika.bank.product && mvn package
+    - cd org.nasdanika.bank.product.parent && mvn package
     - java -cp winstone-0.9.10.jar winstone.tools.WinstoneControl shutdown
     
 deployment:
