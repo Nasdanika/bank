@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" immediate="true" name="Nasdanika Bank factory">
+   <implementation class="org.nasdanika.bank.ui.driver.actors.impl.NasdanikaBankActorFactoryImpl"/>
+   <reference 
+   		bind="setPageFactory" 
+   		cardinality="1..1" 
+   		interface="org.nasdanika.bank.ui.driver.pages.NasdanikaBankPageFactory" 
+   		name="NasdanikaBankPageFactory" 
+   		policy="static"/>
+   		
+   <service>
+      <provide interface="org.nasdanika.bank.ui.driver.actors.NasdanikaBankActorFactory"/>
+   </service>
+</scr:component>

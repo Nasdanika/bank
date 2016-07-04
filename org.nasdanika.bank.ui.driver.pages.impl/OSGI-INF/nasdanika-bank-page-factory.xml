@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" immediate="true" name="Nasdanika Bank page factory">
+   <implementation class="org.nasdanika.bank.ui.driver.pages.impl.NasdanikaBankPageFactoryImpl"/>
+   <service>
+      <provide interface="org.nasdanika.bank.ui.driver.pages.NasdanikaBankPageFactory"/>
+   </service>
+   <property name="base-url" type="String" value="http://localhost:8080"/>
+</scr:component>

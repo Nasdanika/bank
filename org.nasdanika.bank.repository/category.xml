@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	
+	   <feature url="features/org.nasdanika.bank.feature_1.0.0.qualifier.jar" id="org.nasdanika.bank.feature" version="1.0.0.qualifier">
+	      <category name="org.nasdanika.bank.category"/>
+	   </feature>
+   <category-def name="org.nasdanika.bank.category" label="Nasdanika Bank">
+      <description>
+         org.nasdanika.bank.
+      </description>
+   </category-def>
+</site>
