@@ -1,7 +1,9 @@
 machine:
   java:
     version: openjdk8
-    
+  services:
+    - docker
+        
 dependencies: 
   override:
     - echo 'Skipping Dependency Check'
@@ -20,9 +22,12 @@ test:
     - sleep 5
     - cd org.nasdanika.bank.product.parent && mvn package
     - java -cp winstone-0.9.10.jar winstone.tools.WinstoneControl shutdown
+    - docker build -t nasdanika/bank:$CIRCLE_BUILD_NUM org.nasdanika.bank.product/target/products/org.nasdanika.bank.product/linux/gtk
     
 deployment:
   staging:
     branch: master
     commands:
     - mv org.nasdanika.bank.product/target/products/org.nasdanika.bank.product-*.zip $CIRCLE_ARTIFACTS    
+    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - docker push nasdanika/bank:$CIRCLE_BUILD_NUM
