@@ -12,20 +12,17 @@ test:
     - cd org.nasdanika.bank.aggregator && mvn package javadoc:aggregate
     
   override:
-    - pwd
     - cd org.nasdanika.bank.aggregator && mvn verify
     
   post:
-    - pwd
-    - java -jar winstone-0.9.10.jar --webroot=org.nasdanika.repository/target/repository --controlPort=8081:
+    - java -jar winstone-0.9.10.jar --webroot=org.nasdanika.bank.repository/target/repository --controlPort=8081:
         background: true
     - sleep 5
     - cd org.nasdanika.bank.product && mvn package
-    - pwd
     - java -cp winstone-0.9.10.jar winstone.tools.WinstoneControl shutdown
     
 deployment:
   staging:
     branch: master
     commands:
-    - mv org.nasdanika.repository/target/products/org.nasdanika.bank.product-*.zip $CIRCLE_ARTIFACTS    
+    - mv org.nasdanika.bank.repository/target/products/org.nasdanika.bank.product-*.zip $CIRCLE_ARTIFACTS    
