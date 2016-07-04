@@ -9,17 +9,20 @@ dependencies:
 test:
   pre:
     - wget http://nasdanika.org/winstone-0.9.10.jar
-    - cd org.nasdanika.bank.aggregator
-    - mvn package javadoc:aggregate
+    - cd org.nasdanika.bank.aggregator && mvn package javadoc:aggregate
     
   override:
-    - mvn verify
+    - pwd
+    - cd org.nasdanika.bank.aggregator && mvn verify
     
   post:
-    - cd ../org.nasdanika.bank.product
-    - java -jar ../winstine-0.9.10.jar --webroot=../org.nasdanika.repository/target/repository --controlPort=8081 &
-    - mvn package
-    - java -cp ../winstine-0.9.10.jar winstone.tools.WinstoneControl shutdown
+    - pwd
+    - java -jar winstone-0.9.10.jar --webroot=org.nasdanika.repository/target/repository --controlPort=8081
+        background: true
+    - sleep 5
+    - cd org.nasdanika.bank.product && mvn package
+    - pwd
+    - java -cp winstone-0.9.10.jar winstone.tools.WinstoneControl shutdown
     
 deployment:
   staging:
