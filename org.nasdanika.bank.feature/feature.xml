@@ -68,7 +68,7 @@
          install-size="4519"
          version="0.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="org.nasdanika.core"
          download-size="84"
@@ -147,34 +147,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.lucene.analyzers-common"
-         download-size="1527"
-         install-size="3439"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.lucene.core"
-         download-size="2288"
-         install-size="4405"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.lucene.queries"
-         download-size="210"
-         install-size="417"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.lucene.queryparser"
-         download-size="397"
-         install-size="794"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.commons.codec"
          download-size="277"
          install-size="540"
@@ -215,6 +187,12 @@
          install-size="413"
          version="0.0.0"
          unpack="false"/>
-         
+
+   <plugin
+         id="org.apache.lucene"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
