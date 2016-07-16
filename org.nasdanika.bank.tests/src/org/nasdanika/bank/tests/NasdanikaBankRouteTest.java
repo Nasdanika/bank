@@ -25,7 +25,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 @Description("Tests NasdanikaBankRoute")
 public class NasdanikaBankRouteTest implements WebTest<WebDriver> {
 	
-	private enum DriverType { firefox, chrome, ie, phantomjs } 
+	public enum DriverType { firefox, chrome, ie, phantomjs } 
 	
 	private WebDriver driver;
 		

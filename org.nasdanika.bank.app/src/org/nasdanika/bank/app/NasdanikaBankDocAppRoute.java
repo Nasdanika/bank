@@ -92,6 +92,8 @@ public class NasdanikaBankDocAppRoute implements Route {
 						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js/underscore-min.js"),
 						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js/backbone-min.js"),
 						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/bootstrap/js/bootstrap.min.js"),
+						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js/d3.min.js"), 				
+						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js/c3.min.js"),						
 						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js/require.js"),
 						htmlFactory.tag(TagName.script, htmlFactory.interpolate(getClass().getResource("require-config.js"), "base-url", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js")),
 						htmlFactory.tag(TagName.script).attribute("src", context.getContextURL()+"/doc/bundle/org.nasdanika.web.resources/js/lightbox.min.js"),
