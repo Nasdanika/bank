@@ -158,8 +158,8 @@ Example:
          <description>
 Includes content of another documentation resource into this resource.
  
-Format ``{{include>resource location}}``. Resource location URL supports custom schemes corresponding to the names of registered wiki
-link resolvers, e.g. ``bundle`` schema.
+Format {{include>resource location}}. Resource location URL supports custom schemes corresponding to the names of registered
+ wiki link resolvers, e.g. ``bundle`` schema.
          </description>
       </markdown-pre-processor>
       
@@ -235,5 +235,11 @@ A -> B : Message
 @enduml
          </description>
       </markdown-pre-processor>      
+   </extension>
+   <extension
+         point="org.nasdanika.story.model">
+      <story
+            model="Bank.nasdanika_story">
+      </story>
    </extension>
 </plugin>
