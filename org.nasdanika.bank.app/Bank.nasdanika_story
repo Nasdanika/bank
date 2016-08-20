@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.story:Catalog xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.story="urn:org.nasdanika.story" name=" Nasdanika Bank">
+  <elements xsi:type="org.nasdanika.story:User" name="Guest" description="Guest, a.k.a. Visitor, is an unautheticated principal of the application.">
+    <states name="Guest page template" description="Features a header and a footer common for all guest pages."/>
+    <states name="Guest home page" description="Guest home page with a sign-in form and a link to the registration form:&#xD;&#xA;&#xD;&#xA;* [[image:sketches/guest-home-web.png|Web]] &#xD;&#xA;* [[image:sketches/guest-home-mobile.png|Mobile]]" superStates="//@elements.0/@states.0"/>
+    <stories xsi:type="org.nasdanika.story:Story" name="Register (Sign-up)" goal="Create a user id/password combination linked to the customer accounts." benefit="I can sign-in to the system to get access to my accounts information." startStates="//@elements.0/@states.1" endStates="//@elements.1/@states.1">
+      <scenarios name="Successful registration" context="" contextStates="//@elements.0/@states.1" action="I Click on the Register button and then enter valid data to the registration form:&#xD;&#xA;&#xD;&#xA;* Non-existent user ID&#xD;&#xA;* Password complying to password strength requirements&#xD;&#xA;* Password confirmation equal to the password&#xD;&#xA;* Identification data&#xD;&#xA;  * First and last name&#xD;&#xA;  * Social security number&#xD;&#xA;  * Address&#xD;&#xA;  * Date of birth&#xD;&#xA;&#xD;&#xA;And then click the &quot;Register&quot; button." outcome="The system:&#xD;&#xA;&#xD;&#xA;* Validates input, &#xD;&#xA;* Creates a registration record (online account), &#xD;&#xA;* Links the registration record to my financial accounts using provided&#xD;&#xA;identification data, &#xD;&#xA;* Navigates to the customer home page (accounts summary)" outcomeState="//@elements.1/@states.1">
+        <states name="Guest registration form" description="Guest home page with a sign-in form and a link to the registration form:&#xD;&#xA;&#xD;&#xA;* [[image:sketches/guest-home-web.png|Web]] &#xD;&#xA;* [[image:sketches/guest-home-mobile.png|mobile]]" superStates="//@elements.0/@states.0"/>
+        <steps name="Click &quot;Register&quot; button" fromState="//@elements.0/@states.1" toState="//@elements.0/@stories.0/@scenarios.0/@states.0"/>
+        <steps name="Submit registration" fromState="//@elements.0/@stories.0/@scenarios.0/@states.0" toState="//@elements.1/@states.1"/>
+      </scenarios>
+    </stories>
+    <stories xsi:type="org.nasdanika.story:Story" name="Login (Sign-in)" goal="Sign-in to the system." benefit="Get access to my financial information - accounts, statemens, transactions." startStates="//@elements.0/@states.1" endStates="//@elements.1/@states.1">
+      <scenarios name="Successful login (happy path)" context="" contextStates="//@elements.0/@states.1" action="I enter valid user id and password and click the &quot;Sign-In&quot; button." outcome="" outcomeState="//@elements.1/@states.1"/>
+    </stories>
+  </elements>
+  <elements xsi:type="org.nasdanika.story:User" name="Customer">
+    <states name="Customer page template" description="Features a header with navigation menu, a right panel, and a footer common for all customer pages."/>
+    <states name="Accounts summary (Customer home)" description="The customer home page (accounts summary) displays a list of customer accounts with balances:&#xD;&#xA;&#xD;&#xA;  * [[image:sketches/customer-home-web.png|Web]]&#xD;&#xA;  * [[image:sketches/customer-home-mobile.png|Mobile]]" superStates="//@elements.1/@states.0"/>
+    <states name="Account details" description="Account details page displays account summary header and a list of current (unbilled) transactions with an option&#xD;&#xA;to select a statement:&#xD;&#xA;&#xD;&#xA;  * [[image:sketches/account-details-web.png|Web]]&#xD;&#xA;  * [[image:sketches/account-details-mobile.png|Mobile]]" superStates="//@elements.1/@states.0"/>
+    <stories xsi:type="org.nasdanika.story:Story" name="Accounts list (summary)" depends="//@elements.0/@stories.1 //@elements.0/@stories.0" goal="To see a list of my accounts with balances." benefit="To have information about the current state of my finances." startStates="//@elements.1/@states.0 //@elements.0/@stories.0/@scenarios.0/@states.0 //@elements.0/@states.1" endStates="//@elements.1/@states.1">
+      <scenarios name="Navigate to accounts summary using header menu" contextStates="//@elements.1/@states.0" action="I click on the &quot;Accounts&quot; top navigation menu item." outcomeState="//@elements.1/@states.1"/>
+    </stories>
+    <stories xsi:type="org.nasdanika.story:Story" name="Account details" goal="To see account details, including statements and transactions." benefit="Obtain detailed information about my finances." startStates="//@elements.1/@states.1" endStates="//@elements.1/@states.2">
+      <scenarios name="Navigate to account details" contextStates="//@elements.1/@states.1" action="I click on account name in the accounts summary list." outcomeState="//@elements.1/@states.2"/>
+      <scenarios name="Select statement" contextStates="//@elements.1/@states.2" action="Select a statement for the statements drop-down." outcome="The transactions table is updated with transactions for the selected statement." outcomeState="//@elements.1/@states.2"/>
+    </stories>
+  </elements>
+</org.nasdanika.story:Catalog>
