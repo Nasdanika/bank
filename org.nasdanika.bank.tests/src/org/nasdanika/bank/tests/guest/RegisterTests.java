@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.nasdanika.bank.ui.driver.actors.NasdanikaBankActorFactory;
 import org.nasdanika.webtest.ActorFactory;
+import org.nasdanika.webtest.Description;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.NasdanikaWebTestRunner;
 import org.nasdanika.webtest.Pending;
@@ -22,11 +23,11 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 @RunWith(NasdanikaWebTestRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-@Title("Log-in")
+@Title("Register (Sign-up)")
 @Link(
 		type = "Story@urn:org.nasdanika.story", 
-		value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in")
-public class LogInTests implements WebTest<WebDriver> {
+		value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.sign-up")
+public class RegisterTests implements WebTest<WebDriver> {
 	private WebDriver driver;
 	
 	@Override
@@ -45,11 +46,8 @@ public class LogInTests implements WebTest<WebDriver> {
 	
 	@Test
 	@Pending
-	@Title("Successful log-in")
-	@Link(
-			type = "Scenario@urn:org.nasdanika.story", 
-			value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in.successful-login")
-	public void successfulLogIn() throws Exception {
+	@Description("Tests successful registration")
+	public void successfulRegistration() throws Exception {
 //		Guest actor = actorFactory.createGuest(getWebDriver());
 //		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
 //		Assert.assertNotNull(page); // TODO - implement assertions
