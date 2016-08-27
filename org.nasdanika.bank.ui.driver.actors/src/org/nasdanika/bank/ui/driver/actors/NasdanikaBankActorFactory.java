@@ -7,6 +7,6 @@ public interface NasdanikaBankActorFactory {
 	
 	NasdanikaBankPageFactory getPageFactory();
 	
-	NasdanikaBankActor createNasdanikaBankActor(WebDriver webDriver);
+	Guest createGuest(WebDriver webDriver);
 
 }
