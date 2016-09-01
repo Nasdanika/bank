@@ -1,4 +1,4 @@
-package org.nasdanika.bank.tests.guest;
+package org.nasdanika.bank.tests.customer;
 
 import java.awt.GraphicsEnvironment;
 import java.util.concurrent.TimeUnit;
@@ -14,8 +14,6 @@ import org.nasdanika.webtest.ActorFactory;
 import org.nasdanika.webtest.Category;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.NasdanikaWebTestRunner;
-import org.nasdanika.webtest.Pending;
-import org.nasdanika.webtest.Title;
 import org.nasdanika.webtest.WebTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -23,12 +21,11 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 @RunWith(NasdanikaWebTestRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-@Title("Log-in")
-@Category("Guest")
+@Category("Customer")
 @Link(
 		type = "Story@urn:org.nasdanika.story", 
-		value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in")
-public class LogInTests implements WebTest<WebDriver> {
+		value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details")
+public class AccountDetailsTests implements WebTest<WebDriver> {
 	private WebDriver driver;
 	
 	@Override
@@ -46,16 +43,24 @@ public class LogInTests implements WebTest<WebDriver> {
 	}
 	
 	@Test
-	@Pending
-	@Title("Successful log-in")
 	@Link(
 			type = "Scenario@urn:org.nasdanika.story", 
-			value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in.successful-login")
-	public void successfulLogIn() throws Exception {
+			value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details.load")
+	public void loadAccountDetails() throws Exception {
 //		Guest actor = actorFactory.createGuest(getWebDriver());
 //		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
 //		Assert.assertNotNull(page); // TODO - implement assertions
 	}
+
+	@Test
+	@Link(
+			type = "Scenario@urn:org.nasdanika.story", 
+			value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details.select-statement")
+	public void selectStatement() throws Exception {
+//		Guest actor = actorFactory.createGuest(getWebDriver());
+//		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
+//		Assert.assertNotNull(page); // TODO - implement assertions
+	}	
 	
 	@After
 	public void quitDriver() throws Exception {

@@ -1,4 +1,4 @@
-package org.nasdanika.bank.tests.guest;
+package org.nasdanika.bank.tests.customer;
 
 import java.awt.GraphicsEnvironment;
 import java.util.concurrent.TimeUnit;
@@ -23,12 +23,11 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 @RunWith(NasdanikaWebTestRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-@Title("Log-in")
-@Category("Guest")
+@Category("Customer")
 @Link(
 		type = "Story@urn:org.nasdanika.story", 
-		value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in")
-public class LogInTests implements WebTest<WebDriver> {
+		value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.accounts-summary")
+public class AccountsSummaryTests implements WebTest<WebDriver> {
 	private WebDriver driver;
 	
 	@Override
@@ -46,12 +45,10 @@ public class LogInTests implements WebTest<WebDriver> {
 	}
 	
 	@Test
-	@Pending
-	@Title("Successful log-in")
 	@Link(
 			type = "Scenario@urn:org.nasdanika.story", 
-			value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in.successful-login")
-	public void successfulLogIn() throws Exception {
+			value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.accounts-summary.navigate-using-header-menu")
+	public void navigateToAccountsSummaryUsingHeaderMenu() throws Exception {
 //		Guest actor = actorFactory.createGuest(getWebDriver());
 //		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
 //		Assert.assertNotNull(page); // TODO - implement assertions

@@ -14,6 +14,7 @@ import org.nasdanika.bank.ui.driver.actors.Guest;
 import org.nasdanika.bank.ui.driver.actors.NasdanikaBankActorFactory;
 import org.nasdanika.bank.ui.driver.pages.NasdanikaBankPage;
 import org.nasdanika.webtest.ActorFactory;
+import org.nasdanika.webtest.Category;
 import org.nasdanika.webtest.Description;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.NasdanikaWebTestRunner;
@@ -28,6 +29,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 @RunWith(NasdanikaWebTestRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Title("Navigate to home (landing) page")
+@Category("Guest")
 @Link(
 		type = "Story@urn:org.nasdanika.story", 
 		value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.navigate-home")
