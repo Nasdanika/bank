@@ -5,6 +5,8 @@ import org.nasdanika.bank.tests.NasdanikaBankTestBase;
 import org.nasdanika.webtest.Category;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.Sketch;
+import org.nasdanika.webtest.SketchWebDriver;
+import org.nasdanika.webtest.WebTestUtil;
 
 @Category("Customer")
 @Link(
@@ -41,6 +43,12 @@ public class AccountDetailsTests extends NasdanikaBankTestBase {
 			type = "Scenario@urn:org.nasdanika.story", 
 			value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details.select-statement")
 	public void selectStatement() throws Exception {
+		
+		// Demo of unsupported parameter value.
+		if (getWebDriver() instanceof SketchWebDriver && "sketch/web".equals(((SketchWebDriver) getWebDriver()).getSelector())) {
+			WebTestUtil.ignore();
+		}
+		
 //		Guest actor = actorFactory.createGuest(getWebDriver());
 //		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
 //		Assert.assertNotNull(page); // TODO - implement assertions

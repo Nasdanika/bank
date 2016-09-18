@@ -43,11 +43,12 @@ public abstract class NasdanikaBankTestBase implements WebTest<WebDriver> {
 	}
 		
 	@Parameters(name="{index}: {0}")
-	public static Collection<Object[]> registrationData() {
+	public static Collection<Object[]> getParameters() {
 		List<Object[]> ret = new ArrayList<>();
 		for (DriverType driverType: DriverType.values()) {
-			for (ClientType clientType: ClientType.values())
-			ret.add(new Object[] { driverType, clientType });
+			for (ClientType clientType: ClientType.values()) {
+				ret.add(new Object[] { driverType, clientType });
+			}
 		}
 		return ret;
 	}

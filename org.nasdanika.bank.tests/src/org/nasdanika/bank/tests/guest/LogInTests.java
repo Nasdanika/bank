@@ -32,6 +32,5 @@ public class LogInTests extends NasdanikaBankTestBase {
 //		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
 //		Assert.assertNotNull(page); // TODO - implement assertions
 	}
-	
-	
+		
 }
