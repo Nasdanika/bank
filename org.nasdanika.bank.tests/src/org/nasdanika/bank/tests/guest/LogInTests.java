@@ -2,6 +2,8 @@ package org.nasdanika.bank.tests.guest;
 
 import org.junit.Test;
 import org.nasdanika.bank.tests.NasdanikaBankTestBase;
+import org.nasdanika.bank.ui.driver.actors.Guest;
+import org.nasdanika.bank.ui.driver.actors.TestCustomer;
 import org.nasdanika.webtest.Category;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.Sketch;
@@ -28,9 +30,10 @@ public class LogInTests extends NasdanikaBankTestBase {
 			type = "Scenario@urn:org.nasdanika.story", 
 			value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.log-in.successful-login")
 	public void successfulLogIn() throws Exception {
-//		Guest actor = actorFactory.createGuest(getWebDriver());
-//		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
-//		Assert.assertNotNull(page); // TODO - implement assertions
+		Guest guest = actorFactory.createGuest(getWebDriver());
+		try (TestCustomer testCustomer = guest.createTestCustomer("John Doe")) {
+			guest.logIn(testCustomer.getUserId(), testCustomer.getPassword());
+		}
 	}
 		
 }

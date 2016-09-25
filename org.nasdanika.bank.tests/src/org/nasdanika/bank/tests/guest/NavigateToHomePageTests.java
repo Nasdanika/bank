@@ -29,9 +29,7 @@ public class NavigateToHomePageTests extends NasdanikaBankTestBase {
 			type = "Scenario@urn:org.nasdanika.story", 
 			value = "org.nasdanika.bank.app/Bank.nasdanika_story#guest.navigate-home.successful-navigation")
 	public void successfulNavigation() throws Exception {
-//		Guest actor = actorFactory.createGuest(getWebDriver());
-//		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
-//		Assert.assertNotNull(page); // TODO - implement assertions
+		actorFactory.createGuest(getWebDriver()).navigateToHomePage();
 	}	
 	
 }

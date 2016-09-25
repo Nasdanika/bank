@@ -50,7 +50,6 @@ public interface Guest extends Actor<WebDriver> {
 	 * Helper method to simplify testing.
 	 * @param alias Customer alias. If null, then the alias is set to "Customer".
 	 * @return
-	 * @throws IllegalArgumentException
 	 */
 	@Description("Generates random but unique customer registration data and registers a customer")
 	TestCustomer createTestCustomer(String alias);

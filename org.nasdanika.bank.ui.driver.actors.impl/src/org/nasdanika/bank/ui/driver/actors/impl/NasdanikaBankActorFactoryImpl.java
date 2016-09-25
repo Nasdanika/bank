@@ -17,8 +17,7 @@ public class NasdanikaBankActorFactoryImpl implements NasdanikaBankActorFactory 
 
 	@Override
 	public Guest createGuest(WebDriver webDriver) {
-//		return new NasdanikaBankActorImpl(this, webDriver);
-		throw new UnsupportedOperationException();
+		return new GuestImpl(this, webDriver);
 	}
 	
 	// For troubleshooting

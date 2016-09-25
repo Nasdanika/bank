@@ -1,16 +1,13 @@
 package org.nasdanika.bank.tests.customer;
 
 import org.junit.Test;
-import org.nasdanika.bank.tests.NasdanikaBankTestBase;
-import org.nasdanika.webtest.Category;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.Sketch;
 
-@Category("Customer")
 @Link(
 		type = "Story@urn:org.nasdanika.story", 
 		value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.accounts-summary")
-public class AccountsSummaryTests extends NasdanikaBankTestBase {
+public class AccountsSummaryTests extends CustomerTestBase {
 	
 	@Test
 	@Sketch(

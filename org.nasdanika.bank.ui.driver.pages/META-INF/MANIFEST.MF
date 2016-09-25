@@ -5,4 +5,6 @@ Bundle-SymbolicName: org.nasdanika.bank.ui.driver.pages; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.nasdanika.webtest;visibility:=reexport
-Export-Package: org.nasdanika.bank.ui.driver.pages
+Export-Package: org.nasdanika.bank.ui.driver.pages,
+ org.nasdanika.bank.ui.driver.pages.customer,
+ org.nasdanika.bank.ui.driver.pages.guest

@@ -1,18 +1,18 @@
 package org.nasdanika.bank.tests.customer;
 
+import java.util.List;
+import java.util.Random;
+
 import org.junit.Test;
-import org.nasdanika.bank.tests.NasdanikaBankTestBase;
-import org.nasdanika.webtest.Category;
+import org.nasdanika.bank.ui.driver.actors.Customer.Account;
+import org.nasdanika.bank.ui.driver.actors.Customer.Statement;
 import org.nasdanika.webtest.Link;
 import org.nasdanika.webtest.Sketch;
-import org.nasdanika.webtest.SketchWebDriver;
-import org.nasdanika.webtest.WebTestUtil;
 
-@Category("Customer")
 @Link(
 		type = "Story@urn:org.nasdanika.story", 
 		value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details")
-public class AccountDetailsTests extends NasdanikaBankTestBase {
+public class AccountDetailsTests extends CustomerTestBase {
 	
 	@Test
 	@Sketch(
@@ -27,9 +27,10 @@ public class AccountDetailsTests extends NasdanikaBankTestBase {
 			type = "Scenario@urn:org.nasdanika.story", 
 			value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details.load")
 	public void loadAccountDetails() throws Exception {
-//		Guest actor = actorFactory.createGuest(getWebDriver());
-//		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
-//		Assert.assertNotNull(page); // TODO - implement assertions
+		List<Account> accounts = getCustomer().getAccounts();
+		Random random = new Random();
+		Account account = accounts.get(random.nextInt(accounts.size()));
+		List<Statement> statements = account.getStatements();
 	}
 
 	@Test
@@ -42,16 +43,18 @@ public class AccountDetailsTests extends NasdanikaBankTestBase {
 	@Link(
 			type = "Scenario@urn:org.nasdanika.story", 
 			value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.account-details.select-statement")
-	public void selectStatement() throws Exception {
+	public void selectStatement() throws Exception {		
+//		// Demo of unsupported parameter value.
+//		if (getWebDriver() instanceof SketchWebDriver && "sketch/web".equals(((SketchWebDriver) getWebDriver()).getSelector())) {
+//			WebTestUtil.ignore();
+//		}
 		
-		// Demo of unsupported parameter value.
-		if (getWebDriver() instanceof SketchWebDriver && "sketch/web".equals(((SketchWebDriver) getWebDriver()).getSelector())) {
-			WebTestUtil.ignore();
-		}
-		
-//		Guest actor = actorFactory.createGuest(getWebDriver());
-//		NasdanikaBankPage page = actor.navigateToNasdanikaBankPage();
-//		Assert.assertNotNull(page); // TODO - implement assertions
+		List<Account> accounts = getCustomer().getAccounts();
+		Random random = new Random();
+		Account account = accounts.get(random.nextInt(accounts.size()));
+		List<Statement> statements = account.getStatements();
+		Statement statement = statements.get(statements.size()-1);
+		statement.getTransactions();
 	}	
 		
 }
