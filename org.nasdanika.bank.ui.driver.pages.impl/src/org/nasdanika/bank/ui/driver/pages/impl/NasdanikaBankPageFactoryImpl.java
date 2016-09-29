@@ -1,9 +1,9 @@
 package org.nasdanika.bank.ui.driver.pages.impl;
 
 import org.nasdanika.bank.ui.driver.pages.NasdanikaBankPageFactory;
-import org.nasdanika.bank.ui.driver.pages.NasdanikaBankPage;
+import org.nasdanika.bank.ui.driver.pages.guest.Home;
+import org.nasdanika.webtest.SketchWebDriver;
 import org.openqa.selenium.WebDriver;
-import org.nasdanika.webtest.WebTestUtil;
 import org.osgi.service.component.ComponentContext;
 
 public class NasdanikaBankPageFactoryImpl implements NasdanikaBankPageFactory {
@@ -19,15 +19,26 @@ public class NasdanikaBankPageFactoryImpl implements NasdanikaBankPageFactory {
 		this.baseURL = baseURL;
 	}
 	
-	@Override
-	public NasdanikaBankPage createNasdanikaBankPage(WebDriver webDriver) {
-		NasdanikaBankPageImpl ret = WebTestUtil.initElements(webDriver, NasdanikaBankPageImpl.class);
-		ret.setFactory(this);
-		return ret;
-	}
-	
 	public String getBaseURL() {
 		return baseURL;
+	}
+
+	@Override
+	public Home navigateToGuestHomePage(WebDriver webDriver) {
+		if (!(webDriver instanceof SketchWebDriver)) {
+			webDriver.get(getBaseURL());			
+		} 
+
+		return createGuestHomePage(webDriver);
+	}
+
+	@Override
+	public Home createGuestHomePage(WebDriver webDriver) {
+		if (webDriver instanceof SketchWebDriver) {
+			return new org.nasdanika.bank.ui.driver.pages.impl.sketch.guest.HomeImpl(webDriver);
+		}
+		
+		throw new UnsupportedOperationException();
 	}
 
 }
