@@ -4,14 +4,15 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.nasdanika.webtest.Link;
-import org.nasdanika.webtest.Sketch;
+import org.nasdanika.webtest.Page;
+import org.openqa.selenium.WebDriver;
 
 @Link(
 		type = "State@urn:org.nasdanika.story", 
 		value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.accounts-summary")
 public interface Home extends Template {
 	
-	interface AccountSummary {
+	interface AccountSummary extends Page<WebDriver> {
 		
 		String getLabel();
 		
@@ -21,12 +22,6 @@ public interface Home extends Template {
 		
 	}
 		
-	@Sketch(
-			after="bundle://org.nasdanika.bank.app/sketches/customer-home-web.png",
-			selector="sketch/web")
-	@Sketch(
-			after="bundle://org.nasdanika.bank.app/sketches/customer-home-mobile.png",
-			selector="sketch/mobile")
 	List<AccountSummary> getAccountSummaries();
 	
 }

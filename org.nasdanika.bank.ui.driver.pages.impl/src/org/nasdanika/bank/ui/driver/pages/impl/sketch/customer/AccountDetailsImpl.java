@@ -1,5 +1,6 @@
 package org.nasdanika.bank.ui.driver.pages.impl.sketch.customer;
 
+import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.Date;
@@ -7,6 +8,7 @@ import java.util.List;
 
 import org.nasdanika.bank.ui.driver.pages.customer.AccountDetails;
 import org.nasdanika.bank.ui.driver.pages.impl.NasdanikaBankPageImpl;
+import org.nasdanika.webtest.Sketch;
 import org.openqa.selenium.WebDriver;
 
 class AccountDetailsImpl extends NasdanikaBankPageImpl implements AccountDetails {
@@ -25,6 +27,12 @@ class AccountDetailsImpl extends NasdanikaBankPageImpl implements AccountDetails
 		return new HomeImpl(getWebDriver());
 	}
 
+	@Sketch(
+			after="bundle://org.nasdanika.bank.app/sketches/account-details-web.png",
+			selector="sketch/web")
+	@Sketch(
+			after="bundle://org.nasdanika.bank.app/sketches/account-details-mobile.png",
+			selector="sketch/mobile")
 	@Override
 	public List<Statement> getStatements() {
 		return Collections.singletonList(new Statement() {
@@ -34,6 +42,12 @@ class AccountDetailsImpl extends NasdanikaBankPageImpl implements AccountDetails
 				return null;
 			}
 
+			@Sketch(
+					after="account-details-select-statement-web.png",
+					selector="sketch/web")
+			@Sketch(
+					after="account-details-select-statement-mobile.png",
+					selector="sketch/mobile")
 			@Override
 			public List<Transaction> select() {
 				return Collections.singletonList(new Transaction() {
@@ -57,8 +71,28 @@ class AccountDetailsImpl extends NasdanikaBankPageImpl implements AccountDetails
 					public BigDecimal getRunningBalance() {
 						return null;
 					}
+
+					@Override
+					public WebDriver getWebDriver() {
+						return AccountDetailsImpl.this.getWebDriver();
+					}
+
+					@Override
+					public List<Field> webElements() {
+						return Collections.emptyList();
+					}
 					
 				});
+			}
+
+			@Override
+			public WebDriver getWebDriver() {
+				return AccountDetailsImpl.this.getWebDriver();
+			}
+
+			@Override
+			public List<Field> webElements() {
+				return Collections.emptyList();
 			}
 			
 		});

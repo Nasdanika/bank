@@ -4,7 +4,6 @@ import org.nasdanika.bank.ui.driver.actors.Customer;
 import org.nasdanika.bank.ui.driver.actors.Guest;
 import org.nasdanika.bank.ui.driver.actors.NasdanikaBankActorFactory;
 import org.nasdanika.bank.ui.driver.actors.TestCustomer;
-import org.nasdanika.bank.ui.driver.pages.customer.Home;
 import org.nasdanika.webtest.Page;
 import org.openqa.selenium.WebDriver;
 
@@ -13,9 +12,14 @@ class GuestImpl implements Guest {
 	private NasdanikaBankActorFactory factory;
 	private WebDriver webDriver;
 
-	GuestImpl(NasdanikaBankActorFactory factory, WebDriver webDriver) {
+	GuestImpl(NasdanikaBankActorFactory factory, WebDriver webDriver, org.nasdanika.bank.ui.driver.pages.guest.Home home) {
 		this.webDriver = webDriver;
 		this.factory = factory;
+		currentPage = home;
+	}	
+	
+	GuestImpl(NasdanikaBankActorFactory factory, WebDriver webDriver) {
+		this(factory, webDriver, factory.getPageFactory().createGuestHomePage(webDriver));
 	}
 	
 	private Page<WebDriver> currentPage;
@@ -37,7 +41,7 @@ class GuestImpl implements Guest {
 		guestHome.setPassword(password);
 		// TODO - analyze resulting page - customer home or guest home with an error message if log-in failed.
 		// For now assuming happy path.
-		org.nasdanika.bank.ui.driver.pages.customer.Home customerHome = (Home) guestHome.clickLogInButton();
+		org.nasdanika.bank.ui.driver.pages.customer.Home customerHome = (org.nasdanika.bank.ui.driver.pages.customer.Home) guestHome.clickLogInButton();
 		return new CustomerImpl(factory, webDriver, customerHome);
 	}
 

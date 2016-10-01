@@ -17,6 +17,7 @@ public class NasdanikaBankActorFactoryImpl implements NasdanikaBankActorFactory 
 
 	@Override
 	public Guest createGuest(WebDriver webDriver) {
+		pageFactory.navigateToGuestHomePage(webDriver);
 		return new GuestImpl(this, webDriver);
 	}
 	

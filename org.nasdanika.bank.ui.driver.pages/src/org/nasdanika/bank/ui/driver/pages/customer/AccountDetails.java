@@ -5,16 +5,17 @@ import java.util.Date;
 import java.util.List;
 
 import org.nasdanika.webtest.Link;
-import org.nasdanika.webtest.Sketch;
+import org.nasdanika.webtest.Page;
+import org.openqa.selenium.WebDriver;
 
 @Link(
 		type = "State@urn:org.nasdanika.story", 
 		value = "org.nasdanika.bank.app/Bank.nasdanika_story#customer.accounts-summary")
 public interface AccountDetails extends Template {
 	
-	interface Statement {
+	interface Statement extends Page<WebDriver> {
 		
-		interface Transaction {
+		interface Transaction extends Page<WebDriver> {
 			
 			Date getDate();
 			String getDescription();
@@ -25,22 +26,10 @@ public interface AccountDetails extends Template {
 		
 		String getLabel();
 		
-		@Sketch(
-				after="account-details-select-statement-web.png",
-				selector="sketch/web")
-		@Sketch(
-				after="account-details-select-statement-mobile.png",
-				selector="sketch/mobile")
 		List<Transaction> select();
 		
 	}
 	
-	@Sketch(
-			after="bundle://org.nasdanika.bank.app/sketches/account-details-web.png",
-			selector="sketch/web")
-	@Sketch(
-			after="bundle://org.nasdanika.bank.app/sketches/account-details-mobile.png",
-			selector="sketch/mobile")
 	List<Statement> getStatements();
 
 }

@@ -74,8 +74,23 @@ class CustomerImpl implements Customer {
 
 		@Override
 		public List<Transaction> getTransactions() {
-			// TODO
-			throw new UnsupportedOperationException();
+			return statement.select().stream().map(tr -> new TransactionImpl(tr)).collect(Collectors.toList());
+		}
+		
+	}
+	
+	private class TransactionImpl implements Transaction {
+		
+		
+		private org.nasdanika.bank.ui.driver.pages.customer.AccountDetails.Statement.Transaction transaction;
+
+		public TransactionImpl(org.nasdanika.bank.ui.driver.pages.customer.AccountDetails.Statement.Transaction transaction) {
+			this.transaction = transaction;
+		}
+
+		@Override
+		public Page<WebDriver> getCurrentPage() {
+			return CustomerImpl.this.getCurrentPage();
 		}
 		
 	}
