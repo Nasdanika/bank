@@ -76,7 +76,6 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.10.4</version>
 				<configuration>
-	  	        	<reportOutputDirectory>${project.build.directory}/../org.nasdanika.bank.doc/apidocs</reportOutputDirectory>
 					<linksource>true</linksource>
 					<failOnError>false</failOnError>
 		            <links>
