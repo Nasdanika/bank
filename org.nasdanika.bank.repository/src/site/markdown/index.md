@@ -1,7 +1,23 @@
 # Nasdanika Bank
 
-TODO - description of what it is about with references to tools and technologies.
+Nasdanika Bank is a model-driven web application which purpose is to demonstrate how to build model-driven web applications with Eclipse and Nasdanika technologies and tools.
+In particular:
 
+* Generate workspace projects in [Nasdanika Tool Suite](../tools/index.html) with the [Workspace Wizard](../workspace-wizard/index.html).
+* Capture domain knowledge in documented Ecore models.
+* Generate HTML documentation from those models with [Docgen Ecore](../docgen-ecore/index.html).
+* Capture requirements as user stories in [story models](../story/index.html) and then generate and publish story model documentation.
+* Annotate the model with Web UI annotations.
+* Create a Web UI model with [Codegen Ecore](../codegen-ecore/index.html) and its [Codegen Ecore Web UI](../codegen-ecore-web-ui/index.html) extension.
+* Generate Web UI classes from the model.
+* Generate Web UI model documentation and publish to the site.
+* Run the application in Eclipse IDE.
+* Build and run the application locally.
+* Build the application on CircleCI.
+* Deploy to the Heroku cloud platform.
+* Create automated UI tests, run them with [WebTest](../webtest/index.html), and link test results with screenshots to the story documentation.        
+
+The above steps are covered in detail in the [developer guide](guides/developer/index.html).
 
 * [Model documentation](modeldoc/index.html)
 * JavaDoc
