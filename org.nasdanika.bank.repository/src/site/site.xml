@@ -12,7 +12,6 @@
  
    <menu name="Main">
       <item name="Overview" href="index.html" />
-      <item name="Developer guide" href="developer-guide/index.html" />
       <item name="Model Documentation" href="modeldoc/index.html" />
       <!-- <item name="User Stories" href="storydoc/index.html" /> -->
       <item name="Project information" href="project-info.html" />      
@@ -23,11 +22,9 @@
       <!-- <item name="Web" href="apidocs/web/index.html" /> -->
    </menu>
    
-   <!--
    <menu name="Developer Guilde">
       <item name="Overview" href="guides/developer/index.html" />
    </menu>   
-   -->
    
    <menu name="Issues">
       <item name="Roadmap" href="../../mantis/roadmap_page.php?project_id=14" />
