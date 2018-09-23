@@ -57,6 +57,22 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case BankPackage.BANK: return (EObject)createBank();
+			case BankPackage.CUSTOMER: return (EObject)createCustomer();
+			case BankPackage.STATEMENT: return (EObject)createStatement();
+			case BankPackage.TRANSACTION: return (EObject)createTransaction();
+			case BankPackage.PRODUCT: return (EObject)createProduct();
+			case BankPackage.MERCHANT: return (EObject)createMerchant();
+			case BankPackage.POINT_OF_SALE: return (EObject)createPointOfSale();
+			case BankPackage.DEVICE: return (EObject)createDevice();
+			case BankPackage.MOBILE_PHONE: return (EObject)createMobilePhone();
+			case BankPackage.CARD: return (EObject)createCard();
+			case BankPackage.DEVICE_TRANSACTION: return (EObject)createDeviceTransaction();
+			case BankPackage.CUSTOMER_ACCOUNT: return (EObject)createCustomerAccount();
+			case BankPackage.INTERNAL_ACCOUNT: return (EObject)createInternalAccount();
+			case BankPackage.BANKER: return (EObject)createBanker();
+			case BankPackage.BANKER_TRANSACTION: return (EObject)createBankerTransaction();
+			case BankPackage.TOKEN: return (EObject)createToken();
+			case BankPackage.TOKEN_TRANSACTION: return (EObject)createTokenTransaction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,6 +86,166 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	public Bank createBank() {
 		BankImpl bank = new BankImpl();
 		return bank;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Customer createCustomer() {
+		CustomerImpl customer = new CustomerImpl();
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Statement createStatement() {
+		StatementImpl statement = new StatementImpl();
+		return statement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Transaction createTransaction() {
+		TransactionImpl transaction = new TransactionImpl();
+		return transaction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Product createProduct() {
+		ProductImpl product = new ProductImpl();
+		return product;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Merchant createMerchant() {
+		MerchantImpl merchant = new MerchantImpl();
+		return merchant;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PointOfSale createPointOfSale() {
+		PointOfSaleImpl pointOfSale = new PointOfSaleImpl();
+		return pointOfSale;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Device createDevice() {
+		DeviceImpl device = new DeviceImpl();
+		return device;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobilePhone createMobilePhone() {
+		MobilePhoneImpl mobilePhone = new MobilePhoneImpl();
+		return mobilePhone;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Card createCard() {
+		CardImpl card = new CardImpl();
+		return card;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeviceTransaction createDeviceTransaction() {
+		DeviceTransactionImpl deviceTransaction = new DeviceTransactionImpl();
+		return deviceTransaction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CustomerAccount createCustomerAccount() {
+		CustomerAccountImpl customerAccount = new CustomerAccountImpl();
+		return customerAccount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InternalAccount createInternalAccount() {
+		InternalAccountImpl internalAccount = new InternalAccountImpl();
+		return internalAccount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Banker createBanker() {
+		BankerImpl banker = new BankerImpl();
+		return banker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BankerTransaction createBankerTransaction() {
+		BankerTransactionImpl bankerTransaction = new BankerTransactionImpl();
+		return bankerTransaction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Token createToken() {
+		TokenImpl token = new TokenImpl();
+		return token;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TokenTransaction createTokenTransaction() {
+		TokenTransactionImpl tokenTransaction = new TokenTransactionImpl();
+		return tokenTransaction;
 	}
 
 	/**

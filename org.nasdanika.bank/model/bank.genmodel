@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/org.nasdanika.bank/src" modelPluginID="org.nasdanika.bank"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.bank/src" modelPluginID="org.nasdanika.bank"
     modelName="bank" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
     complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
@@ -10,6 +10,57 @@
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Bank" basePackage="org.nasdanika" disposableProviderFactory="true"
       ecorePackage="bank.ecore#/">
-    <genClasses ecoreClass="bank.ecore#//Bank"/>
+    <genClasses ecoreClass="bank.ecore#//Bank">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Bank/merchants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Bank/products"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Bank/accounts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Bank/customers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Bank/bankers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Bank/transactions"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//Customer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Customer/accounts"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//Account">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Account/statements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Account/owners"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//Statement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Statement/debits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Statement/credits"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//Transaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Transaction/debit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Transaction/credit"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//Product"/>
+    <genClasses ecoreClass="bank.ecore#//Merchant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Merchant/pointsOfSale"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//PointOfSale"/>
+    <genClasses ecoreClass="bank.ecore#//Device">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Device/tokens"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//MobilePhone"/>
+    <genClasses ecoreClass="bank.ecore#//Card"/>
+    <genClasses ecoreClass="bank.ecore#//DeviceTransaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//DeviceTransaction/device"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//DeviceTransaction/pointofsale"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//CustomerAccount">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//CustomerAccount/devices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//CustomerAccount/product"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//InternalAccount"/>
+    <genClasses ecoreClass="bank.ecore#//Banker"/>
+    <genClasses ecoreClass="bank.ecore#//BankerTransaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//BankerTransaction/banker"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//Token">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Token/merchant"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//TokenTransaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//TokenTransaction/token"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
