@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.nasdanika.bank.CustomerAccount#getDevices <em>Devices</em>}</li>
  *   <li>{@link org.nasdanika.bank.CustomerAccount#getProduct <em>Product</em>}</li>
+ *   <li>{@link org.nasdanika.bank.CustomerAccount#getOwners <em>Owners</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.bank.BankPackage#getCustomerAccount()
@@ -65,5 +66,22 @@ public interface CustomerAccount extends Account {
 	 * @generated
 	 */
 	void setProduct(Product value);
+
+	/**
+	 * Returns the value of the '<em><b>Owners</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.bank.Customer}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.bank.Customer#getAccounts <em>Accounts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * TODO
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Owners</em>' reference list.
+	 * @see org.nasdanika.bank.BankPackage#getCustomerAccount_Owners()
+	 * @see org.nasdanika.bank.Customer#getAccounts
+	 * @model opposite="accounts"
+	 * @generated
+	 */
+	EList<Customer> getOwners();
 
 } // CustomerAccount

@@ -6,7 +6,7 @@
   <body>
  
     <breadcrumbs>
-      <item name="Nasdanika" href="../site/index.html"/>
+      <item name="Nasdanika" href="../../site/current/index.html"/>
       <item name="Bank" href="index.html"/>
     </breadcrumbs>
  
@@ -19,7 +19,8 @@
 
    <menu name="Java API">
       <item name="Model" href="apidocs/model/index.html" />
-      <!-- <item name="Web" href="apidocs/web/index.html" /> -->
+      <item name="Edit" href="apidocs/model/index.html" />
+      <item name="Editor" href="apidocs/model/index.html" />
    </menu>
    
    <menu name="Developer Guilde">

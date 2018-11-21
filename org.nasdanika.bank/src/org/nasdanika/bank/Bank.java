@@ -114,7 +114,7 @@ public interface Bank extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * TODO
+	 * Bank transactions
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transactions</em>' containment reference list.
 	 * @see org.nasdanika.bank.BankPackage#getBank_Transactions()

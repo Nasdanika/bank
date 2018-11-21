@@ -10,7 +10,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.nasdanika.bank.Account;
 import org.nasdanika.bank.BankPackage;
-import org.nasdanika.bank.Customer;
 import org.nasdanika.bank.Statement;
 
 /**
@@ -22,7 +21,6 @@ import org.nasdanika.bank.Statement;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.bank.impl.AccountImpl#getStatements <em>Statements</em>}</li>
- *   <li>{@link org.nasdanika.bank.impl.AccountImpl#getOwners <em>Owners</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,16 +63,6 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	@SuppressWarnings("unchecked")
 	public EList<Statement> getStatements() {
 		return (EList<Statement>)eGet(BankPackage.Literals.ACCOUNT__STATEMENTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Customer> getOwners() {
-		return (EList<Customer>)eGet(BankPackage.Literals.ACCOUNT__OWNERS, true);
 	}
 
 } //AccountImpl

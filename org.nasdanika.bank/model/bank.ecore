@@ -41,7 +41,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" upperBound="-1"
         eType="#//Transaction" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="TODO"/>
+        <details key="documentation" value="Bank transactions"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -50,7 +50,7 @@
       <details key="documentation" value="TODO"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" upperBound="-1"
-        eType="#//Account" eOpposite="#//Account/owners">
+        eType="#//CustomerAccount" eOpposite="#//CustomerAccount/owners">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="TODO"/>
       </eAnnotations>
@@ -62,12 +62,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
         eType="#//Statement" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="TODO"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="owners" upperBound="-1"
-        eType="#//Customer" eOpposite="#//Customer/accounts">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="TODO"/>
       </eAnnotations>
@@ -158,7 +152,7 @@
         <details key="documentation" value="TODO"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pointofsale" eType="#//PointOfSale">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pointOfSale" eType="#//PointOfSale">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="TODO"/>
       </eAnnotations>
@@ -176,6 +170,12 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="product" lowerBound="1"
         eType="#//Product">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owners" upperBound="-1"
+        eType="#//Customer" eOpposite="#//Customer/accounts">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="TODO"/>
       </eAnnotations>

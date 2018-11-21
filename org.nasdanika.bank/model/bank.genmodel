@@ -4,8 +4,8 @@
     modelName="bank" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
     complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
-    providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter" operationReflection="true"
-    importOrganizing="true">
+    providerRootExtendsClass="org.nasdanika.bank.provider.CDOItemProviderAdapterEx"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>bank.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Bank" basePackage="org.nasdanika" disposableProviderFactory="true"
@@ -23,7 +23,6 @@
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//Account">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Account/statements"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Account/owners"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//Statement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Statement/debits"/>
@@ -45,11 +44,12 @@
     <genClasses ecoreClass="bank.ecore#//Card"/>
     <genClasses ecoreClass="bank.ecore#//DeviceTransaction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//DeviceTransaction/device"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//DeviceTransaction/pointofsale"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//DeviceTransaction/pointOfSale"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//CustomerAccount">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//CustomerAccount/devices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//CustomerAccount/product"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//CustomerAccount/owners"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//InternalAccount"/>
     <genClasses ecoreClass="bank.ecore#//Banker"/>

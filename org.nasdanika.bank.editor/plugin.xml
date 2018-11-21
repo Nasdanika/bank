@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated bank -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.nasdanika.bank.presentation.BankModelWizardID"
+            name="%_UI_BankModelWizard_label"
+            class="org.nasdanika.bank.presentation.BankModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BankModelFile.gif">
+         <description>%_UI_BankModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated bank -->
+      <editor
+            id="org.nasdanika.bank.presentation.BankEditorID"
+            name="%_UI_BankEditor_label"
+            icon="icons/full/obj16/BankModelFile.gif"
+            extensions="bank"
+            class="org.nasdanika.bank.presentation.BankEditor"
+            contributorClass="org.nasdanika.bank.presentation.BankActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

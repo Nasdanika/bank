@@ -7,10 +7,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
-import org.nasdanika.bank.Account;
 import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.Customer;
+import org.nasdanika.bank.CustomerAccount;
 
 /**
  * <!-- begin-user-doc -->
@@ -61,8 +60,8 @@ public class CustomerImpl extends CDOObjectImpl implements Customer {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Account> getAccounts() {
-		return (EList<Account>)eGet(BankPackage.Literals.CUSTOMER__ACCOUNTS, true);
+	public EList<CustomerAccount> getAccounts() {
+		return (EList<CustomerAccount>)eGet(BankPackage.Literals.CUSTOMER__ACCOUNTS, true);
 	}
 
 } //CustomerImpl

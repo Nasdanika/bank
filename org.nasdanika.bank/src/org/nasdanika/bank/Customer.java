@@ -30,8 +30,8 @@ import org.eclipse.emf.common.util.EList;
 public interface Customer extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Accounts</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.bank.Account}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.bank.Account#getOwners <em>Owners</em>}'.
+	 * The list contents are of type {@link org.nasdanika.bank.CustomerAccount}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.bank.CustomerAccount#getOwners <em>Owners</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -39,10 +39,10 @@ public interface Customer extends CDOObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Accounts</em>' reference list.
 	 * @see org.nasdanika.bank.BankPackage#getCustomer_Accounts()
-	 * @see org.nasdanika.bank.Account#getOwners
+	 * @see org.nasdanika.bank.CustomerAccount#getOwners
 	 * @model opposite="owners"
 	 * @generated
 	 */
-	EList<Account> getAccounts();
+	EList<CustomerAccount> getAccounts();
 
 } // Customer

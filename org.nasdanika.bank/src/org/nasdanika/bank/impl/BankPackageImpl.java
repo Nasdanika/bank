@@ -311,15 +311,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAccount_Owners() {
-		return (EReference)accountEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStatement() {
 		return statementEClass;
 	}
@@ -464,7 +455,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeviceTransaction_Pointofsale() {
+	public EReference getDeviceTransaction_PointOfSale() {
 		return (EReference)deviceTransactionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -493,6 +484,15 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 */
 	public EReference getCustomerAccount_Product() {
 		return (EReference)customerAccountEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCustomerAccount_Owners() {
+		return (EReference)customerAccountEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -608,7 +608,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		accountEClass = createEClass(ACCOUNT);
 		createEReference(accountEClass, ACCOUNT__STATEMENTS);
-		createEReference(accountEClass, ACCOUNT__OWNERS);
 
 		statementEClass = createEClass(STATEMENT);
 		createEReference(statementEClass, STATEMENT__DEBITS);
@@ -634,11 +633,12 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		deviceTransactionEClass = createEClass(DEVICE_TRANSACTION);
 		createEReference(deviceTransactionEClass, DEVICE_TRANSACTION__DEVICE);
-		createEReference(deviceTransactionEClass, DEVICE_TRANSACTION__POINTOFSALE);
+		createEReference(deviceTransactionEClass, DEVICE_TRANSACTION__POINT_OF_SALE);
 
 		customerAccountEClass = createEClass(CUSTOMER_ACCOUNT);
 		createEReference(customerAccountEClass, CUSTOMER_ACCOUNT__DEVICES);
 		createEReference(customerAccountEClass, CUSTOMER_ACCOUNT__PRODUCT);
+		createEReference(customerAccountEClass, CUSTOMER_ACCOUNT__OWNERS);
 
 		internalAccountEClass = createEClass(INTERNAL_ACCOUNT);
 
@@ -700,11 +700,10 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEReference(getBank_Transactions(), this.getTransaction(), null, "transactions", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCustomer_Accounts(), this.getAccount(), this.getAccount_Owners(), "accounts", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCustomer_Accounts(), this.getCustomerAccount(), this.getCustomerAccount_Owners(), "accounts", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountEClass, Account.class, "Account", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccount_Statements(), this.getStatement(), null, "statements", null, 0, -1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAccount_Owners(), this.getCustomer(), this.getCustomer_Accounts(), "owners", null, 0, -1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStatement_Debits(), this.getTransaction(), this.getTransaction_Debit(), "debits", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -730,11 +729,12 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		initEClass(deviceTransactionEClass, DeviceTransaction.class, "DeviceTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeviceTransaction_Device(), this.getDevice(), null, "device", null, 0, 1, DeviceTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeviceTransaction_Pointofsale(), this.getPointOfSale(), null, "pointofsale", null, 0, 1, DeviceTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeviceTransaction_PointOfSale(), this.getPointOfSale(), null, "pointOfSale", null, 0, 1, DeviceTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerAccountEClass, CustomerAccount.class, "CustomerAccount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomerAccount_Devices(), this.getDevice(), null, "devices", null, 0, -1, CustomerAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCustomerAccount_Product(), this.getProduct(), null, "product", null, 1, 1, CustomerAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCustomerAccount_Owners(), this.getCustomer(), this.getCustomer_Accounts(), "owners", null, 0, -1, CustomerAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(internalAccountEClass, InternalAccount.class, "InternalAccount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -811,7 +811,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		  (getBank_Transactions(),
 		   source,
 		   new String[] {
-			   "documentation", "TODO"
+			   "documentation", "Bank transactions"
 		   });
 		addAnnotation
 		  (customerEClass,
@@ -833,12 +833,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   });
 		addAnnotation
 		  (getAccount_Statements(),
-		   source,
-		   new String[] {
-			   "documentation", "TODO"
-		   });
-		addAnnotation
-		  (getAccount_Owners(),
 		   source,
 		   new String[] {
 			   "documentation", "TODO"
@@ -940,7 +934,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 			   "documentation", "TODO"
 		   });
 		addAnnotation
-		  (getDeviceTransaction_Pointofsale(),
+		  (getDeviceTransaction_PointOfSale(),
 		   source,
 		   new String[] {
 			   "documentation", "TODO"
@@ -959,6 +953,12 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   });
 		addAnnotation
 		  (getCustomerAccount_Product(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getCustomerAccount_Owners(),
 		   source,
 		   new String[] {
 			   "documentation", "TODO"

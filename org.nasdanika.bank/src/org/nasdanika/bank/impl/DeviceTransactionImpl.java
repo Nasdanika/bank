@@ -18,7 +18,7 @@ import org.nasdanika.bank.PointOfSale;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.bank.impl.DeviceTransactionImpl#getDevice <em>Device</em>}</li>
- *   <li>{@link org.nasdanika.bank.impl.DeviceTransactionImpl#getPointofsale <em>Pointofsale</em>}</li>
+ *   <li>{@link org.nasdanika.bank.impl.DeviceTransactionImpl#getPointOfSale <em>Point Of Sale</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,8 +66,8 @@ public class DeviceTransactionImpl extends TransactionImpl implements DeviceTran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointOfSale getPointofsale() {
-		return (PointOfSale)eGet(BankPackage.Literals.DEVICE_TRANSACTION__POINTOFSALE, true);
+	public PointOfSale getPointOfSale() {
+		return (PointOfSale)eGet(BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, true);
 	}
 
 	/**
@@ -75,8 +75,8 @@ public class DeviceTransactionImpl extends TransactionImpl implements DeviceTran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointofsale(PointOfSale newPointofsale) {
-		eSet(BankPackage.Literals.DEVICE_TRANSACTION__POINTOFSALE, newPointofsale);
+	public void setPointOfSale(PointOfSale newPointOfSale) {
+		eSet(BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, newPointOfSale);
 	}
 
 } //DeviceTransactionImpl

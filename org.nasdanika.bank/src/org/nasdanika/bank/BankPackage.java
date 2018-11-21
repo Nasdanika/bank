@@ -202,22 +202,13 @@ public interface BankPackage extends EPackage {
 	int ACCOUNT__STATEMENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Owners</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT__OWNERS = 1;
-
-	/**
 	 * The number of structural features of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_FEATURE_COUNT = 2;
+	int ACCOUNT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Account</em>' class.
@@ -562,13 +553,13 @@ public interface BankPackage extends EPackage {
 	int DEVICE_TRANSACTION__DEVICE = TRANSACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Pointofsale</b></em>' reference.
+	 * The feature id for the '<em><b>Point Of Sale</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TRANSACTION__POINTOFSALE = TRANSACTION_FEATURE_COUNT + 1;
+	int DEVICE_TRANSACTION__POINT_OF_SALE = TRANSACTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Device Transaction</em>' class.
@@ -608,15 +599,6 @@ public interface BankPackage extends EPackage {
 	int CUSTOMER_ACCOUNT__STATEMENTS = ACCOUNT__STATEMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owners</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_ACCOUNT__OWNERS = ACCOUNT__OWNERS;
-
-	/**
 	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -635,13 +617,22 @@ public interface BankPackage extends EPackage {
 	int CUSTOMER_ACCOUNT__PRODUCT = ACCOUNT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Owners</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_ACCOUNT__OWNERS = ACCOUNT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Customer Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT_FEATURE_COUNT = ACCOUNT_FEATURE_COUNT + 2;
+	int CUSTOMER_ACCOUNT_FEATURE_COUNT = ACCOUNT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Customer Account</em>' class.
@@ -670,15 +661,6 @@ public interface BankPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERNAL_ACCOUNT__STATEMENTS = ACCOUNT__STATEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owners</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERNAL_ACCOUNT__OWNERS = ACCOUNT__OWNERS;
 
 	/**
 	 * The number of structural features of the '<em>Internal Account</em>' class.
@@ -993,17 +975,6 @@ public interface BankPackage extends EPackage {
 	EReference getAccount_Statements();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.bank.Account#getOwners <em>Owners</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Owners</em>'.
-	 * @see org.nasdanika.bank.Account#getOwners()
-	 * @see #getAccount()
-	 * @generated
-	 */
-	EReference getAccount_Owners();
-
-	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.Statement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1171,15 +1142,15 @@ public interface BankPackage extends EPackage {
 	EReference getDeviceTransaction_Device();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.nasdanika.bank.DeviceTransaction#getPointofsale <em>Pointofsale</em>}'.
+	 * Returns the meta object for the reference '{@link org.nasdanika.bank.DeviceTransaction#getPointOfSale <em>Point Of Sale</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Pointofsale</em>'.
-	 * @see org.nasdanika.bank.DeviceTransaction#getPointofsale()
+	 * @return the meta object for the reference '<em>Point Of Sale</em>'.
+	 * @see org.nasdanika.bank.DeviceTransaction#getPointOfSale()
 	 * @see #getDeviceTransaction()
 	 * @generated
 	 */
-	EReference getDeviceTransaction_Pointofsale();
+	EReference getDeviceTransaction_PointOfSale();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.CustomerAccount <em>Customer Account</em>}'.
@@ -1212,6 +1183,17 @@ public interface BankPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCustomerAccount_Product();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.bank.CustomerAccount#getOwners <em>Owners</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Owners</em>'.
+	 * @see org.nasdanika.bank.CustomerAccount#getOwners()
+	 * @see #getCustomerAccount()
+	 * @generated
+	 */
+	EReference getCustomerAccount_Owners();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.InternalAccount <em>Internal Account</em>}'.
@@ -1403,13 +1385,6 @@ public interface BankPackage extends EPackage {
 		 */
 		EReference ACCOUNT__STATEMENTS = eINSTANCE.getAccount_Statements();
 		/**
-		 * The meta object literal for the '<em><b>Owners</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACCOUNT__OWNERS = eINSTANCE.getAccount_Owners();
-		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.StatementImpl <em>Statement</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1540,12 +1515,12 @@ public interface BankPackage extends EPackage {
 		 */
 		EReference DEVICE_TRANSACTION__DEVICE = eINSTANCE.getDeviceTransaction_Device();
 		/**
-		 * The meta object literal for the '<em><b>Pointofsale</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Point Of Sale</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEVICE_TRANSACTION__POINTOFSALE = eINSTANCE.getDeviceTransaction_Pointofsale();
+		EReference DEVICE_TRANSACTION__POINT_OF_SALE = eINSTANCE.getDeviceTransaction_PointOfSale();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.CustomerAccountImpl <em>Customer Account</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1569,6 +1544,13 @@ public interface BankPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CUSTOMER_ACCOUNT__PRODUCT = eINSTANCE.getCustomerAccount_Product();
+		/**
+		 * The meta object literal for the '<em><b>Owners</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER_ACCOUNT__OWNERS = eINSTANCE.getCustomerAccount_Owners();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.InternalAccountImpl <em>Internal Account</em>}' class.
 		 * <!-- begin-user-doc -->

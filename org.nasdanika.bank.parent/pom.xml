@@ -48,6 +48,12 @@
 				<url>https://www.nasdanika.org/products/maven-osgi/repository</url>
 				<layout>p2</layout>
 			</repository>
+			
+			<repository>
+				<id>nasdanika-presentation</id>
+				<url>https://www.nasdanika.org/products/presentation/repository</url>
+				<layout>p2</layout>
+			</repository>						
 		
 	</repositories>
  	
@@ -173,6 +179,8 @@
 	</build>
 	<modules>	
 		<module>../org.nasdanika.bank</module>
+		<module>../org.nasdanika.bank.edit</module>
+		<module>../org.nasdanika.bank.editor</module>
 		<module>../org.nasdanika.bank.feature</module>	
 		<module>../org.nasdanika.bank.repository</module>	
 	</modules>

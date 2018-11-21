@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.bank.BankPackage;
+import org.nasdanika.bank.Customer;
 import org.nasdanika.bank.CustomerAccount;
 import org.nasdanika.bank.Device;
 import org.nasdanika.bank.Product;
@@ -21,6 +22,7 @@ import org.nasdanika.bank.Product;
  * <ul>
  *   <li>{@link org.nasdanika.bank.impl.CustomerAccountImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link org.nasdanika.bank.impl.CustomerAccountImpl#getProduct <em>Product</em>}</li>
+ *   <li>{@link org.nasdanika.bank.impl.CustomerAccountImpl#getOwners <em>Owners</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,6 +73,16 @@ public class CustomerAccountImpl extends AccountImpl implements CustomerAccount 
 	 */
 	public void setProduct(Product newProduct) {
 		eSet(BankPackage.Literals.CUSTOMER_ACCOUNT__PRODUCT, newProduct);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Customer> getOwners() {
+		return (EList<Customer>)eGet(BankPackage.Literals.CUSTOMER_ACCOUNT__OWNERS, true);
 	}
 
 } //CustomerAccountImpl
