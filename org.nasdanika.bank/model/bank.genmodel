@@ -89,7 +89,10 @@
     <genClasses ecoreClass="bank.ecore#//Device">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Device/tokens"/>
     </genClasses>
-    <genClasses ecoreClass="bank.ecore#//MobilePhone"/>
+    <genClasses ecoreClass="bank.ecore#//MobilePhone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//MobilePhone/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//MobilePhone/key"/>
+    </genClasses>
     <genClasses ecoreClass="bank.ecore#//Card">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Card/virtual"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Card/id"/>

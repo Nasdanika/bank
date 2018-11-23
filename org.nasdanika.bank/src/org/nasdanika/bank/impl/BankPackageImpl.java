@@ -847,6 +847,24 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobilePhone_Number() {
+		return (EAttribute)mobilePhoneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobilePhone_Key() {
+		return (EAttribute)mobilePhoneEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCard() {
 		return cardEClass;
 	}
@@ -1148,6 +1166,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		createEReference(deviceEClass, DEVICE__TOKENS);
 
 		mobilePhoneEClass = createEClass(MOBILE_PHONE);
+		createEAttribute(mobilePhoneEClass, MOBILE_PHONE__NUMBER);
+		createEAttribute(mobilePhoneEClass, MOBILE_PHONE__KEY);
 
 		cardEClass = createEClass(CARD);
 		createEAttribute(cardEClass, CARD__VIRTUAL);
@@ -1329,6 +1349,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEReference(getDevice_Tokens(), this.getToken(), null, "tokens", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobilePhoneEClass, MobilePhone.class, "MobilePhone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobilePhone_Number(), ecorePackage.getEString(), "number", null, 0, 1, MobilePhone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobilePhone_Key(), ecorePackage.getEString(), "key", null, 0, 1, MobilePhone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cardEClass, Card.class, "Card", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCard_Virtual(), ecorePackage.getEBoolean(), "virtual", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

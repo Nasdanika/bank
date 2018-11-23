@@ -1081,13 +1081,31 @@ public interface BankPackage extends EPackage {
 	int MOBILE_PHONE__TOKENS = DEVICE__TOKENS;
 
 	/**
+	 * The feature id for the '<em><b>Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBILE_PHONE__NUMBER = DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBILE_PHONE__KEY = DEVICE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Mobile Phone</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PHONE_FEATURE_COUNT = DEVICE_FEATURE_COUNT + 0;
+	int MOBILE_PHONE_FEATURE_COUNT = DEVICE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Mobile Phone</em>' class.
@@ -2443,6 +2461,28 @@ public interface BankPackage extends EPackage {
 	EClass getMobilePhone();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.MobilePhone#getNumber <em>Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number</em>'.
+	 * @see org.nasdanika.bank.MobilePhone#getNumber()
+	 * @see #getMobilePhone()
+	 * @generated
+	 */
+	EAttribute getMobilePhone_Number();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.MobilePhone#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see org.nasdanika.bank.MobilePhone#getKey()
+	 * @see #getMobilePhone()
+	 * @generated
+	 */
+	EAttribute getMobilePhone_Key();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.Card <em>Card</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3181,6 +3221,20 @@ public interface BankPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MOBILE_PHONE = eINSTANCE.getMobilePhone();
+		/**
+		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBILE_PHONE__NUMBER = eINSTANCE.getMobilePhone_Number();
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBILE_PHONE__KEY = eINSTANCE.getMobilePhone_Key();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.CardImpl <em>Card</em>}' class.
 		 * <!-- begin-user-doc -->
