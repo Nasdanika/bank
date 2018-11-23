@@ -186,11 +186,6 @@ public class CustomerAccountItemProvider extends AccountItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BankPackage.Literals.CUSTOMER_ACCOUNT__DEVICES,
-				 BankFactory.eINSTANCE.createDevice()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BankPackage.Literals.CUSTOMER_ACCOUNT__DEVICES,
 				 BankFactory.eINSTANCE.createMobilePhone()));
 
 		newChildDescriptors.add

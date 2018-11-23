@@ -302,29 +302,6 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.Device} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DeviceItemProvider deviceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.nasdanika.bank.Device}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDeviceAdapter() {
-		if (deviceItemProvider == null) {
-			deviceItemProvider = new DeviceItemProvider(this);
-		}
-
-		return deviceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.MobilePhone} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -640,7 +617,6 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 		if (productItemProvider != null) productItemProvider.dispose();
 		if (merchantItemProvider != null) merchantItemProvider.dispose();
 		if (pointOfSaleItemProvider != null) pointOfSaleItemProvider.dispose();
-		if (deviceItemProvider != null) deviceItemProvider.dispose();
 		if (mobilePhoneItemProvider != null) mobilePhoneItemProvider.dispose();
 		if (cardItemProvider != null) cardItemProvider.dispose();
 		if (deviceTransactionItemProvider != null) deviceTransactionItemProvider.dispose();

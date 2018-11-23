@@ -66,7 +66,6 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 			case BankPackage.PRODUCT: return (EObject)createProduct();
 			case BankPackage.MERCHANT: return (EObject)createMerchant();
 			case BankPackage.POINT_OF_SALE: return (EObject)createPointOfSale();
-			case BankPackage.DEVICE: return (EObject)createDevice();
 			case BankPackage.MOBILE_PHONE: return (EObject)createMobilePhone();
 			case BankPackage.CARD: return (EObject)createCard();
 			case BankPackage.DEVICE_TRANSACTION: return (EObject)createDeviceTransaction();
@@ -179,16 +178,6 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	public PointOfSale createPointOfSale() {
 		PointOfSaleImpl pointOfSale = new PointOfSaleImpl();
 		return pointOfSale;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Device createDevice() {
-		DeviceImpl device = new DeviceImpl();
-		return device;
 	}
 
 	/**

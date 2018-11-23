@@ -22,7 +22,7 @@ import org.nasdanika.bank.Token;
  *
  * @generated
  */
-public class DeviceImpl extends TransactionInitiatorImpl implements Device {
+public abstract class DeviceImpl extends TransactionInitiatorImpl implements Device {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -112,15 +112,6 @@ public interface BankFactory extends EFactory {
 	PointOfSale createPointOfSale();
 
 	/**
-	 * Returns a new object of class '<em>Device</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Device</em>'.
-	 * @generated
-	 */
-	Device createDevice();
-
-	/**
 	 * Returns a new object of class '<em>Mobile Phone</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

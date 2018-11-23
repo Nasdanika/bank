@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see org.nasdanika.bank.BankPackage#getDevice()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Device extends TransactionInitiator {
