@@ -210,6 +210,7 @@ public class BankSwitch<T1> extends Switch<T1> {
 			case BankPackage.BANKER: {
 				Banker banker = (Banker)theEObject;
 				T1 result = caseBanker(banker);
+				if (result == null) result = caseParty(banker);
 				if (result == null) result = caseTransactionInitiator(banker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

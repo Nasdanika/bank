@@ -13,7 +13,7 @@ import org.nasdanika.bank.Banker;
  *
  * @generated
  */
-public class BankerImpl extends TransactionInitiatorImpl implements Banker {
+public class BankerImpl extends PartyImpl implements Banker {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

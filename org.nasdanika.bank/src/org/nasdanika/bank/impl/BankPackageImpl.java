@@ -1227,6 +1227,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		deviceTransactionEClass.getEGenericSuperTypes().add(g1);
 		customerAccountEClass.getESuperTypes().add(this.getAccount());
 		internalAccountEClass.getESuperTypes().add(this.getAccount());
+		bankerEClass.getESuperTypes().add(this.getParty());
 		bankerEClass.getESuperTypes().add(this.getTransactionInitiator());
 		g1 = createEGenericType(this.getTransaction());
 		g2 = createEGenericType(this.getBanker());

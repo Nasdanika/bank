@@ -1491,13 +1491,31 @@ public interface BankPackage extends EPackage {
 	int BANKER = 21;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANKER__NAME = PARTY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Contact Methods</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANKER__CONTACT_METHODS = PARTY__CONTACT_METHODS;
+
+	/**
 	 * The number of structural features of the '<em>Banker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BANKER_FEATURE_COUNT = TRANSACTION_INITIATOR_FEATURE_COUNT + 0;
+	int BANKER_FEATURE_COUNT = PARTY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Banker</em>' class.
@@ -1506,7 +1524,7 @@ public interface BankPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANKER_OPERATION_COUNT = TRANSACTION_INITIATOR_OPERATION_COUNT + 0;
+	int BANKER_OPERATION_COUNT = PARTY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.bank.impl.BankerTransactionImpl <em>Banker Transaction</em>}' class.

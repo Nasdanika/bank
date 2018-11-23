@@ -16,5 +16,5 @@ package org.nasdanika.bank;
  * @model
  * @generated
  */
-public interface Banker extends TransactionInitiator {
+public interface Banker extends Party, TransactionInitiator {
 } // Banker
