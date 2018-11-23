@@ -16,7 +16,6 @@ package org.nasdanika.bank;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.bank.DeviceTransaction#getDevice <em>Device</em>}</li>
  *   <li>{@link org.nasdanika.bank.DeviceTransaction#getPointOfSale <em>Point Of Sale</em>}</li>
  * </ul>
  *
@@ -24,32 +23,7 @@ package org.nasdanika.bank;
  * @model
  * @generated
  */
-public interface DeviceTransaction extends Transaction {
-	/**
-	 * Returns the value of the '<em><b>Device</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * TODO
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Device</em>' reference.
-	 * @see #setDevice(Device)
-	 * @see org.nasdanika.bank.BankPackage#getDeviceTransaction_Device()
-	 * @model
-	 * @generated
-	 */
-	Device getDevice();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.bank.DeviceTransaction#getDevice <em>Device</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Device</em>' reference.
-	 * @see #getDevice()
-	 * @generated
-	 */
-	void setDevice(Device value);
-
+public interface DeviceTransaction extends Transaction<Device> {
 	/**
 	 * Returns the value of the '<em><b>Point Of Sale</b></em>' reference.
 	 * <!-- begin-user-doc -->

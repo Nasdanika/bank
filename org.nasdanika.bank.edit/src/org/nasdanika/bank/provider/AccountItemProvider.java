@@ -12,12 +12,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.nasdanika.bank.Account;
@@ -59,8 +61,100 @@ public class AccountItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNumberPropertyDescriptor(object);
+			addBalancePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
+			addPeriodStartPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Number feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNumberPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Account_number_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_number_feature", "_UI_Account_type"),
+				 BankPackage.Literals.ACCOUNT__NUMBER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Balance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBalancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Account_balance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_balance_feature", "_UI_Account_type"),
+				 BankPackage.Literals.ACCOUNT__BALANCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Account_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_description_feature", "_UI_Account_type"),
+				 BankPackage.Literals.ACCOUNT__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Period Start feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPeriodStartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Account_periodStart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_periodStart_feature", "_UI_Account_type"),
+				 BankPackage.Literals.ACCOUNT__PERIOD_START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -112,7 +206,10 @@ public class AccountItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Account_type");
+		String label = ((Account)object).getNumber();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Account_type") :
+			getString("_UI_Account_type") + " " + label;
 	}
 
 
@@ -128,6 +225,12 @@ public class AccountItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Account.class)) {
+			case BankPackage.ACCOUNT__NUMBER:
+			case BankPackage.ACCOUNT__BALANCE:
+			case BankPackage.ACCOUNT__DESCRIPTION:
+			case BankPackage.ACCOUNT__PERIOD_START:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case BankPackage.ACCOUNT__STATEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

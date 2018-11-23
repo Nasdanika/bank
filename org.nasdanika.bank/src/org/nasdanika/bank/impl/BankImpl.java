@@ -4,9 +4,6 @@ package org.nasdanika.bank.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.nasdanika.bank.Account;
 import org.nasdanika.bank.Bank;
 import org.nasdanika.bank.BankPackage;
@@ -34,7 +31,7 @@ import org.nasdanika.bank.Transaction;
  *
  * @generated
  */
-public class BankImpl extends CDOObjectImpl implements Bank {
+public class BankImpl extends PartyImpl implements Bank {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,16 +49,6 @@ public class BankImpl extends CDOObjectImpl implements Bank {
 	@Override
 	protected EClass eStaticClass() {
 		return BankPackage.Literals.BANK;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -120,8 +107,8 @@ public class BankImpl extends CDOObjectImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Transaction> getTransactions() {
-		return (EList<Transaction>)eGet(BankPackage.Literals.BANK__TRANSACTIONS, true);
+	public EList<Transaction<?>> getTransactions() {
+		return (EList<Transaction<?>>)eGet(BankPackage.Literals.BANK__TRANSACTIONS, true);
 	}
 
 } //BankImpl

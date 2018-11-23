@@ -2,10 +2,13 @@
  */
 package org.nasdanika.bank.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.nasdanika.bank.Account;
@@ -15,19 +18,26 @@ import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.Banker;
 import org.nasdanika.bank.BankerTransaction;
 import org.nasdanika.bank.Card;
+import org.nasdanika.bank.ContactMethod;
 import org.nasdanika.bank.Customer;
 import org.nasdanika.bank.CustomerAccount;
 import org.nasdanika.bank.Device;
 import org.nasdanika.bank.DeviceTransaction;
+import org.nasdanika.bank.EMail;
 import org.nasdanika.bank.InternalAccount;
 import org.nasdanika.bank.Merchant;
 import org.nasdanika.bank.MobilePhone;
+import org.nasdanika.bank.Party;
+import org.nasdanika.bank.Phone;
 import org.nasdanika.bank.PointOfSale;
+import org.nasdanika.bank.PostalAddress;
 import org.nasdanika.bank.Product;
 import org.nasdanika.bank.Statement;
 import org.nasdanika.bank.Token;
 import org.nasdanika.bank.TokenTransaction;
 import org.nasdanika.bank.Transaction;
+import org.nasdanika.bank.TransactionInitiator;
+import org.nasdanika.bank.WebAddress;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +46,48 @@ import org.nasdanika.bank.Transaction;
  * @generated
  */
 public class BankPackageImpl extends EPackageImpl implements BankPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass partyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass contactMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eMailEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass phoneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass postalAddressEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass webAddressEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +119,13 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * @generated
 	 */
 	private EClass transactionEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transactionInitiatorEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,6 +271,204 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getParty() {
+		return partyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParty_Name() {
+		return (EAttribute)partyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParty_ContactMethods() {
+		return (EReference)partyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getContactMethod() {
+		return contactMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContactMethod_Name() {
+		return (EAttribute)contactMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContactMethod_Description() {
+		return (EAttribute)contactMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEMail() {
+		return eMailEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEMail_EMailAddress() {
+		return (EAttribute)eMailEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPhone() {
+		return phoneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPhone_CountryCode() {
+		return (EAttribute)phoneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPhone_AreaCode() {
+		return (EAttribute)phoneEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPhone_PhoneNumber() {
+		return (EAttribute)phoneEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPhone_Extension() {
+		return (EAttribute)phoneEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPostalAddress() {
+		return postalAddressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPostalAddress_Country() {
+		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPostalAddress_StateProvince() {
+		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPostalAddress_City() {
+		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPostalAddress_PostalCode() {
+		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPostalAddress_Line1() {
+		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPostalAddress_Line2() {
+		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWebAddress() {
+		return webAddressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWebAddress_Url() {
+		return (EAttribute)webAddressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBank() {
 		return bankEClass;
 	}
@@ -311,6 +568,42 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAccount_Number() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccount_Balance() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccount_Description() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccount_PeriodStart() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStatement() {
 		return statementEClass;
 	}
@@ -338,6 +631,42 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStatement_OpeningBalance() {
+		return (EAttribute)statementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatement_OpeningDate() {
+		return (EAttribute)statementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatement_ClosingBalance() {
+		return (EAttribute)statementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStatement_ClosingDate() {
+		return (EAttribute)statementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTransaction() {
 		return transactionEClass;
 	}
@@ -358,6 +687,60 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 */
 	public EReference getTransaction_Credit() {
 		return (EReference)transactionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransaction_Initiator() {
+		return (EReference)transactionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransaction_Amount() {
+		return (EAttribute)transactionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransaction_Date() {
+		return (EAttribute)transactionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransaction_Comment() {
+		return (EAttribute)transactionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransaction_Id() {
+		return (EAttribute)transactionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTransactionInitiator() {
+		return transactionInitiatorEClass;
 	}
 
 	/**
@@ -437,6 +820,78 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCard_Virtual() {
+		return (EAttribute)cardEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCard_Id() {
+		return (EAttribute)cardEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCard_Issued() {
+		return (EAttribute)cardEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCard_Activated() {
+		return (EAttribute)cardEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCard_Deactivated() {
+		return (EAttribute)cardEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCard_Expires() {
+		return (EAttribute)cardEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCard_LockedTo() {
+		return (EReference)cardEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCard_Replaces() {
+		return (EReference)cardEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDeviceTransaction() {
 		return deviceTransactionEClass;
 	}
@@ -446,17 +901,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeviceTransaction_Device() {
-		return (EReference)deviceTransactionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDeviceTransaction_PointOfSale() {
-		return (EReference)deviceTransactionEClass.getEStructuralFeatures().get(1);
+		return (EReference)deviceTransactionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -527,15 +973,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBankerTransaction_Banker() {
-		return (EReference)bankerTransactionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getToken() {
 		return tokenEClass;
 	}
@@ -556,15 +993,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 */
 	public EClass getTokenTransaction() {
 		return tokenTransactionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTokenTransaction_Token() {
-		return (EReference)tokenTransactionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -595,6 +1023,34 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		partyEClass = createEClass(PARTY);
+		createEAttribute(partyEClass, PARTY__NAME);
+		createEReference(partyEClass, PARTY__CONTACT_METHODS);
+
+		contactMethodEClass = createEClass(CONTACT_METHOD);
+		createEAttribute(contactMethodEClass, CONTACT_METHOD__NAME);
+		createEAttribute(contactMethodEClass, CONTACT_METHOD__DESCRIPTION);
+
+		eMailEClass = createEClass(EMAIL);
+		createEAttribute(eMailEClass, EMAIL__EMAIL_ADDRESS);
+
+		phoneEClass = createEClass(PHONE);
+		createEAttribute(phoneEClass, PHONE__COUNTRY_CODE);
+		createEAttribute(phoneEClass, PHONE__AREA_CODE);
+		createEAttribute(phoneEClass, PHONE__PHONE_NUMBER);
+		createEAttribute(phoneEClass, PHONE__EXTENSION);
+
+		postalAddressEClass = createEClass(POSTAL_ADDRESS);
+		createEAttribute(postalAddressEClass, POSTAL_ADDRESS__COUNTRY);
+		createEAttribute(postalAddressEClass, POSTAL_ADDRESS__STATE_PROVINCE);
+		createEAttribute(postalAddressEClass, POSTAL_ADDRESS__CITY);
+		createEAttribute(postalAddressEClass, POSTAL_ADDRESS__POSTAL_CODE);
+		createEAttribute(postalAddressEClass, POSTAL_ADDRESS__LINE1);
+		createEAttribute(postalAddressEClass, POSTAL_ADDRESS__LINE2);
+
+		webAddressEClass = createEClass(WEB_ADDRESS);
+		createEAttribute(webAddressEClass, WEB_ADDRESS__URL);
+
 		bankEClass = createEClass(BANK);
 		createEReference(bankEClass, BANK__MERCHANTS);
 		createEReference(bankEClass, BANK__PRODUCTS);
@@ -608,14 +1064,29 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		accountEClass = createEClass(ACCOUNT);
 		createEReference(accountEClass, ACCOUNT__STATEMENTS);
+		createEAttribute(accountEClass, ACCOUNT__NUMBER);
+		createEAttribute(accountEClass, ACCOUNT__BALANCE);
+		createEAttribute(accountEClass, ACCOUNT__DESCRIPTION);
+		createEAttribute(accountEClass, ACCOUNT__PERIOD_START);
 
 		statementEClass = createEClass(STATEMENT);
 		createEReference(statementEClass, STATEMENT__DEBITS);
 		createEReference(statementEClass, STATEMENT__CREDITS);
+		createEAttribute(statementEClass, STATEMENT__OPENING_BALANCE);
+		createEAttribute(statementEClass, STATEMENT__OPENING_DATE);
+		createEAttribute(statementEClass, STATEMENT__CLOSING_BALANCE);
+		createEAttribute(statementEClass, STATEMENT__CLOSING_DATE);
 
 		transactionEClass = createEClass(TRANSACTION);
 		createEReference(transactionEClass, TRANSACTION__DEBIT);
 		createEReference(transactionEClass, TRANSACTION__CREDIT);
+		createEReference(transactionEClass, TRANSACTION__INITIATOR);
+		createEAttribute(transactionEClass, TRANSACTION__AMOUNT);
+		createEAttribute(transactionEClass, TRANSACTION__DATE);
+		createEAttribute(transactionEClass, TRANSACTION__COMMENT);
+		createEAttribute(transactionEClass, TRANSACTION__ID);
+
+		transactionInitiatorEClass = createEClass(TRANSACTION_INITIATOR);
 
 		productEClass = createEClass(PRODUCT);
 
@@ -630,9 +1101,16 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		mobilePhoneEClass = createEClass(MOBILE_PHONE);
 
 		cardEClass = createEClass(CARD);
+		createEAttribute(cardEClass, CARD__VIRTUAL);
+		createEAttribute(cardEClass, CARD__ID);
+		createEAttribute(cardEClass, CARD__ISSUED);
+		createEAttribute(cardEClass, CARD__ACTIVATED);
+		createEAttribute(cardEClass, CARD__DEACTIVATED);
+		createEAttribute(cardEClass, CARD__EXPIRES);
+		createEReference(cardEClass, CARD__LOCKED_TO);
+		createEReference(cardEClass, CARD__REPLACES);
 
 		deviceTransactionEClass = createEClass(DEVICE_TRANSACTION);
-		createEReference(deviceTransactionEClass, DEVICE_TRANSACTION__DEVICE);
 		createEReference(deviceTransactionEClass, DEVICE_TRANSACTION__POINT_OF_SALE);
 
 		customerAccountEClass = createEClass(CUSTOMER_ACCOUNT);
@@ -645,13 +1123,11 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		bankerEClass = createEClass(BANKER);
 
 		bankerTransactionEClass = createEClass(BANKER_TRANSACTION);
-		createEReference(bankerTransactionEClass, BANKER_TRANSACTION__BANKER);
 
 		tokenEClass = createEClass(TOKEN);
 		createEReference(tokenEClass, TOKEN__MERCHANT);
 
 		tokenTransactionEClass = createEClass(TOKEN_TRANSACTION);
-		createEReference(tokenTransactionEClass, TOKEN_TRANSACTION__TOKEN);
 	}
 
 	/**
@@ -678,40 +1154,114 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		setNsURI(eNS_URI);
 
 		// Create type parameters
+		ETypeParameter transactionEClass_T = addETypeParameter(transactionEClass, "T");
 
 		// Set bounds for type parameters
+		EGenericType g1 = createEGenericType(this.getTransactionInitiator());
+		transactionEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
+		eMailEClass.getESuperTypes().add(this.getContactMethod());
+		phoneEClass.getESuperTypes().add(this.getContactMethod());
+		postalAddressEClass.getESuperTypes().add(this.getContactMethod());
+		webAddressEClass.getESuperTypes().add(this.getContactMethod());
+		bankEClass.getESuperTypes().add(this.getParty());
+		customerEClass.getESuperTypes().add(this.getParty());
+		merchantEClass.getESuperTypes().add(this.getParty());
+		deviceEClass.getESuperTypes().add(this.getTransactionInitiator());
 		mobilePhoneEClass.getESuperTypes().add(this.getDevice());
 		cardEClass.getESuperTypes().add(this.getDevice());
-		deviceTransactionEClass.getESuperTypes().add(this.getTransaction());
+		g1 = createEGenericType(this.getTransaction());
+		EGenericType g2 = createEGenericType(this.getDevice());
+		g1.getETypeArguments().add(g2);
+		deviceTransactionEClass.getEGenericSuperTypes().add(g1);
 		customerAccountEClass.getESuperTypes().add(this.getAccount());
 		internalAccountEClass.getESuperTypes().add(this.getAccount());
-		bankerTransactionEClass.getESuperTypes().add(this.getTransaction());
-		tokenTransactionEClass.getESuperTypes().add(this.getTransaction());
+		bankerEClass.getESuperTypes().add(this.getTransactionInitiator());
+		g1 = createEGenericType(this.getTransaction());
+		g2 = createEGenericType(this.getBanker());
+		g1.getETypeArguments().add(g2);
+		bankerTransactionEClass.getEGenericSuperTypes().add(g1);
+		tokenEClass.getESuperTypes().add(this.getTransactionInitiator());
+		g1 = createEGenericType(this.getTransaction());
+		g2 = createEGenericType(this.getToken());
+		g1.getETypeArguments().add(g2);
+		tokenTransactionEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(partyEClass, Party.class, "Party", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParty_ContactMethods(), this.getContactMethod(), null, "contactMethods", null, 0, -1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(contactMethodEClass, ContactMethod.class, "ContactMethod", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getContactMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContactMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContactMethod_Description(), ecorePackage.getEString(), "description", null, 0, 1, ContactMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eMailEClass, EMail.class, "EMail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEMail_EMailAddress(), ecorePackage.getEString(), "eMailAddress", null, 0, 1, EMail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(phoneEClass, Phone.class, "Phone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPhone_CountryCode(), ecorePackage.getEInt(), "countryCode", null, 0, 1, Phone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPhone_AreaCode(), ecorePackage.getEInt(), "areaCode", null, 0, 1, Phone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPhone_PhoneNumber(), ecorePackage.getEInt(), "phoneNumber", null, 0, 1, Phone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPhone_Extension(), ecorePackage.getEInt(), "extension", null, 0, 1, Phone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(postalAddressEClass, PostalAddress.class, "PostalAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPostalAddress_Country(), ecorePackage.getEString(), "country", null, 0, 1, PostalAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostalAddress_StateProvince(), ecorePackage.getEString(), "stateProvince", null, 0, 1, PostalAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostalAddress_City(), ecorePackage.getEString(), "city", null, 0, 1, PostalAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostalAddress_PostalCode(), ecorePackage.getEString(), "postalCode", null, 0, 1, PostalAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostalAddress_Line1(), ecorePackage.getEString(), "line1", null, 0, 1, PostalAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostalAddress_Line2(), ecorePackage.getEString(), "line2", null, 0, 1, PostalAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(webAddressEClass, WebAddress.class, "WebAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWebAddress_Url(), ecorePackage.getEString(), "url", null, 0, 1, WebAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(bankEClass, Bank.class, "Bank", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBank_Merchants(), this.getMerchant(), null, "merchants", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBank_Products(), this.getProduct(), null, "products", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBank_Accounts(), this.getAccount(), null, "accounts", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBank_Customers(), this.getCustomer(), null, "customers", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBank_Bankers(), this.getBanker(), null, "bankers", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBank_Transactions(), this.getTransaction(), null, "transactions", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(this.getTransaction());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEReference(getBank_Transactions(), g1, null, "transactions", null, 0, -1, Bank.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomer_Accounts(), this.getCustomerAccount(), this.getCustomerAccount_Owners(), "accounts", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountEClass, Account.class, "Account", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccount_Statements(), this.getStatement(), null, "statements", null, 0, -1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccount_Number(), ecorePackage.getEString(), "number", null, 0, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccount_Balance(), ecorePackage.getEBigDecimal(), "balance", null, 0, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccount_Description(), ecorePackage.getEString(), "description", null, 0, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccount_PeriodStart(), ecorePackage.getEInt(), "periodStart", null, 0, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStatement_Debits(), this.getTransaction(), this.getTransaction_Debit(), "debits", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStatement_Credits(), this.getTransaction(), this.getTransaction_Credit(), "credits", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(this.getTransaction());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEReference(getStatement_Debits(), g1, this.getTransaction_Debit(), "debits", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(this.getTransaction());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEReference(getStatement_Credits(), g1, this.getTransaction_Credit(), "credits", null, 0, -1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatement_OpeningBalance(), ecorePackage.getEBigDecimal(), "openingBalance", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatement_OpeningDate(), ecorePackage.getEDate(), "openingDate", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatement_ClosingBalance(), ecorePackage.getEBigDecimal(), "closingBalance", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStatement_ClosingDate(), ecorePackage.getEDate(), "closingDate", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(transactionEClass, Transaction.class, "Transaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(transactionEClass, Transaction.class, "Transaction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransaction_Debit(), this.getStatement(), this.getStatement_Debits(), "debit", null, 1, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransaction_Credit(), this.getStatement(), this.getStatement_Credits(), "credit", null, 1, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransaction_Initiator(), this.getTransactionInitiator(), null, "initiator", null, 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransaction_Amount(), ecorePackage.getEBigDecimal(), "amount", null, 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransaction_Date(), ecorePackage.getEDate(), "date", null, 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransaction_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransaction_Id(), ecorePackage.getEString(), "id", null, 0, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transactionInitiatorEClass, TransactionInitiator.class, "TransactionInitiator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -726,9 +1276,16 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEClass(mobilePhoneEClass, MobilePhone.class, "MobilePhone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(cardEClass, Card.class, "Card", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCard_Virtual(), ecorePackage.getEBoolean(), "virtual", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCard_Id(), ecorePackage.getEString(), "id", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCard_Issued(), ecorePackage.getEDate(), "issued", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCard_Activated(), ecorePackage.getEDate(), "activated", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCard_Deactivated(), ecorePackage.getEDate(), "deactivated", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCard_Expires(), ecorePackage.getEDate(), "expires", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCard_LockedTo(), this.getMerchant(), null, "lockedTo", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCard_Replaces(), this.getCard(), null, "replaces", null, 0, 1, Card.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deviceTransactionEClass, DeviceTransaction.class, "DeviceTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeviceTransaction_Device(), this.getDevice(), null, "device", null, 0, 1, DeviceTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDeviceTransaction_PointOfSale(), this.getPointOfSale(), null, "pointOfSale", null, 0, 1, DeviceTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerAccountEClass, CustomerAccount.class, "CustomerAccount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -741,13 +1298,11 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEClass(bankerEClass, Banker.class, "Banker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(bankerTransactionEClass, BankerTransaction.class, "BankerTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBankerTransaction_Banker(), this.getBanker(), null, "banker", null, 1, 1, BankerTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToken_Merchant(), this.getMerchant(), null, "merchant", null, 1, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tokenTransactionEClass, TokenTransaction.class, "TokenTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTokenTransaction_Token(), this.getToken(), null, "token", null, 1, 1, TokenTransaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -770,6 +1325,18 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   source,
 		   new String[] {
 			   "documentation", "A domain model of a Bank which offers customer debit and credit accounts with linked cards. While a domain model of a real bank would be much more complex and a domain model of a bounded context for a micro-service or a group of micro-services might be simpler this model is \r\nof \"moderate\" complexity so it is not so hard to grasp, it demonstrates the value of model documentation to communicate common understanding accross the oranization (ubiquitous language), and it can be used to generate bounded contexts.\r\n\r\n\r\nPlease keep in mind that this is just a demo, so the model may not be completely valid from the banking/finansial point of view."
+		   });
+		addAnnotation
+		  (getParty_ContactMethods(),
+		   source,
+		   new String[] {
+			   "documentation", "Party can have zero or more contact methods, these methods can be leveraged by Citi personel."
+		   });
+		addAnnotation
+		  (contactMethodEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Contact method interface."
 		   });
 		addAnnotation
 		  (bankEClass,
@@ -838,6 +1405,30 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 			   "documentation", "TODO"
 		   });
 		addAnnotation
+		  (getAccount_Number(),
+		   source,
+		   new String[] {
+			   "documentation", "Account number."
+		   });
+		addAnnotation
+		  (getAccount_Balance(),
+		   source,
+		   new String[] {
+			   "documentation", "Account balance, used by the prototype UI."
+		   });
+		addAnnotation
+		  (getAccount_Description(),
+		   source,
+		   new String[] {
+			   "documentation", "Account description, currently not used."
+		   });
+		addAnnotation
+		  (getAccount_PeriodStart(),
+		   source,
+		   new String[] {
+			   "documentation", "Billing period start, used by the prototype UI for generation of random data - will be removed once back-end connectivity is implemented."
+		   });
+		addAnnotation
 		  (statementEClass,
 		   source,
 		   new String[] {
@@ -856,6 +1447,30 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 			   "documentation", "TODO"
 		   });
 		addAnnotation
+		  (getStatement_OpeningBalance(),
+		   source,
+		   new String[] {
+			   "documentation", "Opening balance, used by the prototype UI, not needed by the auto-updater component."
+		   });
+		addAnnotation
+		  (getStatement_OpeningDate(),
+		   source,
+		   new String[] {
+			   "documentation", "Opening date, used by the prototype UI, not needed by the auto-updater component."
+		   });
+		addAnnotation
+		  (getStatement_ClosingBalance(),
+		   source,
+		   new String[] {
+			   "documentation", "Closing balance, used by the prototype UI, not needed by the auto-updater component."
+		   });
+		addAnnotation
+		  (getStatement_ClosingDate(),
+		   source,
+		   new String[] {
+			   "documentation", "Closing date, used by the prototype UI, not needed by the auto-updater component."
+		   });
+		addAnnotation
 		  (transactionEClass,
 		   source,
 		   new String[] {
@@ -872,6 +1487,30 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   source,
 		   new String[] {
 			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getTransaction_Amount(),
+		   source,
+		   new String[] {
+			   "documentation", "Amount"
+		   });
+		addAnnotation
+		  (getTransaction_Date(),
+		   source,
+		   new String[] {
+			   "documentation", "Date"
+		   });
+		addAnnotation
+		  (getTransaction_Comment(),
+		   source,
+		   new String[] {
+			   "documentation", "Additional information"
+		   });
+		addAnnotation
+		  (getTransaction_Id(),
+		   source,
+		   new String[] {
+			   "documentation", "Unique transaction ID."
 		   });
 		addAnnotation
 		  (productEClass,
@@ -901,7 +1540,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		  (deviceEClass,
 		   source,
 		   new String[] {
-			   "documentation", "TODO"
+			   "documentation", "Device is a generic term for a card and other means to initiate a transaction on an account."
 		   });
 		addAnnotation
 		  (getDevice_Tokens(),
@@ -922,13 +1561,55 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 			   "documentation", "TODO"
 		   });
 		addAnnotation
-		  (deviceTransactionEClass,
+		  (getCard_Virtual(),
 		   source,
 		   new String[] {
-			   "documentation", "TODO"
+			   "documentation", "If true, the card is virtual, i.e. doesn\'t have physical representation."
 		   });
 		addAnnotation
-		  (getDeviceTransaction_Device(),
+		  (getCard_Id(),
+		   source,
+		   new String[] {
+			   "documentation", "Unique ID."
+		   });
+		addAnnotation
+		  (getCard_Issued(),
+		   source,
+		   new String[] {
+			   "documentation", "Issue date."
+		   });
+		addAnnotation
+		  (getCard_Activated(),
+		   source,
+		   new String[] {
+			   "documentation", "Activation date."
+		   });
+		addAnnotation
+		  (getCard_Deactivated(),
+		   source,
+		   new String[] {
+			   "documentation", "Deactivation date."
+		   });
+		addAnnotation
+		  (getCard_Expires(),
+		   source,
+		   new String[] {
+			   "documentation", "Expiration date."
+		   });
+		addAnnotation
+		  (getCard_LockedTo(),
+		   source,
+		   new String[] {
+			   "documentation", "Party (payee) to which this device is locked to. E.g. a virtual card can be locked to a particular merchant."
+		   });
+		addAnnotation
+		  (getCard_Replaces(),
+		   source,
+		   new String[] {
+			   "documentation", "Reference to a card which this one replaces, e.g. a new card replaces an old damaged/lost/stolen/expired card. Or a virtual card replaces a physical card (at a specific merchant)."
+		   });
+		addAnnotation
+		  (deviceTransactionEClass,
 		   source,
 		   new String[] {
 			   "documentation", "TODO"
@@ -982,12 +1663,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 			   "documentation", "TODO"
 		   });
 		addAnnotation
-		  (getBankerTransaction_Banker(),
-		   source,
-		   new String[] {
-			   "documentation", "TODO"
-		   });
-		addAnnotation
 		  (tokenEClass,
 		   source,
 		   new String[] {
@@ -1001,12 +1676,6 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   });
 		addAnnotation
 		  (tokenTransactionEClass,
-		   source,
-		   new String[] {
-			   "documentation", "TODO"
-		   });
-		addAnnotation
-		  (getTokenTransaction_Token(),
 		   source,
 		   new String[] {
 			   "documentation", "TODO"

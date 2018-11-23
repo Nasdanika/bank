@@ -2,8 +2,6 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -24,10 +22,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getMerchant()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Merchant extends CDOObject {
+public interface Merchant extends Party {
 	/**
 	 * Returns the value of the '<em><b>Points Of Sale</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.bank.PointOfSale}.

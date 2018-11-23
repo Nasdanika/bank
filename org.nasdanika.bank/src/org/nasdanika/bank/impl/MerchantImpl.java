@@ -5,9 +5,6 @@ package org.nasdanika.bank.impl;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.Merchant;
 import org.nasdanika.bank.PointOfSale;
@@ -25,7 +22,7 @@ import org.nasdanika.bank.PointOfSale;
  *
  * @generated
  */
-public class MerchantImpl extends CDOObjectImpl implements Merchant {
+public class MerchantImpl extends PartyImpl implements Merchant {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -43,16 +40,6 @@ public class MerchantImpl extends CDOObjectImpl implements Merchant {
 	@Override
 	protected EClass eStaticClass() {
 		return BankPackage.Literals.MERCHANT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.nasdanika.bank.BankPackage;
+import org.nasdanika.bank.DeviceTransaction;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.bank.DeviceTransaction} object.
@@ -42,32 +43,9 @@ public class DeviceTransactionItemProvider extends TransactionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDevicePropertyDescriptor(object);
 			addPointOfSalePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Device feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDevicePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DeviceTransaction_device_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DeviceTransaction_device_feature", "_UI_DeviceTransaction_type"),
-				 BankPackage.Literals.DEVICE_TRANSACTION__DEVICE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -111,7 +89,10 @@ public class DeviceTransactionItemProvider extends TransactionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_DeviceTransaction_type");
+		String label = ((DeviceTransaction)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DeviceTransaction_type") :
+			getString("_UI_DeviceTransaction_type") + " " + label;
 	}
 
 

@@ -2,8 +2,6 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Token</b></em>'.
@@ -22,10 +20,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.nasdanika.bank.BankPackage#getToken()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Token extends CDOObject {
+public interface Token extends TransactionInitiator {
 	/**
 	 * Returns the value of the '<em><b>Merchant</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -68,6 +68,30 @@ public class BankAdapterFactory extends AdapterFactoryImpl {
 	protected BankSwitch<Adapter> modelSwitch =
 		new BankSwitch<Adapter>() {
 			@Override
+			public Adapter caseParty(Party object) {
+				return createPartyAdapter();
+			}
+			@Override
+			public Adapter caseContactMethod(ContactMethod object) {
+				return createContactMethodAdapter();
+			}
+			@Override
+			public Adapter caseEMail(EMail object) {
+				return createEMailAdapter();
+			}
+			@Override
+			public Adapter casePhone(Phone object) {
+				return createPhoneAdapter();
+			}
+			@Override
+			public Adapter casePostalAddress(PostalAddress object) {
+				return createPostalAddressAdapter();
+			}
+			@Override
+			public Adapter caseWebAddress(WebAddress object) {
+				return createWebAddressAdapter();
+			}
+			@Override
 			public Adapter caseBank(Bank object) {
 				return createBankAdapter();
 			}
@@ -84,8 +108,12 @@ public class BankAdapterFactory extends AdapterFactoryImpl {
 				return createStatementAdapter();
 			}
 			@Override
-			public Adapter caseTransaction(Transaction object) {
+			public <T extends TransactionInitiator> Adapter caseTransaction(Transaction<T> object) {
 				return createTransactionAdapter();
+			}
+			@Override
+			public Adapter caseTransactionInitiator(TransactionInitiator object) {
+				return createTransactionInitiatorAdapter();
 			}
 			@Override
 			public Adapter caseProduct(Product object) {
@@ -160,6 +188,90 @@ public class BankAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.Party <em>Party</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.Party
+	 * @generated
+	 */
+	public Adapter createPartyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.ContactMethod <em>Contact Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.ContactMethod
+	 * @generated
+	 */
+	public Adapter createContactMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.EMail <em>EMail</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.EMail
+	 * @generated
+	 */
+	public Adapter createEMailAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.Phone <em>Phone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.Phone
+	 * @generated
+	 */
+	public Adapter createPhoneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.PostalAddress <em>Postal Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.PostalAddress
+	 * @generated
+	 */
+	public Adapter createPostalAddressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.WebAddress <em>Web Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.WebAddress
+	 * @generated
+	 */
+	public Adapter createWebAddressAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.Bank <em>Bank</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -226,6 +338,20 @@ public class BankAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransactionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.TransactionInitiator <em>Transaction Initiator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.bank.TransactionInitiator
+	 * @generated
+	 */
+	public Adapter createTransactionInitiatorAdapter() {
 		return null;
 	}
 

@@ -2,7 +2,6 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,10 +27,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getBank()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Bank extends CDOObject {
+public interface Bank extends Party {
 
 	/**
 	 * Returns the value of the '<em><b>Merchants</b></em>' containment reference list.
@@ -110,7 +108,7 @@ public interface Bank extends CDOObject {
 
 	/**
 	 * Returns the value of the '<em><b>Transactions</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.bank.Transaction}.
+	 * The list contents are of type {@link org.nasdanika.bank.Transaction}<code>&lt;?&gt;</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -121,5 +119,5 @@ public interface Bank extends CDOObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Transaction> getTransactions();
+	EList<Transaction<?>> getTransactions();
 } // Bank

@@ -7,17 +7,8 @@ import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.nasdanika.bank.BankFactory;
@@ -31,13 +22,7 @@ import org.nasdanika.bank.Merchant;
  * @generated
  */
 public class MerchantItemProvider 
-	extends CDOItemProviderAdapterEx
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends PartyItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -112,7 +97,10 @@ public class MerchantItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Merchant_type");
+		String label = ((Merchant)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Merchant_type") :
+			getString("_UI_Merchant_type") + " " + label;
 	}
 
 
@@ -150,17 +138,6 @@ public class MerchantItemProvider
 			(createChildParameter
 				(BankPackage.Literals.MERCHANT__POINTS_OF_SALE,
 				 BankFactory.eINSTANCE.createPointOfSale()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return bankEditPlugin.INSTANCE;
 	}
 
 }

@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.nasdanika.bank.InternalAccount;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.bank.InternalAccount} object.
@@ -62,7 +63,10 @@ public class InternalAccountItemProvider extends AccountItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_InternalAccount_type");
+		String label = ((InternalAccount)object).getNumber();
+		return label == null || label.length() == 0 ?
+			getString("_UI_InternalAccount_type") :
+			getString("_UI_InternalAccount_type") + " " + label;
 	}
 
 

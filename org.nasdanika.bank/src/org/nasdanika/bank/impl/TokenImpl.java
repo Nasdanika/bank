@@ -3,9 +3,6 @@
 package org.nasdanika.bank.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.Merchant;
 import org.nasdanika.bank.Token;
@@ -23,7 +20,7 @@ import org.nasdanika.bank.Token;
  *
  * @generated
  */
-public class TokenImpl extends CDOObjectImpl implements Token {
+public class TokenImpl extends TransactionInitiatorImpl implements Token {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -41,16 +38,6 @@ public class TokenImpl extends CDOObjectImpl implements Token {
 	@Override
 	protected EClass eStaticClass() {
 		return BankPackage.Literals.TOKEN;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

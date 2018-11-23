@@ -2,8 +2,6 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -12,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * TODO
+ * Device is a generic term for a card and other means to initiate a transaction on an account.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -24,10 +22,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getDevice()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Device extends CDOObject {
+public interface Device extends TransactionInitiator {
 	/**
 	 * Returns the value of the '<em><b>Tokens</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.bank.Token}.

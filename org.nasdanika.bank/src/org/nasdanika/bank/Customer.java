@@ -2,8 +2,6 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -24,10 +22,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getCustomer()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Customer extends CDOObject {
+public interface Customer extends Party {
 	/**
 	 * Returns the value of the '<em><b>Accounts</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.bank.CustomerAccount}.

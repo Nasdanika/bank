@@ -3,6 +3,7 @@
 package org.nasdanika.bank.provider;
 
 
+import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -18,7 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.nasdanika.bank.BankPackage;
+import org.nasdanika.bank.Statement;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.bank.Statement} object.
@@ -57,6 +61,10 @@ public class StatementItemProvider
 
 			addDebitsPropertyDescriptor(object);
 			addCreditsPropertyDescriptor(object);
+			addOpeningBalancePropertyDescriptor(object);
+			addOpeningDatePropertyDescriptor(object);
+			addClosingBalancePropertyDescriptor(object);
+			addClosingDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +114,94 @@ public class StatementItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Opening Balance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOpeningBalancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Statement_openingBalance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Statement_openingBalance_feature", "_UI_Statement_type"),
+				 BankPackage.Literals.STATEMENT__OPENING_BALANCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Opening Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOpeningDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Statement_openingDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Statement_openingDate_feature", "_UI_Statement_type"),
+				 BankPackage.Literals.STATEMENT__OPENING_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Closing Balance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClosingBalancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Statement_closingBalance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Statement_closingBalance_feature", "_UI_Statement_type"),
+				 BankPackage.Literals.STATEMENT__CLOSING_BALANCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Closing Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClosingDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Statement_closingDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Statement_closingDate_feature", "_UI_Statement_type"),
+				 BankPackage.Literals.STATEMENT__CLOSING_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Statement.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124,7 +220,11 @@ public class StatementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Statement_type");
+		BigDecimal labelValue = ((Statement)object).getOpeningBalance();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Statement_type") :
+			getString("_UI_Statement_type") + " " + label;
 	}
 
 
@@ -138,6 +238,15 @@ public class StatementItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Statement.class)) {
+			case BankPackage.STATEMENT__OPENING_BALANCE:
+			case BankPackage.STATEMENT__OPENING_DATE:
+			case BankPackage.STATEMENT__CLOSING_BALANCE:
+			case BankPackage.STATEMENT__CLOSING_DATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

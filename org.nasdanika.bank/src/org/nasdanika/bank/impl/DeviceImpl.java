@@ -5,9 +5,6 @@ package org.nasdanika.bank.impl;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.Device;
 import org.nasdanika.bank.Token;
@@ -25,7 +22,7 @@ import org.nasdanika.bank.Token;
  *
  * @generated
  */
-public class DeviceImpl extends CDOObjectImpl implements Device {
+public class DeviceImpl extends TransactionInitiatorImpl implements Device {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -43,16 +40,6 @@ public class DeviceImpl extends CDOObjectImpl implements Device {
 	@Override
 	protected EClass eStaticClass() {
 		return BankPackage.Literals.DEVICE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

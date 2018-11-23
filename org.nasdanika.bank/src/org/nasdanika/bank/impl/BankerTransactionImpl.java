@@ -12,16 +12,10 @@ import org.nasdanika.bank.BankerTransaction;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Banker Transaction</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link org.nasdanika.bank.impl.BankerTransactionImpl#getBanker <em>Banker</em>}</li>
- * </ul>
  *
  * @generated
  */
-public class BankerTransactionImpl extends TransactionImpl implements BankerTransaction {
+public class BankerTransactionImpl extends TransactionImpl<Banker> implements BankerTransaction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,24 +33,6 @@ public class BankerTransactionImpl extends TransactionImpl implements BankerTran
 	@Override
 	protected EClass eStaticClass() {
 		return BankPackage.Literals.BANKER_TRANSACTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Banker getBanker() {
-		return (Banker)eGet(BankPackage.Literals.BANKER_TRANSACTION__BANKER, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBanker(Banker newBanker) {
-		eSet(BankPackage.Literals.BANKER_TRANSACTION__BANKER, newBanker);
 	}
 
 } //BankerTransactionImpl

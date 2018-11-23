@@ -56,10 +56,13 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case BankPackage.EMAIL: return (EObject)createEMail();
+			case BankPackage.PHONE: return (EObject)createPhone();
+			case BankPackage.POSTAL_ADDRESS: return (EObject)createPostalAddress();
+			case BankPackage.WEB_ADDRESS: return (EObject)createWebAddress();
 			case BankPackage.BANK: return (EObject)createBank();
 			case BankPackage.CUSTOMER: return (EObject)createCustomer();
 			case BankPackage.STATEMENT: return (EObject)createStatement();
-			case BankPackage.TRANSACTION: return (EObject)createTransaction();
 			case BankPackage.PRODUCT: return (EObject)createProduct();
 			case BankPackage.MERCHANT: return (EObject)createMerchant();
 			case BankPackage.POINT_OF_SALE: return (EObject)createPointOfSale();
@@ -76,6 +79,46 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMail createEMail() {
+		EMailImpl eMail = new EMailImpl();
+		return eMail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Phone createPhone() {
+		PhoneImpl phone = new PhoneImpl();
+		return phone;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PostalAddress createPostalAddress() {
+		PostalAddressImpl postalAddress = new PostalAddressImpl();
+		return postalAddress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WebAddress createWebAddress() {
+		WebAddressImpl webAddress = new WebAddressImpl();
+		return webAddress;
 	}
 
 	/**
@@ -106,16 +149,6 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	public Statement createStatement() {
 		StatementImpl statement = new StatementImpl();
 		return statement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Transaction createTransaction() {
-		TransactionImpl transaction = new TransactionImpl();
-		return transaction;
 	}
 
 	/**

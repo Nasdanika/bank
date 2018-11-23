@@ -72,6 +72,98 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.EMail} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EMailItemProvider eMailItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.bank.EMail}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEMailAdapter() {
+		if (eMailItemProvider == null) {
+			eMailItemProvider = new EMailItemProvider(this);
+		}
+
+		return eMailItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.Phone} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PhoneItemProvider phoneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.bank.Phone}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPhoneAdapter() {
+		if (phoneItemProvider == null) {
+			phoneItemProvider = new PhoneItemProvider(this);
+		}
+
+		return phoneItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.PostalAddress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PostalAddressItemProvider postalAddressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.bank.PostalAddress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPostalAddressAdapter() {
+		if (postalAddressItemProvider == null) {
+			postalAddressItemProvider = new PostalAddressItemProvider(this);
+		}
+
+		return postalAddressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.WebAddress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WebAddressItemProvider webAddressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.bank.WebAddress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWebAddressAdapter() {
+		if (webAddressItemProvider == null) {
+			webAddressItemProvider = new WebAddressItemProvider(this);
+		}
+
+		return webAddressItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.Bank} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,29 +230,6 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 		}
 
 		return statementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.Transaction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TransactionItemProvider transactionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.nasdanika.bank.Transaction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTransactionAdapter() {
-		if (transactionItemProvider == null) {
-			transactionItemProvider = new TransactionItemProvider(this);
-		}
-
-		return transactionItemProvider;
 	}
 
 	/**
@@ -561,10 +630,13 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 	 * @generated
 	 */
 	public void dispose() {
+		if (eMailItemProvider != null) eMailItemProvider.dispose();
+		if (phoneItemProvider != null) phoneItemProvider.dispose();
+		if (postalAddressItemProvider != null) postalAddressItemProvider.dispose();
+		if (webAddressItemProvider != null) webAddressItemProvider.dispose();
 		if (bankItemProvider != null) bankItemProvider.dispose();
 		if (customerItemProvider != null) customerItemProvider.dispose();
 		if (statementItemProvider != null) statementItemProvider.dispose();
-		if (transactionItemProvider != null) transactionItemProvider.dispose();
 		if (productItemProvider != null) productItemProvider.dispose();
 		if (merchantItemProvider != null) merchantItemProvider.dispose();
 		if (pointOfSaleItemProvider != null) pointOfSaleItemProvider.dispose();

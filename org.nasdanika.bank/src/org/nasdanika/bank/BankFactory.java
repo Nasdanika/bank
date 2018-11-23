@@ -22,6 +22,42 @@ public interface BankFactory extends EFactory {
 	BankFactory eINSTANCE = org.nasdanika.bank.impl.BankFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>EMail</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EMail</em>'.
+	 * @generated
+	 */
+	EMail createEMail();
+
+	/**
+	 * Returns a new object of class '<em>Phone</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Phone</em>'.
+	 * @generated
+	 */
+	Phone createPhone();
+
+	/**
+	 * Returns a new object of class '<em>Postal Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Postal Address</em>'.
+	 * @generated
+	 */
+	PostalAddress createPostalAddress();
+
+	/**
+	 * Returns a new object of class '<em>Web Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Web Address</em>'.
+	 * @generated
+	 */
+	WebAddress createWebAddress();
+
+	/**
 	 * Returns a new object of class '<em>Bank</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,15 +83,6 @@ public interface BankFactory extends EFactory {
 	 * @generated
 	 */
 	Statement createStatement();
-
-	/**
-	 * Returns a new object of class '<em>Transaction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transaction</em>'.
-	 * @generated
-	 */
-	Transaction createTransaction();
 
 	/**
 	 * Returns a new object of class '<em>Product</em>'.

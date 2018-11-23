@@ -146,7 +146,10 @@ public class CustomerAccountItemProvider extends AccountItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CustomerAccount_type");
+		String label = ((CustomerAccount)object).getNumber();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CustomerAccount_type") :
+			getString("_UI_CustomerAccount_type") + " " + label;
 	}
 
 

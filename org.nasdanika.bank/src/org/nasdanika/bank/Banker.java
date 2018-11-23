@@ -2,8 +2,6 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Banker</b></em>'.
@@ -16,8 +14,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.nasdanika.bank.BankPackage#getBanker()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Banker extends CDOObject {
+public interface Banker extends TransactionInitiator {
 } // Banker
