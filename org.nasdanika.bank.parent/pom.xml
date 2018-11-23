@@ -20,12 +20,6 @@
 	<repositories>
 		
 			<repository>
-				<id>nasdanika-server</id>
-				<url>https://www.nasdanika.org/products/server/org.nasdanika.repository/repository</url>
-				<layout>p2</layout>
-			</repository>		
-		
-			<repository>
 				<id>eclipse</id>
 				<url>http://download.eclipse.org/releases/photon</url>
 				<layout>p2</layout>
