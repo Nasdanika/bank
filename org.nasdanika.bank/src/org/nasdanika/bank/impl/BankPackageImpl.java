@@ -1330,7 +1330,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		  (getParty_ContactMethods(),
 		   source,
 		   new String[] {
-			   "documentation", "Party can have zero or more contact methods, these methods can be leveraged by Citi personel."
+			   "documentation", "Party can have zero or more contact methods."
 		   });
 		addAnnotation
 		  (contactMethodEClass,

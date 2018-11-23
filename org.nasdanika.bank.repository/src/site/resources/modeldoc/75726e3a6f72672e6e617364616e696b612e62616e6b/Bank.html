@@ -2,40 +2,125 @@
 <script>document.title="EClass Bank";</script>
 <h2>
 <img src="resources/images/EClass.gif" style="margin-right:5px"/>Bank</h2>
-<div style="margin-bottom:5px;font-family:monospace"><a href="https://www.nasdanika.org/products/bank/apidocs/model/index.html?org/nasdanika/bank/Bank.html">org.nasdanika.bank.Bank</a></div>
+<div style="margin-bottom:5px;font-family:monospace">org.nasdanika.bank.Bank</div>
 <div>
   <ul class="nav nav-tabs">
     <li class="active">
-      <a href="#nsd_2q_tab_0" data-toggle="tab">Documentation</a>
+      <a href="#nsd_4s_tab_0" data-toggle="tab">Documentation</a>
     </li>
     <li>
-      <a href="#nsd_2q_tab_1" data-toggle="tab">
+      <a href="#nsd_4s_tab_1" data-toggle="tab">
+<img src="resources/images/EAttribute.gif" style="margin-right:5px"/> Attributes</a>
+    </li>
+    <li>
+      <a href="#nsd_4s_tab_2" data-toggle="tab">
 <img src="resources/images/EReference.gif" style="margin-right:5px"/> References</a>
+    </li>
+    <li>
+      <a href="#nsd_4s_tab_3" data-toggle="tab">Supertypes</a>
     </li>
   </ul>
   <div class="tab-content">
-    <div id="nsd_2q_tab_0" class="tab-pane active">
+    <div id="nsd_4s_tab_0" class="tab-pane active">
       <div style="margin-top:10px;margin-bottom:10px" class="markdown-body"><p>Bank is the root of the domain model. Bank has customers and bankers - employees performing banking operations. Bank tracks merchants its customers interact with in order to provide customers information about their spending habits.</p></div>
       <img src="75726e3a6f72672e6e617364616e696b612e62616e6b/Bank.png" usemap="#plantuml_map"/><map id="plantuml_map" name="plantuml_map">
-<area shape="rect" id="id1" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Bank.html" title="Bank is the root of the domain model. " alt="" coords="336,60,396,108"/>
-<area shape="rect" id="id2" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Banker.html" title="TODO" alt="" coords="155,186,226,234"/>
-<area shape="rect" id="id3" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Product.html" title="TODO" alt="" coords="384,186,458,234"/>
-<area shape="rect" id="id4" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Account.html" title="TODO" alt="" coords="534,295,610,343"/>
-<area shape="rect" id="id5" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Merchant.html" title="TODO" alt="" coords="38,186,120,234"/>
-<area shape="rect" id="id6" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Customer.html" title="TODO" alt="" coords="261,186,348,234"/>
-<area shape="rect" id="id7" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html" title="TODO" alt="" coords="493,186,590,234"/>
+<area shape="rect" id="id1" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Bank.html" title="Bank is the root of the domain model. " alt="" coords="334,183,394,231"/>
+<area shape="rect" id="id2" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Banker.html" title="TODO" alt="" coords="542,336,613,384"/>
+<area shape="rect" id="id3" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Product.html" title="TODO" alt="" coords="155,336,229,384"/>
+<area shape="rect" id="id4" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Merchant.html" title="TODO" alt="" coords="38,336,120,384"/>
+<area shape="rect" id="id5" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Customer.html" title="TODO" alt="" coords="648,336,735,384"/>
+<area shape="rect" id="id6" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Party.html" title="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Party.html" alt="" coords="329,60,398,121"/>
+<area shape="rect" id="id7" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html" title="TODO" alt="" coords="405,309,507,412"/>
+<area shape="rect" id="id8" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Account.html" title="TODO" alt="" coords="264,309,369,412"/>
 </map>
 </div>
-    <div id="nsd_2q_tab_1" class="tab-pane">
-      <div id="nsd_2r_accordion" role="tablist" class="panel-group">
+    <div id="nsd_4s_tab_1" class="tab-pane">
+      <div id="nsd_4t_accordion" role="tablist" class="panel-group">
         <div class="panel panel-default">
-          <div role="tab" id="nsd_2s_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_4u_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_2r_accordion" href="#nsd_2s_collapse_collapse" aria-expanded="false" aria-controls="nsd_2s_collapse_collapse"><b>accounts</b> : Account - <I>The bank holds customer and own (internal) accounts.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_4t_accordion" href="#nsd_4u_collapse_collapse" aria-expanded="false" aria-controls="nsd_4u_collapse_collapse"><b>name</b> : EString (Party) </a>
             </h4>
           </div>
-          <div id="nsd_2s_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_2s_collapse_panel_body" class="panel-body"><p>The bank holds customer and own (internal) accounts.</p>
+          <div id="nsd_4u_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_4u_collapse_panel_body" class="panel-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Party.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Party</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="nsd_4s_tab_2" class="tab-pane">
+      <div id="nsd_4v_accordion" role="tablist" class="panel-group">
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_4w_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_4w_collapse_collapse" aria-expanded="false" aria-controls="nsd_4w_collapse_collapse"><b>accounts</b> : Account - <I>The bank holds customer and own (internal) accounts.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_4w_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_4w_collapse_panel_body" class="panel-body"><p>The bank holds customer and own (internal) accounts.</p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
@@ -117,13 +202,13 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_2t_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_4x_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_2r_accordion" href="#nsd_2t_collapse_collapse" aria-expanded="false" aria-controls="nsd_2t_collapse_collapse"><b>bankers</b> : Banker - <I>Bank employees.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_4x_collapse_collapse" aria-expanded="false" aria-controls="nsd_4x_collapse_collapse"><b>bankers</b> : Banker - <I>Bank employees.</I></a>
             </h4>
           </div>
-          <div id="nsd_2t_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_2t_collapse_panel_body" class="panel-body"><p>Bank employees.</p>
+          <div id="nsd_4x_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_4x_collapse_panel_body" class="panel-body"><p>Bank employees.</p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
@@ -205,13 +290,107 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_2u_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_4y_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_2r_accordion" href="#nsd_2u_collapse_collapse" aria-expanded="false" aria-controls="nsd_2u_collapse_collapse"><b>customers</b> : Customer - <I>Bank customers.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_4y_collapse_collapse" aria-expanded="false" aria-controls="nsd_4y_collapse_collapse"><b>contactMethods</b> : ContactMethod (Party)  - <I>Party can have zero or more contact methods.</I></a>
             </h4>
           </div>
-          <div id="nsd_2u_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_2u_collapse_panel_body" class="panel-body"><p>Bank customers.</p>
+          <div id="nsd_4y_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_4y_collapse_panel_body" class="panel-body"><p>Party can have zero or more contact methods.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Party.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Party</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/ContactMethod.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>ContactMethod</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>*</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Container</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Containment</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">EKeys</th>
+                  <td>
+                    <ol></ol>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Opposite</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Resolve proxies</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_4z_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_4z_collapse_collapse" aria-expanded="false" aria-controls="nsd_4z_collapse_collapse"><b>customers</b> : Customer - <I>Bank customers.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_4z_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_4z_collapse_panel_body" class="panel-body"><p>Bank customers.</p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
@@ -293,13 +472,13 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_2v_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_50_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_2r_accordion" href="#nsd_2v_collapse_collapse" aria-expanded="false" aria-controls="nsd_2v_collapse_collapse"><b>merchants</b> : Merchant - <I>Bank tracks merchants and points of sale used by customers. </I></a>
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_50_collapse_collapse" aria-expanded="false" aria-controls="nsd_50_collapse_collapse"><b>merchants</b> : Merchant - <I>Bank tracks merchants and points of sale used by customers. </I></a>
             </h4>
           </div>
-          <div id="nsd_2v_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_2v_collapse_panel_body" class="panel-body"><p>Bank tracks merchants and points of sale used by customers. It also tracks token transactions. </p>
+          <div id="nsd_50_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_50_collapse_panel_body" class="panel-body"><p>Bank tracks merchants and points of sale used by customers. It also tracks token transactions. </p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
@@ -381,13 +560,13 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_2w_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_51_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_2r_accordion" href="#nsd_2w_collapse_collapse" aria-expanded="false" aria-controls="nsd_2w_collapse_collapse"><b>products</b> : Product - <I>Customer accounts belong to banking products which define their configuration such as fees and rates.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_51_collapse_collapse" aria-expanded="false" aria-controls="nsd_51_collapse_collapse"><b>products</b> : Product - <I>Customer accounts belong to banking products which define their configuration such as fees and rates.</I></a>
             </h4>
           </div>
-          <div id="nsd_2w_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_2w_collapse_panel_body" class="panel-body"><p>Customer accounts belong to banking products which define their configuration such as fees and rates.</p>
+          <div id="nsd_51_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_51_collapse_panel_body" class="panel-body"><p>Customer accounts belong to banking products which define their configuration such as fees and rates.</p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
@@ -469,13 +648,13 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_2x_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_52_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_2r_accordion" href="#nsd_2x_collapse_collapse" aria-expanded="false" aria-controls="nsd_2x_collapse_collapse"><b>transactions</b> : Transaction - <I>TODO</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_4v_accordion" href="#nsd_52_collapse_collapse" aria-expanded="false" aria-controls="nsd_52_collapse_collapse"><b>transactions</b> : Transaction - <I>Bank transactions</I></a>
             </h4>
           </div>
-          <div id="nsd_2x_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_2x_collapse_panel_body" class="panel-body"><p>TODO</p>
+          <div id="nsd_52_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_52_collapse_panel_body" class="panel-body"><p>Bank transactions</p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
@@ -557,5 +736,18 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="nsd_4s_tab_3" class="tab-pane">
+      <table class="table table-bordered">
+        <tr class="info">
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Party.html">Party</a></td>
+          <td></td>
+        </tr>
+      </table>
     </div></div>
 </div>

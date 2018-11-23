@@ -57,7 +57,7 @@ public interface Party extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Party can have zero or more contact methods, these methods can be leveraged by Citi personel.
+	 * Party can have zero or more contact methods.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Methods</em>' containment reference list.
 	 * @see org.nasdanika.bank.BankPackage#getParty_ContactMethods()
