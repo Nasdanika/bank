@@ -156,7 +156,8 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import org.nasdanika.bank.provider.BankItemProviderAdapterFactory;
-
+import org.nasdanika.presentation.MasterDetailForm;
+import org.nasdanika.presentation.MasterDetailViewer;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -1006,7 +1007,7 @@ public class BankEditor
 	 * This is the method used by the framework to install your own controls.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void createPages() {
@@ -1024,9 +1025,8 @@ public class BankEditor
 					new ViewerPane(getSite().getPage(), BankEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
-							Tree tree = new Tree(composite, SWT.MULTI);
-							TreeViewer newTreeViewer = new TreeViewer(tree);
-							return newTreeViewer;
+							MasterDetailForm masterDetailForm = new MasterDetailForm(composite, SWT.NONE, editingDomain);
+							return new MasterDetailViewer(masterDetailForm);
 						}
 						@Override
 						public void requestActivation() {
@@ -1036,7 +1036,7 @@ public class BankEditor
 					};
 				viewerPane.createControl(getContainer());
 
-				selectionViewer = (TreeViewer)viewerPane.getViewer();
+				selectionViewer = ((MasterDetailViewer) viewerPane.getViewer()).getTreeViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 				selectionViewer.setUseHashlookup(true);
 
