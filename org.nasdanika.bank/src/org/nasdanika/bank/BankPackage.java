@@ -971,13 +971,31 @@ public interface BankPackage extends EPackage {
 	int POINT_OF_SALE = 14;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_OF_SALE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_OF_SALE__LOCATION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Point Of Sale</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_OF_SALE_FEATURE_COUNT = 0;
+	int POINT_OF_SALE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Point Of Sale</em>' class.
@@ -1583,13 +1601,22 @@ public interface BankPackage extends EPackage {
 	int TOKEN__MERCHANT = TRANSACTION_INITIATOR_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN__VALUE = TRANSACTION_INITIATOR_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Token</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOKEN_FEATURE_COUNT = TRANSACTION_INITIATOR_FEATURE_COUNT + 1;
+	int TOKEN_FEATURE_COUNT = TRANSACTION_INITIATOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Token</em>' class.
@@ -2305,6 +2332,28 @@ public interface BankPackage extends EPackage {
 	EClass getPointOfSale();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.PointOfSale#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.nasdanika.bank.PointOfSale#getId()
+	 * @see #getPointOfSale()
+	 * @generated
+	 */
+	EAttribute getPointOfSale_Id();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.bank.PointOfSale#getLocation <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Location</em>'.
+	 * @see org.nasdanika.bank.PointOfSale#getLocation()
+	 * @see #getPointOfSale()
+	 * @generated
+	 */
+	EReference getPointOfSale_Location();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.Device <em>Device</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2547,6 +2596,17 @@ public interface BankPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getToken_Merchant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.Token#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.nasdanika.bank.Token#getValue()
+	 * @see #getToken()
+	 * @generated
+	 */
+	EAttribute getToken_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.TokenTransaction <em>Token Transaction</em>}'.
@@ -3011,6 +3071,20 @@ public interface BankPackage extends EPackage {
 		 */
 		EClass POINT_OF_SALE = eINSTANCE.getPointOfSale();
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POINT_OF_SALE__ID = eINSTANCE.getPointOfSale_Id();
+		/**
+		 * The meta object literal for the '<em><b>Location</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POINT_OF_SALE__LOCATION = eINSTANCE.getPointOfSale_Location();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.DeviceImpl <em>Device</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3189,6 +3263,13 @@ public interface BankPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TOKEN__MERCHANT = eINSTANCE.getToken_Merchant();
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOKEN__VALUE = eINSTANCE.getToken_Value();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.TokenTransactionImpl <em>Token Transaction</em>}' class.
 		 * <!-- begin-user-doc -->

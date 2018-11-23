@@ -9,7 +9,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.nasdanika.bank.BankPackage;
+import org.nasdanika.bank.Token;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.bank.Token} object.
@@ -41,6 +44,7 @@ public class TokenItemProvider
 			super.getPropertyDescriptors(object);
 
 			addMerchantPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +72,28 @@ public class TokenItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Token_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Token_value_feature", "_UI_Token_type"),
+				 BankPackage.Literals.TOKEN__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Token.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,7 +112,10 @@ public class TokenItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Token_type");
+		String label = ((Token)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Token_type") :
+			getString("_UI_Token_type") + " " + label;
 	}
 
 
@@ -100,6 +129,12 @@ public class TokenItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Token.class)) {
+			case BankPackage.TOKEN__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

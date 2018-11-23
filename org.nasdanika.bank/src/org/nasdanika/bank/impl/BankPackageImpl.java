@@ -784,6 +784,24 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPointOfSale_Id() {
+		return (EAttribute)pointOfSaleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPointOfSale_Location() {
+		return (EReference)pointOfSaleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDevice() {
 		return deviceEClass;
 	}
@@ -991,6 +1009,15 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getToken_Value() {
+		return (EAttribute)tokenEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTokenTransaction() {
 		return tokenTransactionEClass;
 	}
@@ -1094,6 +1121,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		createEReference(merchantEClass, MERCHANT__POINTS_OF_SALE);
 
 		pointOfSaleEClass = createEClass(POINT_OF_SALE);
+		createEAttribute(pointOfSaleEClass, POINT_OF_SALE__ID);
+		createEReference(pointOfSaleEClass, POINT_OF_SALE__LOCATION);
 
 		deviceEClass = createEClass(DEVICE);
 		createEReference(deviceEClass, DEVICE__TOKENS);
@@ -1126,6 +1155,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		tokenEClass = createEClass(TOKEN);
 		createEReference(tokenEClass, TOKEN__MERCHANT);
+		createEAttribute(tokenEClass, TOKEN__VALUE);
 
 		tokenTransactionEClass = createEClass(TOKEN_TRANSACTION);
 	}
@@ -1269,6 +1299,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEReference(getMerchant_PointsOfSale(), this.getPointOfSale(), null, "pointsOfSale", null, 0, -1, Merchant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointOfSaleEClass, PointOfSale.class, "PointOfSale", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPointOfSale_Id(), ecorePackage.getEString(), "id", null, 0, 1, PointOfSale.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointOfSale_Location(), this.getPostalAddress(), null, "location", null, 0, 1, PointOfSale.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deviceEClass, Device.class, "Device", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDevice_Tokens(), this.getToken(), null, "tokens", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1301,6 +1333,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getToken_Merchant(), this.getMerchant(), null, "merchant", null, 1, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToken_Value(), ecorePackage.getEString(), "value", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tokenTransactionEClass, TokenTransaction.class, "TokenTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

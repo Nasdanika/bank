@@ -29,8 +29,8 @@ The above steps are covered in detail in the [developer guide](guides/developer/
 
 ## P2 Repository
 
-* ``https://www.nasdanika.org/products/bank/repository``
-* [Archived](https://www.nasdanika.org/products/bank/org.nasdanika.bank.repository-1.0.0-SNAPSHOT.zip)
+* ``https://www.nasdanika.org/products/bank/1.0.0-SNAPSHOT/repository``
+* [Archived](org.nasdanika.bank.repository-1.0.0-SNAPSHOT.zip)
 
 ## How to contribute
 

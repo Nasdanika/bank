@@ -16,6 +16,7 @@ package org.nasdanika.bank;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.bank.Token#getMerchant <em>Merchant</em>}</li>
+ *   <li>{@link org.nasdanika.bank.Token#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.bank.BankPackage#getToken()
@@ -47,5 +48,31 @@ public interface Token extends TransactionInitiator {
 	 * @generated
 	 */
 	void setMerchant(Merchant value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(String)
+	 * @see org.nasdanika.bank.BankPackage#getToken_Value()
+	 * @model
+	 * @generated
+	 */
+	String getValue();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.bank.Token#getValue <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see #getValue()
+	 * @generated
+	 */
+	void setValue(String value);
 
 } // Token

@@ -16,6 +16,7 @@ import org.nasdanika.bank.Token;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.bank.impl.TokenImpl#getMerchant <em>Merchant</em>}</li>
+ *   <li>{@link org.nasdanika.bank.impl.TokenImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +57,24 @@ public class TokenImpl extends TransactionInitiatorImpl implements Token {
 	 */
 	public void setMerchant(Merchant newMerchant) {
 		eSet(BankPackage.Literals.TOKEN__MERCHANT, newMerchant);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getValue() {
+		return (String)eGet(BankPackage.Literals.TOKEN__VALUE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(String newValue) {
+		eSet(BankPackage.Literals.TOKEN__VALUE, newValue);
 	}
 
 } //TokenImpl
