@@ -13,6 +13,13 @@ import org.nasdanika.bank.Product;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Product</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.nasdanika.bank.impl.ProductImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.nasdanika.bank.impl.ProductImpl#getDescription <em>Description</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -44,6 +51,42 @@ public class ProductImpl extends CDOObjectImpl implements Product {
 	@Override
 	protected int eStaticFeatureCount() {
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return (String)eGet(BankPackage.Literals.PRODUCT__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(BankPackage.Literals.PRODUCT__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return (String)eGet(BankPackage.Literals.PRODUCT__DESCRIPTION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		eSet(BankPackage.Literals.PRODUCT__DESCRIPTION, newDescription);
 	}
 
 } //ProductImpl

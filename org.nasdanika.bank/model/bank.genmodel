@@ -75,7 +75,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Transaction/id"/>
     </genClasses>
     <genClasses image="false" ecoreClass="bank.ecore#//TransactionInitiator"/>
-    <genClasses ecoreClass="bank.ecore#//Product"/>
+    <genClasses ecoreClass="bank.ecore#//Product">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Product/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Product/description"/>
+    </genClasses>
     <genClasses ecoreClass="bank.ecore#//Merchant">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Merchant/pointsOfSale"/>
     </genClasses>

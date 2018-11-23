@@ -757,6 +757,24 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProduct_Name() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProduct_Description() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMerchant() {
 		return merchantEClass;
 	}
@@ -1116,6 +1134,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		transactionInitiatorEClass = createEClass(TRANSACTION_INITIATOR);
 
 		productEClass = createEClass(PRODUCT);
+		createEAttribute(productEClass, PRODUCT__NAME);
+		createEAttribute(productEClass, PRODUCT__DESCRIPTION);
 
 		merchantEClass = createEClass(MERCHANT);
 		createEReference(merchantEClass, MERCHANT__POINTS_OF_SALE);
@@ -1294,6 +1314,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEClass(transactionInitiatorEClass, TransactionInitiator.class, "TransactionInitiator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProduct_Name(), ecorePackage.getEString(), "name", null, 1, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_Description(), ecorePackage.getEString(), "description", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(merchantEClass, Merchant.class, "Merchant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMerchant_PointsOfSale(), this.getPointOfSale(), null, "pointsOfSale", null, 0, -1, Merchant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

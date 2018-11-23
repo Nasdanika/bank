@@ -888,13 +888,31 @@ public interface BankPackage extends EPackage {
 	int PRODUCT = 12;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__DESCRIPTION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Product</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_FEATURE_COUNT = 0;
+	int PRODUCT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Product</em>' class.
@@ -2301,6 +2319,28 @@ public interface BankPackage extends EPackage {
 	EClass getProduct();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.Product#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.nasdanika.bank.Product#getName()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.Product#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.nasdanika.bank.Product#getDescription()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_Description();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.Merchant <em>Merchant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3045,6 +3085,20 @@ public interface BankPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRODUCT = eINSTANCE.getProduct();
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__NAME = eINSTANCE.getProduct_Name();
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__DESCRIPTION = eINSTANCE.getProduct_Description();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.MerchantImpl <em>Merchant</em>}' class.
 		 * <!-- begin-user-doc -->
