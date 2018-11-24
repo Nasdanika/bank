@@ -25,8 +25,10 @@ import org.nasdanika.bank.Device;
 import org.nasdanika.bank.DeviceTransaction;
 import org.nasdanika.bank.EMail;
 import org.nasdanika.bank.InternalAccount;
+import org.nasdanika.bank.InternetAddress;
 import org.nasdanika.bank.Merchant;
 import org.nasdanika.bank.MobilePhone;
+import org.nasdanika.bank.OnlineTransaction;
 import org.nasdanika.bank.Party;
 import org.nasdanika.bank.Phone;
 import org.nasdanika.bank.PointOfSale;
@@ -204,6 +206,20 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * @generated
 	 */
 	private EClass tokenTransactionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass internetAddressEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass onlineTransactionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1063,6 +1079,33 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getInternetAddress() {
+		return internetAddressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInternetAddress_Address() {
+		return (EAttribute)internetAddressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOnlineTransaction() {
+		return onlineTransactionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BankFactory getBankFactory() {
 		return (BankFactory)getEFactoryInstance();
 	}
@@ -1198,6 +1241,11 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		createEAttribute(tokenEClass, TOKEN__VALUE);
 
 		tokenTransactionEClass = createEClass(TOKEN_TRANSACTION);
+
+		internetAddressEClass = createEClass(INTERNET_ADDRESS);
+		createEAttribute(internetAddressEClass, INTERNET_ADDRESS__ADDRESS);
+
+		onlineTransactionEClass = createEClass(ONLINE_TRANSACTION);
 	}
 
 	/**
@@ -1258,6 +1306,11 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		g2 = createEGenericType(this.getToken());
 		g1.getETypeArguments().add(g2);
 		tokenTransactionEClass.getEGenericSuperTypes().add(g1);
+		internetAddressEClass.getESuperTypes().add(this.getTransactionInitiator());
+		g1 = createEGenericType(this.getTransaction());
+		g2 = createEGenericType(this.getInternetAddress());
+		g1.getETypeArguments().add(g2);
+		onlineTransactionEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(partyEClass, Party.class, "Party", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1381,6 +1434,11 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		initEAttribute(getToken_Value(), ecorePackage.getEString(), "value", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tokenTransactionEClass, TokenTransaction.class, "TokenTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(internetAddressEClass, InternetAddress.class, "InternetAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInternetAddress_Address(), ecorePackage.getEString(), "address", null, 1, 1, InternetAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(onlineTransactionEClass, OnlineTransaction.class, "OnlineTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

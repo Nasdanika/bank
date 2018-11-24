@@ -509,6 +509,52 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.InternetAddress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InternetAddressItemProvider internetAddressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.bank.InternetAddress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInternetAddressAdapter() {
+		if (internetAddressItemProvider == null) {
+			internetAddressItemProvider = new InternetAddressItemProvider(this);
+		}
+
+		return internetAddressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.OnlineTransaction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OnlineTransactionItemProvider onlineTransactionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.bank.OnlineTransaction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOnlineTransactionAdapter() {
+		if (onlineTransactionItemProvider == null) {
+			onlineTransactionItemProvider = new OnlineTransactionItemProvider(this);
+		}
+
+		return onlineTransactionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -626,6 +672,8 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 		if (bankerTransactionItemProvider != null) bankerTransactionItemProvider.dispose();
 		if (tokenItemProvider != null) tokenItemProvider.dispose();
 		if (tokenTransactionItemProvider != null) tokenTransactionItemProvider.dispose();
+		if (internetAddressItemProvider != null) internetAddressItemProvider.dispose();
+		if (onlineTransactionItemProvider != null) onlineTransactionItemProvider.dispose();
 	}
 
 }

@@ -188,6 +188,11 @@ public class BankItemProvider
 			(createChildParameter
 				(BankPackage.Literals.BANK__TRANSACTIONS,
 				 BankFactory.eINSTANCE.createTokenTransaction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BankPackage.Literals.BANK__TRANSACTIONS,
+				 BankFactory.eINSTANCE.createOnlineTransaction()));
 	}
 
 }

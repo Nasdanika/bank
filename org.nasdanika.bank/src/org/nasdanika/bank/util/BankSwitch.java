@@ -236,6 +236,20 @@ public class BankSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BankPackage.INTERNET_ADDRESS: {
+				InternetAddress internetAddress = (InternetAddress)theEObject;
+				T1 result = caseInternetAddress(internetAddress);
+				if (result == null) result = caseTransactionInitiator(internetAddress);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BankPackage.ONLINE_TRANSACTION: {
+				OnlineTransaction onlineTransaction = (OnlineTransaction)theEObject;
+				T1 result = caseOnlineTransaction(onlineTransaction);
+				if (result == null) result = caseTransaction(onlineTransaction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -612,6 +626,36 @@ public class BankSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseTokenTransaction(TokenTransaction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Internet Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Internet Address</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseInternetAddress(InternetAddress object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Online Transaction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Online Transaction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseOnlineTransaction(OnlineTransaction object) {
 		return null;
 	}
 

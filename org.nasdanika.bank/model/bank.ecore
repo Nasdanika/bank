@@ -376,4 +376,13 @@
       <eTypeArguments eClassifier="#//Token"/>
     </eGenericSuperTypes>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternetAddress" eSuperTypes="#//TransactionInitiator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OnlineTransaction">
+    <eGenericSuperTypes eClassifier="#//Transaction">
+      <eTypeArguments eClassifier="#//InternetAddress"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
 </ecore:EPackage>

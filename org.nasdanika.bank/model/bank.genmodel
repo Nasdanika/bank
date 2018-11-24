@@ -119,5 +119,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Token/value"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//TokenTransaction"/>
+    <genClasses ecoreClass="bank.ecore#//InternetAddress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//InternetAddress/address"/>
+    </genClasses>
+    <genClasses ecoreClass="bank.ecore#//OnlineTransaction"/>
   </genPackages>
 </genmodel:GenModel>

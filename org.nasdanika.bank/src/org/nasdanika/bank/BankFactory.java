@@ -193,6 +193,24 @@ public interface BankFactory extends EFactory {
 	TokenTransaction createTokenTransaction();
 
 	/**
+	 * Returns a new object of class '<em>Internet Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Internet Address</em>'.
+	 * @generated
+	 */
+	InternetAddress createInternetAddress();
+
+	/**
+	 * Returns a new object of class '<em>Online Transaction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Online Transaction</em>'.
+	 * @generated
+	 */
+	OnlineTransaction createOnlineTransaction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1774,6 +1774,135 @@ public interface BankPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.bank.impl.InternetAddressImpl <em>Internet Address</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.bank.impl.InternetAddressImpl
+	 * @see org.nasdanika.bank.impl.BankPackageImpl#getInternetAddress()
+	 * @generated
+	 */
+	int INTERNET_ADDRESS = 25;
+
+	/**
+	 * The feature id for the '<em><b>Address</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNET_ADDRESS__ADDRESS = TRANSACTION_INITIATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Internet Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNET_ADDRESS_FEATURE_COUNT = TRANSACTION_INITIATOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Internet Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNET_ADDRESS_OPERATION_COUNT = TRANSACTION_INITIATOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.bank.impl.OnlineTransactionImpl <em>Online Transaction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.bank.impl.OnlineTransactionImpl
+	 * @see org.nasdanika.bank.impl.BankPackageImpl#getOnlineTransaction()
+	 * @generated
+	 */
+	int ONLINE_TRANSACTION = 26;
+
+	/**
+	 * The feature id for the '<em><b>Debit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__DEBIT = TRANSACTION__DEBIT;
+
+	/**
+	 * The feature id for the '<em><b>Credit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__CREDIT = TRANSACTION__CREDIT;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__INITIATOR = TRANSACTION__INITIATOR;
+
+	/**
+	 * The feature id for the '<em><b>Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__AMOUNT = TRANSACTION__AMOUNT;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__DATE = TRANSACTION__DATE;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__COMMENT = TRANSACTION__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION__ID = TRANSACTION__ID;
+
+	/**
+	 * The number of structural features of the '<em>Online Transaction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION_FEATURE_COUNT = TRANSACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Online Transaction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_TRANSACTION_OPERATION_COUNT = TRANSACTION_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.Party <em>Party</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2717,6 +2846,37 @@ public interface BankPackage extends EPackage {
 	EClass getTokenTransaction();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.bank.InternetAddress <em>Internet Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Internet Address</em>'.
+	 * @see org.nasdanika.bank.InternetAddress
+	 * @generated
+	 */
+	EClass getInternetAddress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.InternetAddress#getAddress <em>Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Address</em>'.
+	 * @see org.nasdanika.bank.InternetAddress#getAddress()
+	 * @see #getInternetAddress()
+	 * @generated
+	 */
+	EAttribute getInternetAddress_Address();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.bank.OnlineTransaction <em>Online Transaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Online Transaction</em>'.
+	 * @see org.nasdanika.bank.OnlineTransaction
+	 * @generated
+	 */
+	EClass getOnlineTransaction();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3405,6 +3565,31 @@ public interface BankPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOKEN_TRANSACTION = eINSTANCE.getTokenTransaction();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.bank.impl.InternetAddressImpl <em>Internet Address</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.bank.impl.InternetAddressImpl
+		 * @see org.nasdanika.bank.impl.BankPackageImpl#getInternetAddress()
+		 * @generated
+		 */
+		EClass INTERNET_ADDRESS = eINSTANCE.getInternetAddress();
+		/**
+		 * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNET_ADDRESS__ADDRESS = eINSTANCE.getInternetAddress_Address();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.bank.impl.OnlineTransactionImpl <em>Online Transaction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.bank.impl.OnlineTransactionImpl
+		 * @see org.nasdanika.bank.impl.BankPackageImpl#getOnlineTransaction()
+		 * @generated
+		 */
+		EClass ONLINE_TRANSACTION = eINSTANCE.getOnlineTransaction();
 
 	}
 

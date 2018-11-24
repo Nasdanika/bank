@@ -1,50 +1,54 @@
 
-<script>document.title="EClass Card";</script>
+<script>document.title="EClass OnlineTransaction";</script>
 <h2>
-<img src="resources/images/EClass.gif" style="margin-right:5px"/>Card</h2>
-<div style="margin-bottom:5px;font-family:monospace">org.nasdanika.bank.Card</div>
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>OnlineTransaction</h2>
+<div style="margin-bottom:5px;font-family:monospace">org.nasdanika.bank.OnlineTransaction</div>
 <div>
   <ul class="nav nav-tabs">
     <li class="active">
-      <a href="#nsd_p7_tab_0" data-toggle="tab">Documentation</a>
+      <a href="#nsd_ra_tab_0" data-toggle="tab">Diagram</a>
     </li>
     <li>
-      <a href="#nsd_p7_tab_1" data-toggle="tab">
+      <a href="#nsd_ra_tab_1" data-toggle="tab">
 <img src="resources/images/EAttribute.gif" style="margin-right:5px"/> Attributes</a>
     </li>
     <li>
-      <a href="#nsd_p7_tab_2" data-toggle="tab">
+      <a href="#nsd_ra_tab_2" data-toggle="tab">
 <img src="resources/images/EReference.gif" style="margin-right:5px"/> References</a>
     </li>
     <li>
-      <a href="#nsd_p7_tab_3" data-toggle="tab">Supertypes</a>
+      <a href="#nsd_ra_tab_3" data-toggle="tab">Supertypes</a>
     </li>
   </ul>
   <div class="tab-content">
-    <div id="nsd_p7_tab_0" class="tab-pane active">
-      <div style="margin-top:10px;margin-bottom:10px" class="markdown-body"><p>TODO</p></div>
-      <img src="75726e3a6f72672e6e617364616e696b612e62616e6b/Card.png" usemap="#plantuml_map"/><map id="plantuml_map" name="plantuml_map">
-<area shape="rect" id="id1" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Device.html" title="Device is a generic term for a card and other means to initiate a transaction on an account." alt="" coords="62,60,132,108"/>
-<area shape="rect" id="id2" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Merchant.html" title="TODO" alt="" coords="56,378,138,426"/>
-<area shape="rect" id="id3" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Card.html" title="TODO" alt="" coords="50,169,143,300"/>
+    <div id="nsd_ra_tab_0" class="tab-pane active">
+      <img src="75726e3a6f72672e6e617364616e696b612e62616e6b/OnlineTransaction.png" usemap="#plantuml_map"/><map id="plantuml_map" name="plantuml_map">
+<area shape="rect" id="id1" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/OnlineTransaction.html" title="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/OnlineTransaction.html" alt="" coords="69,223,202,271"/>
+<area shape="rect" id="id2" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html" title="TODO" alt="" coords="85,60,187,163"/>
 </map>
 </div>
-    <div id="nsd_p7_tab_1" class="tab-pane">
-      <div id="nsd_p8_accordion" role="tablist" class="panel-group">
+    <div id="nsd_ra_tab_1" class="tab-pane">
+      <div id="nsd_rb_accordion" role="tablist" class="panel-group">
         <div class="panel panel-default">
-          <div role="tab" id="nsd_p9_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_rc_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_p8_accordion" href="#nsd_p9_collapse_collapse" aria-expanded="false" aria-controls="nsd_p9_collapse_collapse"><b>activated</b> : EDate - <I>Activation date.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_rb_accordion" href="#nsd_rc_collapse_collapse" aria-expanded="false" aria-controls="nsd_rc_collapse_collapse"><b>amount</b> : EBigDecimal (Transaction)  - <I>Amount</I></a>
             </h4>
           </div>
-          <div id="nsd_p9_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_p9_collapse_panel_body" class="panel-body"><p>Activation date.</p>
+          <div id="nsd_rc_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_rc_collapse_panel_body" class="panel-body"><p>Amount</p>
               <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
+                </tr>
                 <tr>
                   <th style="align:left">Type</th>
                   <td>
-<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EDate.html">
-<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EDate</a></td>
+<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EBigDecimal.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EBigDecimal</a></td>
                 </tr>
                 <tr>
                   <th style="align:left">Cardinality</th>
@@ -98,146 +102,20 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_pa_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_rd_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_p8_accordion" href="#nsd_pa_collapse_collapse" aria-expanded="false" aria-controls="nsd_pa_collapse_collapse"><b>deactivated</b> : EDate - <I>Deactivation date.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_rb_accordion" href="#nsd_rd_collapse_collapse" aria-expanded="false" aria-controls="nsd_rd_collapse_collapse"><b>comment</b> : EString (Transaction)  - <I>Additional information</I></a>
             </h4>
           </div>
-          <div id="nsd_pa_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pa_collapse_panel_body" class="panel-body"><p>Deactivation date.</p>
+          <div id="nsd_rd_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_rd_collapse_panel_body" class="panel-body"><p>Additional information</p>
               <table class="table table-bordered">
                 <tr>
-                  <th style="align:left">Type</th>
+                  <th style="align:left">Declaring Type</th>
                   <td>
-<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EDate.html">
-<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EDate</a></td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
                 </tr>
-                <tr>
-                  <th style="align:left">Cardinality</th>
-                  <td>0..1</td>
-                </tr>
-                <tr>
-                  <th style="align:left">Default value</th>
-                  <td>
-                    <div style="white-space:pre;font-family:monospace"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Changeable</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Derived</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">ID</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Ordered</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Transient</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unique</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unsettable</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Volatile</th>
-                  <td></td>
-                </tr>
-              </table></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div role="tab" id="nsd_pb_collapse_heading" class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_p8_accordion" href="#nsd_pb_collapse_collapse" aria-expanded="false" aria-controls="nsd_pb_collapse_collapse"><b>expires</b> : EDate - <I>Expiration date.</I></a>
-            </h4>
-          </div>
-          <div id="nsd_pb_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pb_collapse_panel_body" class="panel-body"><p>Expiration date.</p>
-              <table class="table table-bordered">
-                <tr>
-                  <th style="align:left">Type</th>
-                  <td>
-<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EDate.html">
-<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EDate</a></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Cardinality</th>
-                  <td>0..1</td>
-                </tr>
-                <tr>
-                  <th style="align:left">Default value</th>
-                  <td>
-                    <div style="white-space:pre;font-family:monospace"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Changeable</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Derived</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">ID</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Ordered</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Transient</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unique</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unsettable</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Volatile</th>
-                  <td></td>
-                </tr>
-              </table></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div role="tab" id="nsd_pc_collapse_heading" class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_p8_accordion" href="#nsd_pc_collapse_collapse" aria-expanded="false" aria-controls="nsd_pc_collapse_collapse"><b>id</b> : EString - <I>Unique ID.</I></a>
-            </h4>
-          </div>
-          <div id="nsd_pc_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pc_collapse_panel_body" class="panel-body"><p>Unique ID.</p>
-              <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Type</th>
                   <td>
@@ -296,14 +174,20 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_pd_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_re_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_p8_accordion" href="#nsd_pd_collapse_collapse" aria-expanded="false" aria-controls="nsd_pd_collapse_collapse"><b>issued</b> : EDate - <I>Issue date.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_rb_accordion" href="#nsd_re_collapse_collapse" aria-expanded="false" aria-controls="nsd_re_collapse_collapse"><b>date</b> : EDate (Transaction)  - <I>Date</I></a>
             </h4>
           </div>
-          <div id="nsd_pd_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pd_collapse_panel_body" class="panel-body"><p>Issue date.</p>
+          <div id="nsd_re_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_re_collapse_panel_body" class="panel-body"><p>Date</p>
               <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
+                </tr>
                 <tr>
                   <th style="align:left">Type</th>
                   <td>
@@ -362,19 +246,25 @@
           </div>
         </div>
         <div class="panel panel-default">
-          <div role="tab" id="nsd_pe_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_rf_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_p8_accordion" href="#nsd_pe_collapse_collapse" aria-expanded="false" aria-controls="nsd_pe_collapse_collapse"><b>virtual</b> : EBoolean - <I>If true, the card is virtual, i.e. doesn’t have physical representation.</I></a>
+              <a data-toggle="collapse" data-parent="#nsd_rb_accordion" href="#nsd_rf_collapse_collapse" aria-expanded="false" aria-controls="nsd_rf_collapse_collapse"><b>id</b> : EString (Transaction)  - <I>Unique transaction ID.</I></a>
             </h4>
           </div>
-          <div id="nsd_pe_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pe_collapse_panel_body" class="panel-body"><p>If true, the card is virtual, i.e. doesn&rsquo;t have physical representation.</p>
+          <div id="nsd_rf_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_rf_collapse_panel_body" class="panel-body"><p>Unique transaction ID.</p>
               <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
+                </tr>
                 <tr>
                   <th style="align:left">Type</th>
                   <td>
-<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EBoolean.html">
-<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EBoolean</a></td>
+<a href="https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
                 </tr>
                 <tr>
                   <th style="align:left">Cardinality</th>
@@ -398,7 +288,9 @@
                 </tr>
                 <tr>
                   <th style="align:left">ID</th>
-                  <td></td>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
                 </tr>
                 <tr>
                   <th style="align:left">Ordered</th>
@@ -429,204 +321,32 @@
         </div>
       </div>
     </div>
-    <div id="nsd_p7_tab_2" class="tab-pane">
-      <div id="nsd_pf_accordion" role="tablist" class="panel-group">
+    <div id="nsd_ra_tab_2" class="tab-pane">
+      <div id="nsd_rg_accordion" role="tablist" class="panel-group">
         <div class="panel panel-default">
-          <div role="tab" id="nsd_pg_collapse_heading" class="panel-heading">
+          <div role="tab" id="nsd_rh_collapse_heading" class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_pf_accordion" href="#nsd_pg_collapse_collapse" aria-expanded="false" aria-controls="nsd_pg_collapse_collapse"><b>lockedTo</b> : Merchant - <I>Party (payee) to which this device is locked to. </I></a>
+              <a data-toggle="collapse" data-parent="#nsd_rg_accordion" href="#nsd_rh_collapse_collapse" aria-expanded="false" aria-controls="nsd_rh_collapse_collapse"><b>credit</b> : Statement (Transaction)  - <I>TODO</I></a>
             </h4>
           </div>
-          <div id="nsd_pg_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pg_collapse_panel_body" class="panel-body"><p>Party (payee) to which this device is locked to. E.g. a virtual card can be locked to a particular merchant.</p>
-              <table class="table table-bordered">
-                <tr>
-                  <th style="align:left">Type</th>
-                  <td>
-<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Merchant.html">
-<img src="resources/images/EClass.gif" style="margin-right:5px"/>Merchant</a></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Cardinality</th>
-                  <td>0..1</td>
-                </tr>
-                <tr>
-                  <th style="align:left">Default value</th>
-                  <td>
-                    <div style="white-space:pre;font-family:monospace"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Changeable</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Container</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Containment</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Derived</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">EKeys</th>
-                  <td>
-                    <ol></ol>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Opposite</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Ordered</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Resolve proxies</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Transient</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unique</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unsettable</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Volatile</th>
-                  <td></td>
-                </tr>
-              </table></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div role="tab" id="nsd_ph_collapse_heading" class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_pf_accordion" href="#nsd_ph_collapse_collapse" aria-expanded="false" aria-controls="nsd_ph_collapse_collapse"><b>replaces</b> : Card - <I>Reference to a card which this one replaces, e.g. a new card replaces an old damaged/lost/stolen/expired card. </I></a>
-            </h4>
-          </div>
-          <div id="nsd_ph_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_ph_collapse_panel_body" class="panel-body"><p>Reference to a card which this one replaces, e.g. a new card replaces an old damaged/lost/stolen/expired card. Or a virtual card replaces a physical card (at a specific merchant).</p>
-              <table class="table table-bordered">
-                <tr>
-                  <th style="align:left">Type</th>
-                  <td>
-<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Card.html">
-<img src="resources/images/EClass.gif" style="margin-right:5px"/>Card</a></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Cardinality</th>
-                  <td>0..1</td>
-                </tr>
-                <tr>
-                  <th style="align:left">Default value</th>
-                  <td>
-                    <div style="white-space:pre;font-family:monospace"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Changeable</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Container</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Containment</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Derived</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">EKeys</th>
-                  <td>
-                    <ol></ol>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Opposite</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Ordered</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Resolve proxies</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Transient</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unique</th>
-                  <td>
-                    <span class="glyphicon glyphicon-ok"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th style="align:left">Unsettable</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th style="align:left">Volatile</th>
-                  <td></td>
-                </tr>
-              </table></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div role="tab" id="nsd_pi_collapse_heading" class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#nsd_pf_accordion" href="#nsd_pi_collapse_collapse" aria-expanded="false" aria-controls="nsd_pi_collapse_collapse"><b>tokens</b> : Token (Device)  - <I>TODO</I></a>
-            </h4>
-          </div>
-          <div id="nsd_pi_collapse_collapse" class="panel-collapse collapse">
-            <div id="nsd_pi_collapse_panel_body" class="panel-body"><p>TODO</p>
+          <div id="nsd_rh_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_rh_collapse_panel_body" class="panel-body"><p>TODO</p>
               <table class="table table-bordered">
                 <tr>
                   <th style="align:left">Declaring Type</th>
                   <td>
-<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Device.html">
-<img src="resources/images/EClass.gif" style="margin-right:5px"/>Device</a></td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
                 </tr>
                 <tr>
                   <th style="align:left">Type</th>
                   <td>
-<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Token.html">
-<img src="resources/images/EClass.gif" style="margin-right:5px"/>Token</a></td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Statement.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Statement</a></td>
                 </tr>
                 <tr>
                   <th style="align:left">Cardinality</th>
-                  <td>*</td>
+                  <td>1</td>
                 </tr>
                 <tr>
                   <th style="align:left">Default value</th>
@@ -646,9 +366,193 @@
                 </tr>
                 <tr>
                   <th style="align:left">Containment</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">EKeys</th>
+                  <td>
+                    <ol></ol>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Opposite</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Statement.html">Statement</a>.credits</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
                   <td>
                     <span class="glyphicon glyphicon-ok"></span>
                   </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Resolve proxies</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_ri_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_rg_accordion" href="#nsd_ri_collapse_collapse" aria-expanded="false" aria-controls="nsd_ri_collapse_collapse"><b>debit</b> : Statement (Transaction)  - <I>TODO</I></a>
+            </h4>
+          </div>
+          <div id="nsd_ri_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_ri_collapse_panel_body" class="panel-body"><p>TODO</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Statement.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Statement</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Container</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Containment</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">EKeys</th>
+                  <td>
+                    <ol></ol>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Opposite</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Statement.html">Statement</a>.debits</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Resolve proxies</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_rj_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_rg_accordion" href="#nsd_rj_collapse_collapse" aria-expanded="false" aria-controls="nsd_rj_collapse_collapse"><b>initiator</b> : TransactionInitiator (Transaction) </a>
+            </h4>
+          </div>
+          <div id="nsd_rj_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_rj_collapse_panel_body" class="panel-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>Transaction</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/TransactionInitiator.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>TransactionInitiator</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Container</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Containment</th>
+                  <td></td>
                 </tr>
                 <tr>
                   <th style="align:left">Derived</th>
@@ -694,12 +598,13 @@
                   <th style="align:left">Volatile</th>
                   <td></td>
                 </tr>
-              </table></div>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="nsd_p7_tab_3" class="tab-pane">
+    <div id="nsd_ra_tab_3" class="tab-pane">
       <table class="table table-bordered">
         <tr class="info">
           <th>Name</th>
@@ -707,8 +612,8 @@
         </tr>
         <tr>
           <td>
-<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Device.html">Device</a></td>
-          <td>Device is a generic term for a card and other means to initiate a transaction on an account.</td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e62616e6b/Transaction.html">Transaction</a></td>
+          <td>TODO</td>
         </tr>
       </table>
     </div></div>
