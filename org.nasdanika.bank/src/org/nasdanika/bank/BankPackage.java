@@ -586,13 +586,22 @@ public interface BankPackage extends EPackage {
 	int CUSTOMER__ACCOUNTS = PARTY_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Online Sessions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__ONLINE_SESSIONS = PARTY_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Customer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_FEATURE_COUNT = PARTY_FEATURE_COUNT + 1;
+	int CUSTOMER_FEATURE_COUNT = PARTY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Customer</em>' class.
@@ -1774,41 +1783,59 @@ public interface BankPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.bank.impl.InternetAddressImpl <em>Internet Address</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.bank.impl.OnlineSessionImpl <em>Online Session</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.bank.impl.InternetAddressImpl
-	 * @see org.nasdanika.bank.impl.BankPackageImpl#getInternetAddress()
+	 * @see org.nasdanika.bank.impl.OnlineSessionImpl
+	 * @see org.nasdanika.bank.impl.BankPackageImpl#getOnlineSession()
 	 * @generated
 	 */
-	int INTERNET_ADDRESS = 25;
+	int ONLINE_SESSION = 25;
 
 	/**
-	 * The feature id for the '<em><b>Address</b></em>' attribute.
+	 * The feature id for the '<em><b>Internet Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNET_ADDRESS__ADDRESS = TRANSACTION_INITIATOR_FEATURE_COUNT + 0;
+	int ONLINE_SESSION__INTERNET_ADDRESS = TRANSACTION_INITIATOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Internet Address</em>' class.
+	 * The feature id for the '<em><b>Start</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNET_ADDRESS_FEATURE_COUNT = TRANSACTION_INITIATOR_FEATURE_COUNT + 1;
+	int ONLINE_SESSION__START = TRANSACTION_INITIATOR_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Internet Address</em>' class.
+	 * The feature id for the '<em><b>End</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNET_ADDRESS_OPERATION_COUNT = TRANSACTION_INITIATOR_OPERATION_COUNT + 0;
+	int ONLINE_SESSION__END = TRANSACTION_INITIATOR_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Online Session</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_SESSION_FEATURE_COUNT = TRANSACTION_INITIATOR_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Online Session</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONLINE_SESSION_OPERATION_COUNT = TRANSACTION_INITIATOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.bank.impl.OnlineTransactionImpl <em>Online Transaction</em>}' class.
@@ -2234,6 +2261,17 @@ public interface BankPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCustomer_Accounts();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.bank.Customer#getOnlineSessions <em>Online Sessions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Online Sessions</em>'.
+	 * @see org.nasdanika.bank.Customer#getOnlineSessions()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_OnlineSessions();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.Account <em>Account</em>}'.
@@ -2846,25 +2884,47 @@ public interface BankPackage extends EPackage {
 	EClass getTokenTransaction();
 
 	/**
-	 * Returns the meta object for class '{@link org.nasdanika.bank.InternetAddress <em>Internet Address</em>}'.
+	 * Returns the meta object for class '{@link org.nasdanika.bank.OnlineSession <em>Online Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Internet Address</em>'.
-	 * @see org.nasdanika.bank.InternetAddress
+	 * @return the meta object for class '<em>Online Session</em>'.
+	 * @see org.nasdanika.bank.OnlineSession
 	 * @generated
 	 */
-	EClass getInternetAddress();
+	EClass getOnlineSession();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.InternetAddress#getAddress <em>Address</em>}'.
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.OnlineSession#getInternetAddress <em>Internet Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Address</em>'.
-	 * @see org.nasdanika.bank.InternetAddress#getAddress()
-	 * @see #getInternetAddress()
+	 * @return the meta object for the attribute '<em>Internet Address</em>'.
+	 * @see org.nasdanika.bank.OnlineSession#getInternetAddress()
+	 * @see #getOnlineSession()
 	 * @generated
 	 */
-	EAttribute getInternetAddress_Address();
+	EAttribute getOnlineSession_InternetAddress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.OnlineSession#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start</em>'.
+	 * @see org.nasdanika.bank.OnlineSession#getStart()
+	 * @see #getOnlineSession()
+	 * @generated
+	 */
+	EAttribute getOnlineSession_Start();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.bank.OnlineSession#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End</em>'.
+	 * @see org.nasdanika.bank.OnlineSession#getEnd()
+	 * @see #getOnlineSession()
+	 * @generated
+	 */
+	EAttribute getOnlineSession_End();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.bank.OnlineTransaction <em>Online Transaction</em>}'.
@@ -3132,6 +3192,13 @@ public interface BankPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CUSTOMER__ACCOUNTS = eINSTANCE.getCustomer_Accounts();
+		/**
+		 * The meta object literal for the '<em><b>Online Sessions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__ONLINE_SESSIONS = eINSTANCE.getCustomer_OnlineSessions();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.AccountImpl <em>Account</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3566,21 +3633,35 @@ public interface BankPackage extends EPackage {
 		 */
 		EClass TOKEN_TRANSACTION = eINSTANCE.getTokenTransaction();
 		/**
-		 * The meta object literal for the '{@link org.nasdanika.bank.impl.InternetAddressImpl <em>Internet Address</em>}' class.
+		 * The meta object literal for the '{@link org.nasdanika.bank.impl.OnlineSessionImpl <em>Online Session</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.bank.impl.InternetAddressImpl
-		 * @see org.nasdanika.bank.impl.BankPackageImpl#getInternetAddress()
+		 * @see org.nasdanika.bank.impl.OnlineSessionImpl
+		 * @see org.nasdanika.bank.impl.BankPackageImpl#getOnlineSession()
 		 * @generated
 		 */
-		EClass INTERNET_ADDRESS = eINSTANCE.getInternetAddress();
+		EClass ONLINE_SESSION = eINSTANCE.getOnlineSession();
 		/**
-		 * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Internet Address</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INTERNET_ADDRESS__ADDRESS = eINSTANCE.getInternetAddress_Address();
+		EAttribute ONLINE_SESSION__INTERNET_ADDRESS = eINSTANCE.getOnlineSession_InternetAddress();
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ONLINE_SESSION__START = eINSTANCE.getOnlineSession_Start();
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ONLINE_SESSION__END = eINSTANCE.getOnlineSession_End();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.bank.impl.OnlineTransactionImpl <em>Online Transaction</em>}' class.
 		 * <!-- begin-user-doc -->

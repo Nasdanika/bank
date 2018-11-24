@@ -5,7 +5,7 @@ package org.nasdanika.bank.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.bank.BankPackage;
-import org.nasdanika.bank.InternetAddress;
+import org.nasdanika.bank.OnlineSession;
 import org.nasdanika.bank.OnlineTransaction;
 
 /**
@@ -15,7 +15,7 @@ import org.nasdanika.bank.OnlineTransaction;
  *
  * @generated
  */
-public class OnlineTransactionImpl extends TransactionImpl<InternetAddress> implements OnlineTransaction {
+public class OnlineTransactionImpl extends TransactionImpl<OnlineSession> implements OnlineTransaction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

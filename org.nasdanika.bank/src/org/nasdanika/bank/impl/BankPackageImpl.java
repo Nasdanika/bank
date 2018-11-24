@@ -25,9 +25,9 @@ import org.nasdanika.bank.Device;
 import org.nasdanika.bank.DeviceTransaction;
 import org.nasdanika.bank.EMail;
 import org.nasdanika.bank.InternalAccount;
-import org.nasdanika.bank.InternetAddress;
 import org.nasdanika.bank.Merchant;
 import org.nasdanika.bank.MobilePhone;
+import org.nasdanika.bank.OnlineSession;
 import org.nasdanika.bank.OnlineTransaction;
 import org.nasdanika.bank.Party;
 import org.nasdanika.bank.Phone;
@@ -212,7 +212,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass internetAddressEClass = null;
+	private EClass onlineSessionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -559,6 +559,15 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 */
 	public EReference getCustomer_Accounts() {
 		return (EReference)customerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCustomer_OnlineSessions() {
+		return (EReference)customerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1079,8 +1088,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInternetAddress() {
-		return internetAddressEClass;
+	public EClass getOnlineSession() {
+		return onlineSessionEClass;
 	}
 
 	/**
@@ -1088,8 +1097,26 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInternetAddress_Address() {
-		return (EAttribute)internetAddressEClass.getEStructuralFeatures().get(0);
+	public EAttribute getOnlineSession_InternetAddress() {
+		return (EAttribute)onlineSessionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOnlineSession_Start() {
+		return (EAttribute)onlineSessionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOnlineSession_End() {
+		return (EAttribute)onlineSessionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1167,6 +1194,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		customerEClass = createEClass(CUSTOMER);
 		createEReference(customerEClass, CUSTOMER__ACCOUNTS);
+		createEReference(customerEClass, CUSTOMER__ONLINE_SESSIONS);
 
 		accountEClass = createEClass(ACCOUNT);
 		createEReference(accountEClass, ACCOUNT__STATEMENTS);
@@ -1242,8 +1270,10 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		tokenTransactionEClass = createEClass(TOKEN_TRANSACTION);
 
-		internetAddressEClass = createEClass(INTERNET_ADDRESS);
-		createEAttribute(internetAddressEClass, INTERNET_ADDRESS__ADDRESS);
+		onlineSessionEClass = createEClass(ONLINE_SESSION);
+		createEAttribute(onlineSessionEClass, ONLINE_SESSION__INTERNET_ADDRESS);
+		createEAttribute(onlineSessionEClass, ONLINE_SESSION__START);
+		createEAttribute(onlineSessionEClass, ONLINE_SESSION__END);
 
 		onlineTransactionEClass = createEClass(ONLINE_TRANSACTION);
 	}
@@ -1306,9 +1336,9 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		g2 = createEGenericType(this.getToken());
 		g1.getETypeArguments().add(g2);
 		tokenTransactionEClass.getEGenericSuperTypes().add(g1);
-		internetAddressEClass.getESuperTypes().add(this.getTransactionInitiator());
+		onlineSessionEClass.getESuperTypes().add(this.getTransactionInitiator());
 		g1 = createEGenericType(this.getTransaction());
-		g2 = createEGenericType(this.getInternetAddress());
+		g2 = createEGenericType(this.getOnlineSession());
 		g1.getETypeArguments().add(g2);
 		onlineTransactionEClass.getEGenericSuperTypes().add(g1);
 
@@ -1354,6 +1384,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomer_Accounts(), this.getCustomerAccount(), this.getCustomerAccount_Owners(), "accounts", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCustomer_OnlineSessions(), this.getOnlineSession(), null, "onlineSessions", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountEClass, Account.class, "Account", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccount_Statements(), this.getStatement(), null, "statements", null, 0, -1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1435,8 +1466,10 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		initEClass(tokenTransactionEClass, TokenTransaction.class, "TokenTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(internetAddressEClass, InternetAddress.class, "InternetAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInternetAddress_Address(), ecorePackage.getEString(), "address", null, 1, 1, InternetAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(onlineSessionEClass, OnlineSession.class, "OnlineSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOnlineSession_InternetAddress(), ecorePackage.getEString(), "internetAddress", null, 1, 1, OnlineSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOnlineSession_Start(), ecorePackage.getEDate(), "start", null, 0, 1, OnlineSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOnlineSession_End(), ecorePackage.getEDate(), "end", null, 0, 1, OnlineSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(onlineTransactionEClass, OnlineTransaction.class, "OnlineTransaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

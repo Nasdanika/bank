@@ -168,8 +168,8 @@ public class BankAdapterFactory extends AdapterFactoryImpl {
 				return createTokenTransactionAdapter();
 			}
 			@Override
-			public Adapter caseInternetAddress(InternetAddress object) {
-				return createInternetAddressAdapter();
+			public Adapter caseOnlineSession(OnlineSession object) {
+				return createOnlineSessionAdapter();
 			}
 			@Override
 			public Adapter caseOnlineTransaction(OnlineTransaction object) {
@@ -546,16 +546,16 @@ public class BankAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.InternetAddress <em>Internet Address</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.bank.OnlineSession <em>Online Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.nasdanika.bank.InternetAddress
+	 * @see org.nasdanika.bank.OnlineSession
 	 * @generated
 	 */
-	public Adapter createInternetAddressAdapter() {
+	public Adapter createOnlineSessionAdapter() {
 		return null;
 	}
 

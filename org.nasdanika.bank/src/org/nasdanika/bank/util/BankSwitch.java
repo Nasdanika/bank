@@ -236,10 +236,10 @@ public class BankSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BankPackage.INTERNET_ADDRESS: {
-				InternetAddress internetAddress = (InternetAddress)theEObject;
-				T1 result = caseInternetAddress(internetAddress);
-				if (result == null) result = caseTransactionInitiator(internetAddress);
+			case BankPackage.ONLINE_SESSION: {
+				OnlineSession onlineSession = (OnlineSession)theEObject;
+				T1 result = caseOnlineSession(onlineSession);
+				if (result == null) result = caseTransactionInitiator(onlineSession);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -630,17 +630,17 @@ public class BankSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Internet Address</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Online Session</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Internet Address</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Online Session</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseInternetAddress(InternetAddress object) {
+	public T1 caseOnlineSession(OnlineSession object) {
 		return null;
 	}
 

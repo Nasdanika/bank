@@ -13,5 +13,5 @@ package org.nasdanika.bank;
  * @model
  * @generated
  */
-public interface OnlineTransaction extends Transaction<InternetAddress> {
+public interface OnlineTransaction extends Transaction<OnlineSession> {
 } // OnlineTransaction

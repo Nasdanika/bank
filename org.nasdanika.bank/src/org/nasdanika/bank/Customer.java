@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.bank.Customer#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link org.nasdanika.bank.Customer#getOnlineSessions <em>Online Sessions</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.bank.BankPackage#getCustomer()
@@ -41,5 +42,21 @@ public interface Customer extends Party {
 	 * @generated
 	 */
 	EList<CustomerAccount> getAccounts();
+
+	/**
+	 * Returns the value of the '<em><b>Online Sessions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.bank.OnlineSession}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Online Sessions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Online Sessions</em>' containment reference list.
+	 * @see org.nasdanika.bank.BankPackage#getCustomer_OnlineSessions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<OnlineSession> getOnlineSessions();
 
 } // Customer

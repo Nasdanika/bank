@@ -509,26 +509,26 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.InternetAddress} instances.
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.bank.OnlineSession} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InternetAddressItemProvider internetAddressItemProvider;
+	protected OnlineSessionItemProvider onlineSessionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.nasdanika.bank.InternetAddress}.
+	 * This creates an adapter for a {@link org.nasdanika.bank.OnlineSession}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createInternetAddressAdapter() {
-		if (internetAddressItemProvider == null) {
-			internetAddressItemProvider = new InternetAddressItemProvider(this);
+	public Adapter createOnlineSessionAdapter() {
+		if (onlineSessionItemProvider == null) {
+			onlineSessionItemProvider = new OnlineSessionItemProvider(this);
 		}
 
-		return internetAddressItemProvider;
+		return onlineSessionItemProvider;
 	}
 
 	/**
@@ -672,7 +672,7 @@ public class BankItemProviderAdapterFactory extends BankAdapterFactory implement
 		if (bankerTransactionItemProvider != null) bankerTransactionItemProvider.dispose();
 		if (tokenItemProvider != null) tokenItemProvider.dispose();
 		if (tokenTransactionItemProvider != null) tokenTransactionItemProvider.dispose();
-		if (internetAddressItemProvider != null) internetAddressItemProvider.dispose();
+		if (onlineSessionItemProvider != null) onlineSessionItemProvider.dispose();
 		if (onlineTransactionItemProvider != null) onlineTransactionItemProvider.dispose();
 	}
 

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.Customer;
 import org.nasdanika.bank.CustomerAccount;
+import org.nasdanika.bank.OnlineSession;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +19,7 @@ import org.nasdanika.bank.CustomerAccount;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.bank.impl.CustomerImpl#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link org.nasdanika.bank.impl.CustomerImpl#getOnlineSessions <em>Online Sessions</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +52,16 @@ public class CustomerImpl extends PartyImpl implements Customer {
 	@SuppressWarnings("unchecked")
 	public EList<CustomerAccount> getAccounts() {
 		return (EList<CustomerAccount>)eGet(BankPackage.Literals.CUSTOMER__ACCOUNTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<OnlineSession> getOnlineSessions() {
+		return (EList<OnlineSession>)eGet(BankPackage.Literals.CUSTOMER__ONLINE_SESSIONS, true);
 	}
 
 } //CustomerImpl

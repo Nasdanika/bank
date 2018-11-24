@@ -48,6 +48,7 @@
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//Customer">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bank.ecore#//Customer/accounts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Customer/onlineSessions"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//Account">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bank.ecore#//Account/statements"/>
@@ -119,8 +120,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//Token/value"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//TokenTransaction"/>
-    <genClasses ecoreClass="bank.ecore#//InternetAddress">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//InternetAddress/address"/>
+    <genClasses ecoreClass="bank.ecore#//OnlineSession">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//OnlineSession/internetAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//OnlineSession/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bank.ecore#//OnlineSession/end"/>
     </genClasses>
     <genClasses ecoreClass="bank.ecore#//OnlineTransaction"/>
   </genPackages>

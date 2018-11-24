@@ -15,22 +15,22 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.nasdanika.bank.BankPackage;
-import org.nasdanika.bank.InternetAddress;
+import org.nasdanika.bank.OnlineSession;
 
 /**
- * This is the item provider adapter for a {@link org.nasdanika.bank.InternetAddress} object.
+ * This is the item provider adapter for a {@link org.nasdanika.bank.OnlineSession} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class InternetAddressItemProvider extends TransactionInitiatorItemProvider {
+public class OnlineSessionItemProvider extends TransactionInitiatorItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InternetAddressItemProvider(AdapterFactory adapterFactory) {
+	public OnlineSessionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,25 +45,27 @@ public class InternetAddressItemProvider extends TransactionInitiatorItemProvide
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAddressPropertyDescriptor(object);
+			addInternetAddressPropertyDescriptor(object);
+			addStartPropertyDescriptor(object);
+			addEndPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Address feature.
+	 * This adds a property descriptor for the Internet Address feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAddressPropertyDescriptor(Object object) {
+	protected void addInternetAddressPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InternetAddress_address_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InternetAddress_address_feature", "_UI_InternetAddress_type"),
-				 BankPackage.Literals.INTERNET_ADDRESS__ADDRESS,
+				 getString("_UI_OnlineSession_internetAddress_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OnlineSession_internetAddress_feature", "_UI_OnlineSession_type"),
+				 BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS,
 				 true,
 				 false,
 				 false,
@@ -73,14 +75,58 @@ public class InternetAddressItemProvider extends TransactionInitiatorItemProvide
 	}
 
 	/**
-	 * This returns InternetAddress.gif.
+	 * This adds a property descriptor for the Start feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OnlineSession_start_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OnlineSession_start_feature", "_UI_OnlineSession_type"),
+				 BankPackage.Literals.ONLINE_SESSION__START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the End feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OnlineSession_end_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OnlineSession_end_feature", "_UI_OnlineSession_type"),
+				 BankPackage.Literals.ONLINE_SESSION__END,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns OnlineSession.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/InternetAddress"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/OnlineSession"));
 	}
 
 	/**
@@ -91,10 +137,10 @@ public class InternetAddressItemProvider extends TransactionInitiatorItemProvide
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((InternetAddress)object).getAddress();
+		String label = ((OnlineSession)object).getInternetAddress();
 		return label == null || label.length() == 0 ?
-			getString("_UI_InternetAddress_type") :
-			getString("_UI_InternetAddress_type") + " " + label;
+			getString("_UI_OnlineSession_type") :
+			getString("_UI_OnlineSession_type") + " " + label;
 	}
 
 
@@ -109,8 +155,10 @@ public class InternetAddressItemProvider extends TransactionInitiatorItemProvide
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(InternetAddress.class)) {
-			case BankPackage.INTERNET_ADDRESS__ADDRESS:
+		switch (notification.getFeatureID(OnlineSession.class)) {
+			case BankPackage.ONLINE_SESSION__INTERNET_ADDRESS:
+			case BankPackage.ONLINE_SESSION__START:
+			case BankPackage.ONLINE_SESSION__END:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

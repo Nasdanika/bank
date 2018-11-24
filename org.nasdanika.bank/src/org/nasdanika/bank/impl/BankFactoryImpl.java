@@ -75,7 +75,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 			case BankPackage.BANKER_TRANSACTION: return (EObject)createBankerTransaction();
 			case BankPackage.TOKEN: return (EObject)createToken();
 			case BankPackage.TOKEN_TRANSACTION: return (EObject)createTokenTransaction();
-			case BankPackage.INTERNET_ADDRESS: return (EObject)createInternetAddress();
+			case BankPackage.ONLINE_SESSION: return (EObject)createOnlineSession();
 			case BankPackage.ONLINE_TRANSACTION: return (EObject)createOnlineTransaction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -277,9 +277,9 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InternetAddress createInternetAddress() {
-		InternetAddressImpl internetAddress = new InternetAddressImpl();
-		return internetAddress;
+	public OnlineSession createOnlineSession() {
+		OnlineSessionImpl onlineSession = new OnlineSessionImpl();
+		return onlineSession;
 	}
 
 	/**
