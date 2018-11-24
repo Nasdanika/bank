@@ -142,11 +142,12 @@ public class CustomerAccountItemProvider extends AccountItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CustomerAccount)object).getNumber();
+		CustomerAccount account = (CustomerAccount) object;
+		String label = (account.getProduct() == null ? "" : account.getProduct().getName()+"-") + account.getNumber();
 		return label == null || label.length() == 0 ?
 			getString("_UI_CustomerAccount_type") :
 			getString("_UI_CustomerAccount_type") + " " + label;

@@ -3,14 +3,13 @@
 package org.nasdanika.bank.provider;
 
 
-import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -18,10 +17,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.nasdanika.bank.Account;
 import org.nasdanika.bank.BankPackage;
+import org.nasdanika.bank.CustomerAccount;
 import org.nasdanika.bank.Statement;
 
 /**
@@ -216,15 +216,30 @@ public class StatementItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		BigDecimal labelValue = ((Statement)object).getOpeningBalance();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
+		StringBuilder labelBuilder = new StringBuilder();						
+		Statement statement = (Statement)object;
+		EObject container = statement.eContainer();
+		if (container instanceof CustomerAccount) {		
+			CustomerAccount account = (CustomerAccount) container;
+			labelBuilder.append((account.getProduct() == null ? "" : account.getProduct().getName()+"-") + account.getNumber());
+		} else if (container instanceof Account) {
+			labelBuilder.append(((Account) container).getNumber());
+		}
+		
+		labelBuilder.append(" ");
+		labelBuilder.append(statement.getOpeningDate());
+		if (statement.getClosingDate() != null) {
+			labelBuilder.append(" - ");
+			labelBuilder.append(statement.getClosingDate());
+		}		
+		
+		return labelBuilder.length() == 0 ?
 			getString("_UI_Statement_type") :
-			getString("_UI_Statement_type") + " " + label;
+			getString("_UI_Statement_type") + " " + labelBuilder;
 	}
 
 
