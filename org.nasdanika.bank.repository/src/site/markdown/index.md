@@ -1,36 +1,61 @@
 # Nasdanika Bank
 
-Nasdanika Bank is a model-driven web application which purpose is to demonstrate how to build model-driven web applications with Eclipse and Nasdanika technologies and tools.
-
-In particular:
-
-* Generate workspace projects in [Nasdanika Tool Suite](../tools/index.html) with the [Workspace Wizard](../workspace-wizard/index.html).
-* Capture domain knowledge in documented Ecore models.
-* Generate [HTML documentation](modeldoc/index.html) from those models with [Docgen Ecore](../docgen-ecore/index.html).
-* Capture requirements as user stories in [story models](../story/index.html) and then generate and publish story model documentation.
-* Annotate the model with Web UI annotations.
-* Create a Web UI model with [Codegen Ecore](../codegen-ecore/index.html) and its [Codegen Ecore Web UI](../codegen-ecore-web-ui/index.html) extension.
-* Generate Web UI classes from the model.
-* Generate Web UI model documentation and publish to the site.
-* Run the application in Eclipse IDE.
-* Build and run the application locally.
-* Build the application on CircleCI.
-* Deploy to [Heroku](https://www.heroku.com/) cloud application platform.
-* Create automated UI tests, run them with [WebTest](../webtest/index.html), and link test results with screenshots to the story documentation.        
-
-The above steps are covered in detail in the [developer guide](guides/developer/index.html).  
+Nasdanika bank is a simple enough ECore bank domain model to use for demonstration purposes in different Nasdanika products. 
 
 ## Resources
 
 * [Model documentation](modeldoc/index.html)
 * JavaDoc
     * [Model](apidocs/model)
-* [Sources](bank.zip)    
+    * [Edit](apidocs/model)
+    * [Editor](apidocs/model)
+* [Sources](bank.zip)
+* [Nasdanika.bank](Nasdanika.bank) - a sample model with several customers, accounts and transactions. It is also available as a resource in ``org.nasdanika.bank`` bundle.    
 
 ## P2 Repository
 
 * ``https://www.nasdanika.org/products/bank/1.0.0-SNAPSHOT/repository``
 * [Archived](org.nasdanika.bank.repository-1.0.0-SNAPSHOT.zip)
+
+## How to use
+
+### Eclipse editor
+
+Install Nasdanika Bank feature. 
+
+#### New model
+
+* Select to New > Other > Nasdanika > Nasdanika Bank Model.
+* Select Bank as the root object.
+
+#### Nasdanika.bank model
+
+* Download the model into an Eclipse project.
+* Double-click on the model to open the editor.
+
+
+### Load programmatically
+
+org.eclipse.emf.ecore.xmi
+
+```
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.nasdanika.bank.Bank;
+import org.nasdanika.bank.BankPackage;
+
+...
+
+ResourceSet resourceSet = new ResourceSetImpl();
+resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
+resourceSet.getPackageRegistry().put(BankPackage.eNS_URI, BankPackage.eINSTANCE);
+URI uri = URI.createPlatformPluginURI("org.nasdanika.bank/Nasdanika.bank", false);
+Resource resource = resourceSet.getResource(uri, true);
+Bank bank = (Bank) resource.getContents().iterator().next();
+```
 
 ## How to contribute
 

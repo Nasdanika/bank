@@ -66,6 +66,23 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>copy-sample-model</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/../org.nasdanika.bank</directory>
+									<include>Nasdanika.bank</include>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
 						<id>copy-model-javadoc</id>
 						<phase>pre-site</phase>
 						<goals>
@@ -76,6 +93,38 @@
 							<resources>
 								<resource>
 									<directory>${basedir}/../org.nasdanika.bank/target/site/apidocs</directory>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-edit-javadoc</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site/apidocs/edit</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/../org.nasdanika.bank.edit/target/site/apidocs</directory>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-editor-javadoc</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site/apidocs/editor</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/../org.nasdanika.bank.editor/target/site/apidocs</directory>
 									<filtering>false</filtering>
 								</resource>								
 							</resources>
