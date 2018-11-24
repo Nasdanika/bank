@@ -6,12 +6,6 @@ output:
 
 apidocs:
   - https://docs.oracle.com/javase/8/docs/api/
-  - https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/apidocs/
-  - https://www.nasdanika.org/products/bank/apidocs/model/
-  
-modeldocs:
-  site:
-    "http://www.eclipse.org/emf/2002/Ecore" : "https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/{{encoded-epackage-ns-uri}}/"
-    "urn:org.nasdanika.cdo.security" : "https://www.nasdanika.org/products/server/org.nasdanika.cdo.security/modeldoc/index.html#router/doc-content/{{encoded-epackage-ns-uri}}/"  
-  
+  - https://www.nasdanika.org/products/bank/1.0.0-SNAPSHOT/apidocs/model/
+    
   
