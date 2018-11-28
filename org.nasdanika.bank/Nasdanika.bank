@@ -51,7 +51,7 @@
   <customers name="Jane Doe" accounts="1234 5678">
     <contactMethods xsi:type="org.nasdanika.bank:PostalAddress" name="Home" country="USA" stateProvince="Kansas" city="Lenexa" postalCode="66215" line1="9670 Halsey St" line2="Apt 3895-290"/>
   </customers>
-  <bankers/>
+  <bankers name="Joe Bloggs"/>
   <transactions xsi:type="org.nasdanika.bank:BankerTransaction" debit="//@accounts.3/@statements.0" credit="//@accounts.0/@statements.1" amount="150" date="2018-10-17T11:00:00.000-0400" comment="Cash deposit" id="111111"/>
   <transactions xsi:type="org.nasdanika.bank:TokenTransaction" debit="//@accounts.2/@statements.0" credit="//@accounts.4/@statements.0" initiator="//@accounts.2/@devices.0/@tokens.0" amount="23.86" date="2018-10-19T00:00:00.000-0400" comment="Online purchase" id="222222"/>
   <transactions xsi:type="org.nasdanika.bank:DeviceTransaction" debit="//@accounts.2/@statements.0" credit="//@accounts.4/@statements.1" initiator="//@accounts.2/@devices.1" amount="19.37" date="2018-11-02T00:00:00.000-0400" comment="Online purchase" id="333333"/>
