@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.nasdanika.bank.Account;
@@ -40,6 +41,7 @@ import org.nasdanika.bank.TokenTransaction;
 import org.nasdanika.bank.Transaction;
 import org.nasdanika.bank.TransactionInitiator;
 import org.nasdanika.bank.WebAddress;
+import org.nasdanika.bank.util.BankValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -273,6 +275,15 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 
 		// Initialize created meta-data
 		theBankPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theBankPackage,
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return BankValidator.INSTANCE;
+				 }
+			 });
 
 		// Mark meta-data to indicate it can't be changed
 		theBankPackage.freeze();
@@ -1479,6 +1490,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/GenModel
 		createGenModelAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
 	}
 
 	/**
@@ -1848,6 +1861,22 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   source,
 		   new String[] {
 			   "documentation", "TODO"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (bankEClass,
+		   source,
+		   new String[] {
+			   "constraints", "a"
 		   });
 	}
 

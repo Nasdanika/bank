@@ -44,6 +44,9 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Bank is the root of the domain model. Bank has customers and bankers - employees performing banking operations. Bank tracks merchants its customers interact with in order to provide customers information about their spending habits."/>
     </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="a"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="merchants" upperBound="-1"
         eType="#//Merchant" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

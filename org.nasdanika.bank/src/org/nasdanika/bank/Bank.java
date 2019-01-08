@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see org.nasdanika.bank.BankPackage#getBank()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='a'"
  * @generated
  */
 public interface Bank extends Party {
