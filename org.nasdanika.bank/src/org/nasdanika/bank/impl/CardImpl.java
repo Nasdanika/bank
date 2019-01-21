@@ -54,6 +54,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVirtual() {
 		return (Boolean)eGet(BankPackage.Literals.CARD__VIRTUAL, true);
 	}
@@ -63,6 +64,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVirtual(boolean newVirtual) {
 		eSet(BankPackage.Literals.CARD__VIRTUAL, newVirtual);
 	}
@@ -72,6 +74,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return (String)eGet(BankPackage.Literals.CARD__ID, true);
 	}
@@ -81,6 +84,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		eSet(BankPackage.Literals.CARD__ID, newId);
 	}
@@ -90,6 +94,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getIssued() {
 		return (Date)eGet(BankPackage.Literals.CARD__ISSUED, true);
 	}
@@ -99,6 +104,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssued(Date newIssued) {
 		eSet(BankPackage.Literals.CARD__ISSUED, newIssued);
 	}
@@ -108,6 +114,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getActivated() {
 		return (Date)eGet(BankPackage.Literals.CARD__ACTIVATED, true);
 	}
@@ -117,6 +124,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivated(Date newActivated) {
 		eSet(BankPackage.Literals.CARD__ACTIVATED, newActivated);
 	}
@@ -126,6 +134,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDeactivated() {
 		return (Date)eGet(BankPackage.Literals.CARD__DEACTIVATED, true);
 	}
@@ -135,6 +144,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeactivated(Date newDeactivated) {
 		eSet(BankPackage.Literals.CARD__DEACTIVATED, newDeactivated);
 	}
@@ -144,6 +154,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getExpires() {
 		return (Date)eGet(BankPackage.Literals.CARD__EXPIRES, true);
 	}
@@ -153,6 +164,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpires(Date newExpires) {
 		eSet(BankPackage.Literals.CARD__EXPIRES, newExpires);
 	}
@@ -162,6 +174,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Merchant getLockedTo() {
 		return (Merchant)eGet(BankPackage.Literals.CARD__LOCKED_TO, true);
 	}
@@ -171,6 +184,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLockedTo(Merchant newLockedTo) {
 		eSet(BankPackage.Literals.CARD__LOCKED_TO, newLockedTo);
 	}
@@ -180,6 +194,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Card getReplaces() {
 		return (Card)eGet(BankPackage.Literals.CARD__REPLACES, true);
 	}
@@ -189,6 +204,7 @@ public class CardImpl extends DeviceImpl implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReplaces(Card newReplaces) {
 		eSet(BankPackage.Literals.CARD__REPLACES, newReplaces);
 	}

@@ -67,6 +67,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getDebit() {
 		return (Statement)eGet(BankPackage.Literals.TRANSACTION__DEBIT, true);
 	}
@@ -76,6 +77,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDebit(Statement newDebit) {
 		eSet(BankPackage.Literals.TRANSACTION__DEBIT, newDebit);
 	}
@@ -85,6 +87,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getCredit() {
 		return (Statement)eGet(BankPackage.Literals.TRANSACTION__CREDIT, true);
 	}
@@ -94,6 +97,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCredit(Statement newCredit) {
 		eSet(BankPackage.Literals.TRANSACTION__CREDIT, newCredit);
 	}
@@ -103,6 +107,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransactionInitiator getInitiator() {
 		return (TransactionInitiator)eGet(BankPackage.Literals.TRANSACTION__INITIATOR, true);
 	}
@@ -112,6 +117,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitiator(TransactionInitiator newInitiator) {
 		eSet(BankPackage.Literals.TRANSACTION__INITIATOR, newInitiator);
 	}
@@ -121,6 +127,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigDecimal getAmount() {
 		return (BigDecimal)eGet(BankPackage.Literals.TRANSACTION__AMOUNT, true);
 	}
@@ -130,6 +137,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmount(BigDecimal newAmount) {
 		eSet(BankPackage.Literals.TRANSACTION__AMOUNT, newAmount);
 	}
@@ -139,6 +147,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDate() {
 		return (Date)eGet(BankPackage.Literals.TRANSACTION__DATE, true);
 	}
@@ -148,6 +157,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(Date newDate) {
 		eSet(BankPackage.Literals.TRANSACTION__DATE, newDate);
 	}
@@ -157,6 +167,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getComment() {
 		return (String)eGet(BankPackage.Literals.TRANSACTION__COMMENT, true);
 	}
@@ -166,6 +177,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(String newComment) {
 		eSet(BankPackage.Literals.TRANSACTION__COMMENT, newComment);
 	}
@@ -175,6 +187,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return (String)eGet(BankPackage.Literals.TRANSACTION__ID, true);
 	}
@@ -184,6 +197,7 @@ public abstract class TransactionImpl<T extends TransactionInitiator> extends CD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		eSet(BankPackage.Literals.TRANSACTION__ID, newId);
 	}

@@ -62,6 +62,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__NAME, true);
 	}
@@ -71,6 +72,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__NAME, newName);
 	}
@@ -80,6 +82,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, true);
 	}
@@ -89,6 +92,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, newDescription);
 	}
@@ -98,6 +102,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getCountryCode() {
 		return (Integer)eGet(BankPackage.Literals.PHONE__COUNTRY_CODE, true);
 	}
@@ -107,6 +112,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCountryCode(int newCountryCode) {
 		eSet(BankPackage.Literals.PHONE__COUNTRY_CODE, newCountryCode);
 	}
@@ -116,6 +122,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getAreaCode() {
 		return (Integer)eGet(BankPackage.Literals.PHONE__AREA_CODE, true);
 	}
@@ -125,6 +132,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAreaCode(int newAreaCode) {
 		eSet(BankPackage.Literals.PHONE__AREA_CODE, newAreaCode);
 	}
@@ -134,6 +142,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPhoneNumber() {
 		return (Integer)eGet(BankPackage.Literals.PHONE__PHONE_NUMBER, true);
 	}
@@ -143,6 +152,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPhoneNumber(int newPhoneNumber) {
 		eSet(BankPackage.Literals.PHONE__PHONE_NUMBER, newPhoneNumber);
 	}
@@ -152,6 +162,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtension() {
 		return (Integer)eGet(BankPackage.Literals.PHONE__EXTENSION, true);
 	}
@@ -161,6 +172,7 @@ public class PhoneImpl extends CDOObjectImpl implements Phone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtension(int newExtension) {
 		eSet(BankPackage.Literals.PHONE__EXTENSION, newExtension);
 	}

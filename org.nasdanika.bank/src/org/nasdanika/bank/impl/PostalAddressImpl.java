@@ -64,6 +64,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__NAME, true);
 	}
@@ -73,6 +74,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__NAME, newName);
 	}
@@ -82,6 +84,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, true);
 	}
@@ -91,6 +94,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, newDescription);
 	}
@@ -100,6 +104,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCountry() {
 		return (String)eGet(BankPackage.Literals.POSTAL_ADDRESS__COUNTRY, true);
 	}
@@ -109,6 +114,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCountry(String newCountry) {
 		eSet(BankPackage.Literals.POSTAL_ADDRESS__COUNTRY, newCountry);
 	}
@@ -118,6 +124,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStateProvince() {
 		return (String)eGet(BankPackage.Literals.POSTAL_ADDRESS__STATE_PROVINCE, true);
 	}
@@ -127,6 +134,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStateProvince(String newStateProvince) {
 		eSet(BankPackage.Literals.POSTAL_ADDRESS__STATE_PROVINCE, newStateProvince);
 	}
@@ -136,6 +144,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCity() {
 		return (String)eGet(BankPackage.Literals.POSTAL_ADDRESS__CITY, true);
 	}
@@ -145,6 +154,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCity(String newCity) {
 		eSet(BankPackage.Literals.POSTAL_ADDRESS__CITY, newCity);
 	}
@@ -154,6 +164,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPostalCode() {
 		return (String)eGet(BankPackage.Literals.POSTAL_ADDRESS__POSTAL_CODE, true);
 	}
@@ -163,6 +174,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPostalCode(String newPostalCode) {
 		eSet(BankPackage.Literals.POSTAL_ADDRESS__POSTAL_CODE, newPostalCode);
 	}
@@ -172,6 +184,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLine1() {
 		return (String)eGet(BankPackage.Literals.POSTAL_ADDRESS__LINE1, true);
 	}
@@ -181,6 +194,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLine1(String newLine1) {
 		eSet(BankPackage.Literals.POSTAL_ADDRESS__LINE1, newLine1);
 	}
@@ -190,6 +204,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLine2() {
 		return (String)eGet(BankPackage.Literals.POSTAL_ADDRESS__LINE2, true);
 	}
@@ -199,6 +214,7 @@ public class PostalAddressImpl extends CDOObjectImpl implements PostalAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLine2(String newLine2) {
 		eSet(BankPackage.Literals.POSTAL_ADDRESS__LINE2, newLine2);
 	}

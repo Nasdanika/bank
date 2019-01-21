@@ -57,6 +57,7 @@ public class BankImpl extends PartyImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Merchant> getMerchants() {
 		return (EList<Merchant>)eGet(BankPackage.Literals.BANK__MERCHANTS, true);
 	}
@@ -67,6 +68,7 @@ public class BankImpl extends PartyImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Product> getProducts() {
 		return (EList<Product>)eGet(BankPackage.Literals.BANK__PRODUCTS, true);
 	}
@@ -77,6 +79,7 @@ public class BankImpl extends PartyImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Account> getAccounts() {
 		return (EList<Account>)eGet(BankPackage.Literals.BANK__ACCOUNTS, true);
 	}
@@ -87,6 +90,7 @@ public class BankImpl extends PartyImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Customer> getCustomers() {
 		return (EList<Customer>)eGet(BankPackage.Literals.BANK__CUSTOMERS, true);
 	}
@@ -97,6 +101,7 @@ public class BankImpl extends PartyImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Banker> getBankers() {
 		return (EList<Banker>)eGet(BankPackage.Literals.BANK__BANKERS, true);
 	}
@@ -107,6 +112,7 @@ public class BankImpl extends PartyImpl implements Bank {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Transaction<?>> getTransactions() {
 		return (EList<Transaction<?>>)eGet(BankPackage.Literals.BANK__TRANSACTIONS, true);
 	}

@@ -61,6 +61,7 @@ public abstract class PartyImpl extends CDOObjectImpl implements Party {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(BankPackage.Literals.PARTY__NAME, true);
 	}
@@ -70,6 +71,7 @@ public abstract class PartyImpl extends CDOObjectImpl implements Party {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(BankPackage.Literals.PARTY__NAME, newName);
 	}
@@ -80,6 +82,7 @@ public abstract class PartyImpl extends CDOObjectImpl implements Party {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ContactMethod> getContactMethods() {
 		return (EList<ContactMethod>)eGet(BankPackage.Literals.PARTY__CONTACT_METHODS, true);
 	}

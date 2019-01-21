@@ -50,6 +50,7 @@ public class CustomerImpl extends PartyImpl implements Customer {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<CustomerAccount> getAccounts() {
 		return (EList<CustomerAccount>)eGet(BankPackage.Literals.CUSTOMER__ACCOUNTS, true);
 	}
@@ -60,8 +61,14 @@ public class CustomerImpl extends PartyImpl implements Customer {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<OnlineSession> getOnlineSessions() {
 		return (EList<OnlineSession>)eGet(BankPackage.Literals.CUSTOMER__ONLINE_SESSIONS, true);
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " " + getName();
 	}
 
 } //CustomerImpl

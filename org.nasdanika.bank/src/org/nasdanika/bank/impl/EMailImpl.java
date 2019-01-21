@@ -59,6 +59,7 @@ public class EMailImpl extends CDOObjectImpl implements EMail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__NAME, true);
 	}
@@ -68,6 +69,7 @@ public class EMailImpl extends CDOObjectImpl implements EMail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__NAME, newName);
 	}
@@ -77,6 +79,7 @@ public class EMailImpl extends CDOObjectImpl implements EMail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, true);
 	}
@@ -86,6 +89,7 @@ public class EMailImpl extends CDOObjectImpl implements EMail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, newDescription);
 	}
@@ -95,6 +99,7 @@ public class EMailImpl extends CDOObjectImpl implements EMail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEMailAddress() {
 		return (String)eGet(BankPackage.Literals.EMAIL__EMAIL_ADDRESS, true);
 	}
@@ -104,6 +109,7 @@ public class EMailImpl extends CDOObjectImpl implements EMail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEMailAddress(String newEMailAddress) {
 		eSet(BankPackage.Literals.EMAIL__EMAIL_ADDRESS, newEMailAddress);
 	}

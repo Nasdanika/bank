@@ -20,13 +20,13 @@
   <products name="Checking"/>
   <products name="Savings"/>
   <products name="Credit card"/>
-  <accounts xsi:type="org.nasdanika.bank:CustomerAccount" number="1234" periodStart="10" product="//@products.0" owners="//@customers.0 //@customers.1">
+  <accounts xsi:type="org.nasdanika.bank:CustomerAccount" number="1234" balance="1050.33" periodStart="10" product="//@products.0" owners="//@customers.0 //@customers.1">
     <statements openingDate="2018-09-10T00:00:00.000-0400" closingDate="2018-10-09T00:00:00.000-0400"/>
     <statements credits="111111" openingDate="2018-10-10T00:00:00.000-0400" closingDate="2018-11-09T00:00:00.000-0500"/>
     <statements debits="444444 555555" openingDate="2018-11-10T00:00:00.000-0500"/>
     <devices xsi:type="org.nasdanika.bank:Card" id="1234 5678 9012 3456" issued="2018-11-01T00:00:00.000-0400" activated="2018-11-15T00:00:00.000-0500" expires="2020-11-23T00:00:00.000-0500"/>
   </accounts>
-  <accounts xsi:type="org.nasdanika.bank:CustomerAccount" number="5678" periodStart="23" product="//@products.1" owners="//@customers.0 //@customers.1"/>
+  <accounts xsi:type="org.nasdanika.bank:CustomerAccount" number="5678" balance="2380.47" periodStart="23" product="//@products.1" owners="//@customers.0 //@customers.1"/>
   <accounts xsi:type="org.nasdanika.bank:CustomerAccount" number="9012" periodStart="15" product="//@products.2" owners="//@customers.0">
     <statements debits="222222 333333" openingDate="2018-10-15T00:00:00.000-0400" closingDate="2018-11-14T00:00:00.000-0500"/>
     <statements credits="555555" openingDate="2018-11-15T00:00:00.000-0500"/>

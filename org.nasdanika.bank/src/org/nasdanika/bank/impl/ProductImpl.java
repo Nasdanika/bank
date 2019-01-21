@@ -58,6 +58,7 @@ public class ProductImpl extends CDOObjectImpl implements Product {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(BankPackage.Literals.PRODUCT__NAME, true);
 	}
@@ -67,6 +68,7 @@ public class ProductImpl extends CDOObjectImpl implements Product {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(BankPackage.Literals.PRODUCT__NAME, newName);
 	}
@@ -76,6 +78,7 @@ public class ProductImpl extends CDOObjectImpl implements Product {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return (String)eGet(BankPackage.Literals.PRODUCT__DESCRIPTION, true);
 	}
@@ -85,6 +88,7 @@ public class ProductImpl extends CDOObjectImpl implements Product {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		eSet(BankPackage.Literals.PRODUCT__DESCRIPTION, newDescription);
 	}

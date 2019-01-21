@@ -66,6 +66,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Statement> getStatements() {
 		return (EList<Statement>)eGet(BankPackage.Literals.ACCOUNT__STATEMENTS, true);
 	}
@@ -75,6 +76,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNumber() {
 		return (String)eGet(BankPackage.Literals.ACCOUNT__NUMBER, true);
 	}
@@ -84,6 +86,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumber(String newNumber) {
 		eSet(BankPackage.Literals.ACCOUNT__NUMBER, newNumber);
 	}
@@ -93,6 +96,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigDecimal getBalance() {
 		return (BigDecimal)eGet(BankPackage.Literals.ACCOUNT__BALANCE, true);
 	}
@@ -102,6 +106,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBalance(BigDecimal newBalance) {
 		eSet(BankPackage.Literals.ACCOUNT__BALANCE, newBalance);
 	}
@@ -111,6 +116,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return (String)eGet(BankPackage.Literals.ACCOUNT__DESCRIPTION, true);
 	}
@@ -120,6 +126,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		eSet(BankPackage.Literals.ACCOUNT__DESCRIPTION, newDescription);
 	}
@@ -129,6 +136,7 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPeriodStart() {
 		return (Integer)eGet(BankPackage.Literals.ACCOUNT__PERIOD_START, true);
 	}
@@ -138,8 +146,14 @@ public abstract class AccountImpl extends CDOObjectImpl implements Account {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriodStart(int newPeriodStart) {
 		eSet(BankPackage.Literals.ACCOUNT__PERIOD_START, newPeriodStart);
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " " + getNumber();
 	}
 
 } //AccountImpl

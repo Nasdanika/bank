@@ -68,6 +68,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Transaction<?>> getDebits() {
 		return (EList<Transaction<?>>)eGet(BankPackage.Literals.STATEMENT__DEBITS, true);
 	}
@@ -78,6 +79,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Transaction<?>> getCredits() {
 		return (EList<Transaction<?>>)eGet(BankPackage.Literals.STATEMENT__CREDITS, true);
 	}
@@ -87,6 +89,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigDecimal getOpeningBalance() {
 		return (BigDecimal)eGet(BankPackage.Literals.STATEMENT__OPENING_BALANCE, true);
 	}
@@ -96,6 +99,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOpeningBalance(BigDecimal newOpeningBalance) {
 		eSet(BankPackage.Literals.STATEMENT__OPENING_BALANCE, newOpeningBalance);
 	}
@@ -105,6 +109,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getOpeningDate() {
 		return (Date)eGet(BankPackage.Literals.STATEMENT__OPENING_DATE, true);
 	}
@@ -114,6 +119,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOpeningDate(Date newOpeningDate) {
 		eSet(BankPackage.Literals.STATEMENT__OPENING_DATE, newOpeningDate);
 	}
@@ -123,6 +129,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigDecimal getClosingBalance() {
 		return (BigDecimal)eGet(BankPackage.Literals.STATEMENT__CLOSING_BALANCE, true);
 	}
@@ -132,6 +139,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClosingBalance(BigDecimal newClosingBalance) {
 		eSet(BankPackage.Literals.STATEMENT__CLOSING_BALANCE, newClosingBalance);
 	}
@@ -141,6 +149,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getClosingDate() {
 		return (Date)eGet(BankPackage.Literals.STATEMENT__CLOSING_DATE, true);
 	}
@@ -150,6 +159,7 @@ public class StatementImpl extends CDOObjectImpl implements Statement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClosingDate(Date newClosingDate) {
 		eSet(BankPackage.Literals.STATEMENT__CLOSING_DATE, newClosingDate);
 	}

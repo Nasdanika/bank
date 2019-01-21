@@ -48,6 +48,7 @@ public class MerchantImpl extends PartyImpl implements Merchant {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<PointOfSale> getPointsOfSale() {
 		return (EList<PointOfSale>)eGet(BankPackage.Literals.MERCHANT__POINTS_OF_SALE, true);
 	}

@@ -46,6 +46,7 @@ public class MobilePhoneImpl extends DeviceImpl implements MobilePhone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNumber() {
 		return (String)eGet(BankPackage.Literals.MOBILE_PHONE__NUMBER, true);
 	}
@@ -55,6 +56,7 @@ public class MobilePhoneImpl extends DeviceImpl implements MobilePhone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumber(String newNumber) {
 		eSet(BankPackage.Literals.MOBILE_PHONE__NUMBER, newNumber);
 	}
@@ -64,6 +66,7 @@ public class MobilePhoneImpl extends DeviceImpl implements MobilePhone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKey() {
 		return (String)eGet(BankPackage.Literals.MOBILE_PHONE__KEY, true);
 	}
@@ -73,6 +76,7 @@ public class MobilePhoneImpl extends DeviceImpl implements MobilePhone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKey(String newKey) {
 		eSet(BankPackage.Literals.MOBILE_PHONE__KEY, newKey);
 	}

@@ -53,6 +53,7 @@ public class CustomerAccountImpl extends AccountImpl implements CustomerAccount 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Device> getDevices() {
 		return (EList<Device>)eGet(BankPackage.Literals.CUSTOMER_ACCOUNT__DEVICES, true);
 	}
@@ -62,6 +63,7 @@ public class CustomerAccountImpl extends AccountImpl implements CustomerAccount 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Product getProduct() {
 		return (Product)eGet(BankPackage.Literals.CUSTOMER_ACCOUNT__PRODUCT, true);
 	}
@@ -71,6 +73,7 @@ public class CustomerAccountImpl extends AccountImpl implements CustomerAccount 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProduct(Product newProduct) {
 		eSet(BankPackage.Literals.CUSTOMER_ACCOUNT__PRODUCT, newProduct);
 	}
@@ -81,6 +84,7 @@ public class CustomerAccountImpl extends AccountImpl implements CustomerAccount 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Customer> getOwners() {
 		return (EList<Customer>)eGet(BankPackage.Literals.CUSTOMER_ACCOUNT__OWNERS, true);
 	}

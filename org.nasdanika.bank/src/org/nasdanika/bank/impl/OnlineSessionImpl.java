@@ -49,6 +49,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInternetAddress() {
 		return (String)eGet(BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS, true);
 	}
@@ -58,6 +59,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInternetAddress(String newInternetAddress) {
 		eSet(BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS, newInternetAddress);
 	}
@@ -67,6 +69,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getStart() {
 		return (Date)eGet(BankPackage.Literals.ONLINE_SESSION__START, true);
 	}
@@ -76,6 +79,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(Date newStart) {
 		eSet(BankPackage.Literals.ONLINE_SESSION__START, newStart);
 	}
@@ -85,6 +89,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getEnd() {
 		return (Date)eGet(BankPackage.Literals.ONLINE_SESSION__END, true);
 	}
@@ -94,6 +99,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(Date newEnd) {
 		eSet(BankPackage.Literals.ONLINE_SESSION__END, newEnd);
 	}

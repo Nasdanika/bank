@@ -74,7 +74,7 @@ public interface Statement extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Opening balance, used by the prototype UI, not needed by the auto-updater component.
+	 * Opening balance.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Opening Balance</em>' attribute.
 	 * @see #setOpeningBalance(BigDecimal)
@@ -99,7 +99,7 @@ public interface Statement extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Opening date, used by the prototype UI, not needed by the auto-updater component.
+	 * Opening date.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Opening Date</em>' attribute.
 	 * @see #setOpeningDate(Date)
@@ -124,7 +124,7 @@ public interface Statement extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Closing balance, used by the prototype UI, not needed by the auto-updater component.
+	 * Closing balance.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Closing Balance</em>' attribute.
 	 * @see #setClosingBalance(BigDecimal)
@@ -149,7 +149,7 @@ public interface Statement extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Closing date, used by the prototype UI, not needed by the auto-updater component.
+	 * Closing date.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Closing Date</em>' attribute.
 	 * @see #setClosingDate(Date)

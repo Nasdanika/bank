@@ -46,6 +46,7 @@ public class TokenImpl extends TransactionInitiatorImpl implements Token {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Merchant getMerchant() {
 		return (Merchant)eGet(BankPackage.Literals.TOKEN__MERCHANT, true);
 	}
@@ -55,6 +56,7 @@ public class TokenImpl extends TransactionInitiatorImpl implements Token {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMerchant(Merchant newMerchant) {
 		eSet(BankPackage.Literals.TOKEN__MERCHANT, newMerchant);
 	}
@@ -64,6 +66,7 @@ public class TokenImpl extends TransactionInitiatorImpl implements Token {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return (String)eGet(BankPackage.Literals.TOKEN__VALUE, true);
 	}
@@ -73,6 +76,7 @@ public class TokenImpl extends TransactionInitiatorImpl implements Token {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		eSet(BankPackage.Literals.TOKEN__VALUE, newValue);
 	}

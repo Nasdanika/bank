@@ -78,7 +78,7 @@ public interface Account extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Account balance, used by the prototype UI.
+	 * Account balance.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Balance</em>' attribute.
 	 * @see #setBalance(BigDecimal)
@@ -128,7 +128,7 @@ public interface Account extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Billing period start, used by the prototype UI for generation of random data - will be removed once back-end connectivity is implemented.
+	 * Billing period start.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Period Start</em>' attribute.
 	 * @see #setPeriodStart(int)

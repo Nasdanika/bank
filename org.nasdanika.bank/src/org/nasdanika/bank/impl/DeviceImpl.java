@@ -48,6 +48,7 @@ public abstract class DeviceImpl extends TransactionInitiatorImpl implements Dev
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Token> getTokens() {
 		return (EList<Token>)eGet(BankPackage.Literals.DEVICE__TOKENS, true);
 	}

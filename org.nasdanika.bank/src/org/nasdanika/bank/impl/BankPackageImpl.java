@@ -280,6 +280,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		EValidator.Registry.INSTANCE.put
 			(theBankPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return BankValidator.INSTANCE;
 				 }
@@ -298,6 +299,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParty() {
 		return partyEClass;
 	}
@@ -307,6 +309,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParty_Name() {
 		return (EAttribute)partyEClass.getEStructuralFeatures().get(0);
 	}
@@ -316,6 +319,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParty_ContactMethods() {
 		return (EReference)partyEClass.getEStructuralFeatures().get(1);
 	}
@@ -325,6 +329,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getContactMethod() {
 		return contactMethodEClass;
 	}
@@ -334,6 +339,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContactMethod_Name() {
 		return (EAttribute)contactMethodEClass.getEStructuralFeatures().get(0);
 	}
@@ -343,6 +349,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getContactMethod_Description() {
 		return (EAttribute)contactMethodEClass.getEStructuralFeatures().get(1);
 	}
@@ -352,6 +359,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEMail() {
 		return eMailEClass;
 	}
@@ -361,6 +369,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEMail_EMailAddress() {
 		return (EAttribute)eMailEClass.getEStructuralFeatures().get(0);
 	}
@@ -370,6 +379,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPhone() {
 		return phoneEClass;
 	}
@@ -379,6 +389,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPhone_CountryCode() {
 		return (EAttribute)phoneEClass.getEStructuralFeatures().get(0);
 	}
@@ -388,6 +399,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPhone_AreaCode() {
 		return (EAttribute)phoneEClass.getEStructuralFeatures().get(1);
 	}
@@ -397,6 +409,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPhone_PhoneNumber() {
 		return (EAttribute)phoneEClass.getEStructuralFeatures().get(2);
 	}
@@ -406,6 +419,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPhone_Extension() {
 		return (EAttribute)phoneEClass.getEStructuralFeatures().get(3);
 	}
@@ -415,6 +429,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPostalAddress() {
 		return postalAddressEClass;
 	}
@@ -424,6 +439,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostalAddress_Country() {
 		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(0);
 	}
@@ -433,6 +449,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostalAddress_StateProvince() {
 		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(1);
 	}
@@ -442,6 +459,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostalAddress_City() {
 		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(2);
 	}
@@ -451,6 +469,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostalAddress_PostalCode() {
 		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(3);
 	}
@@ -460,6 +479,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostalAddress_Line1() {
 		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(4);
 	}
@@ -469,6 +489,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostalAddress_Line2() {
 		return (EAttribute)postalAddressEClass.getEStructuralFeatures().get(5);
 	}
@@ -478,6 +499,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWebAddress() {
 		return webAddressEClass;
 	}
@@ -487,6 +509,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWebAddress_Url() {
 		return (EAttribute)webAddressEClass.getEStructuralFeatures().get(0);
 	}
@@ -496,6 +519,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBank() {
 		return bankEClass;
 	}
@@ -505,6 +529,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBank_Merchants() {
 		return (EReference)bankEClass.getEStructuralFeatures().get(0);
 	}
@@ -514,6 +539,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBank_Products() {
 		return (EReference)bankEClass.getEStructuralFeatures().get(1);
 	}
@@ -523,6 +549,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBank_Accounts() {
 		return (EReference)bankEClass.getEStructuralFeatures().get(2);
 	}
@@ -532,6 +559,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBank_Customers() {
 		return (EReference)bankEClass.getEStructuralFeatures().get(3);
 	}
@@ -541,6 +569,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBank_Bankers() {
 		return (EReference)bankEClass.getEStructuralFeatures().get(4);
 	}
@@ -550,6 +579,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBank_Transactions() {
 		return (EReference)bankEClass.getEStructuralFeatures().get(5);
 	}
@@ -559,6 +589,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCustomer() {
 		return customerEClass;
 	}
@@ -568,6 +599,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomer_Accounts() {
 		return (EReference)customerEClass.getEStructuralFeatures().get(0);
 	}
@@ -577,6 +609,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomer_OnlineSessions() {
 		return (EReference)customerEClass.getEStructuralFeatures().get(1);
 	}
@@ -586,6 +619,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAccount() {
 		return accountEClass;
 	}
@@ -595,6 +629,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAccount_Statements() {
 		return (EReference)accountEClass.getEStructuralFeatures().get(0);
 	}
@@ -604,6 +639,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAccount_Number() {
 		return (EAttribute)accountEClass.getEStructuralFeatures().get(1);
 	}
@@ -613,6 +649,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAccount_Balance() {
 		return (EAttribute)accountEClass.getEStructuralFeatures().get(2);
 	}
@@ -622,6 +659,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAccount_Description() {
 		return (EAttribute)accountEClass.getEStructuralFeatures().get(3);
 	}
@@ -631,6 +669,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAccount_PeriodStart() {
 		return (EAttribute)accountEClass.getEStructuralFeatures().get(4);
 	}
@@ -640,6 +679,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatement() {
 		return statementEClass;
 	}
@@ -649,6 +689,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStatement_Debits() {
 		return (EReference)statementEClass.getEStructuralFeatures().get(0);
 	}
@@ -658,6 +699,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStatement_Credits() {
 		return (EReference)statementEClass.getEStructuralFeatures().get(1);
 	}
@@ -667,6 +709,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStatement_OpeningBalance() {
 		return (EAttribute)statementEClass.getEStructuralFeatures().get(2);
 	}
@@ -676,6 +719,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStatement_OpeningDate() {
 		return (EAttribute)statementEClass.getEStructuralFeatures().get(3);
 	}
@@ -685,6 +729,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStatement_ClosingBalance() {
 		return (EAttribute)statementEClass.getEStructuralFeatures().get(4);
 	}
@@ -694,6 +739,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStatement_ClosingDate() {
 		return (EAttribute)statementEClass.getEStructuralFeatures().get(5);
 	}
@@ -703,6 +749,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransaction() {
 		return transactionEClass;
 	}
@@ -712,6 +759,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransaction_Debit() {
 		return (EReference)transactionEClass.getEStructuralFeatures().get(0);
 	}
@@ -721,6 +769,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransaction_Credit() {
 		return (EReference)transactionEClass.getEStructuralFeatures().get(1);
 	}
@@ -730,6 +779,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransaction_Initiator() {
 		return (EReference)transactionEClass.getEStructuralFeatures().get(2);
 	}
@@ -739,6 +789,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_Amount() {
 		return (EAttribute)transactionEClass.getEStructuralFeatures().get(3);
 	}
@@ -748,6 +799,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_Date() {
 		return (EAttribute)transactionEClass.getEStructuralFeatures().get(4);
 	}
@@ -757,6 +809,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_Comment() {
 		return (EAttribute)transactionEClass.getEStructuralFeatures().get(5);
 	}
@@ -766,6 +819,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransaction_Id() {
 		return (EAttribute)transactionEClass.getEStructuralFeatures().get(6);
 	}
@@ -775,6 +829,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransactionInitiator() {
 		return transactionInitiatorEClass;
 	}
@@ -784,6 +839,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProduct() {
 		return productEClass;
 	}
@@ -793,6 +849,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProduct_Name() {
 		return (EAttribute)productEClass.getEStructuralFeatures().get(0);
 	}
@@ -802,6 +859,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProduct_Description() {
 		return (EAttribute)productEClass.getEStructuralFeatures().get(1);
 	}
@@ -811,6 +869,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMerchant() {
 		return merchantEClass;
 	}
@@ -820,6 +879,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMerchant_PointsOfSale() {
 		return (EReference)merchantEClass.getEStructuralFeatures().get(0);
 	}
@@ -829,6 +889,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPointOfSale() {
 		return pointOfSaleEClass;
 	}
@@ -838,6 +899,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPointOfSale_Id() {
 		return (EAttribute)pointOfSaleEClass.getEStructuralFeatures().get(0);
 	}
@@ -847,6 +909,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPointOfSale_Location() {
 		return (EReference)pointOfSaleEClass.getEStructuralFeatures().get(1);
 	}
@@ -856,6 +919,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDevice() {
 		return deviceEClass;
 	}
@@ -865,6 +929,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDevice_Tokens() {
 		return (EReference)deviceEClass.getEStructuralFeatures().get(0);
 	}
@@ -874,6 +939,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMobilePhone() {
 		return mobilePhoneEClass;
 	}
@@ -883,6 +949,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMobilePhone_Number() {
 		return (EAttribute)mobilePhoneEClass.getEStructuralFeatures().get(0);
 	}
@@ -892,6 +959,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMobilePhone_Key() {
 		return (EAttribute)mobilePhoneEClass.getEStructuralFeatures().get(1);
 	}
@@ -901,6 +969,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCard() {
 		return cardEClass;
 	}
@@ -910,6 +979,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCard_Virtual() {
 		return (EAttribute)cardEClass.getEStructuralFeatures().get(0);
 	}
@@ -919,6 +989,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCard_Id() {
 		return (EAttribute)cardEClass.getEStructuralFeatures().get(1);
 	}
@@ -928,6 +999,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCard_Issued() {
 		return (EAttribute)cardEClass.getEStructuralFeatures().get(2);
 	}
@@ -937,6 +1009,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCard_Activated() {
 		return (EAttribute)cardEClass.getEStructuralFeatures().get(3);
 	}
@@ -946,6 +1019,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCard_Deactivated() {
 		return (EAttribute)cardEClass.getEStructuralFeatures().get(4);
 	}
@@ -955,6 +1029,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCard_Expires() {
 		return (EAttribute)cardEClass.getEStructuralFeatures().get(5);
 	}
@@ -964,6 +1039,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCard_LockedTo() {
 		return (EReference)cardEClass.getEStructuralFeatures().get(6);
 	}
@@ -973,6 +1049,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCard_Replaces() {
 		return (EReference)cardEClass.getEStructuralFeatures().get(7);
 	}
@@ -982,6 +1059,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeviceTransaction() {
 		return deviceTransactionEClass;
 	}
@@ -991,6 +1069,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeviceTransaction_PointOfSale() {
 		return (EReference)deviceTransactionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1000,6 +1079,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCustomerAccount() {
 		return customerAccountEClass;
 	}
@@ -1009,6 +1089,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomerAccount_Devices() {
 		return (EReference)customerAccountEClass.getEStructuralFeatures().get(0);
 	}
@@ -1018,6 +1099,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomerAccount_Product() {
 		return (EReference)customerAccountEClass.getEStructuralFeatures().get(1);
 	}
@@ -1027,6 +1109,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomerAccount_Owners() {
 		return (EReference)customerAccountEClass.getEStructuralFeatures().get(2);
 	}
@@ -1036,6 +1119,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInternalAccount() {
 		return internalAccountEClass;
 	}
@@ -1045,6 +1129,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBanker() {
 		return bankerEClass;
 	}
@@ -1054,6 +1139,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBankerTransaction() {
 		return bankerTransactionEClass;
 	}
@@ -1063,6 +1149,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getToken() {
 		return tokenEClass;
 	}
@@ -1072,6 +1159,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getToken_Merchant() {
 		return (EReference)tokenEClass.getEStructuralFeatures().get(0);
 	}
@@ -1081,6 +1169,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getToken_Value() {
 		return (EAttribute)tokenEClass.getEStructuralFeatures().get(1);
 	}
@@ -1090,6 +1179,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTokenTransaction() {
 		return tokenTransactionEClass;
 	}
@@ -1099,6 +1189,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOnlineSession() {
 		return onlineSessionEClass;
 	}
@@ -1108,6 +1199,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOnlineSession_InternetAddress() {
 		return (EAttribute)onlineSessionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1117,6 +1209,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOnlineSession_Start() {
 		return (EAttribute)onlineSessionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1126,6 +1219,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOnlineSession_End() {
 		return (EAttribute)onlineSessionEClass.getEStructuralFeatures().get(2);
 	}
@@ -1135,6 +1229,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOnlineTransaction() {
 		return onlineTransactionEClass;
 	}
@@ -1144,6 +1239,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BankFactory getBankFactory() {
 		return (BankFactory)getEFactoryInstance();
 	}
@@ -1596,7 +1692,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		  (getAccount_Balance(),
 		   source,
 		   new String[] {
-			   "documentation", "Account balance, used by the prototype UI."
+			   "documentation", "Account balance."
 		   });
 		addAnnotation
 		  (getAccount_Description(),
@@ -1608,7 +1704,7 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		  (getAccount_PeriodStart(),
 		   source,
 		   new String[] {
-			   "documentation", "Billing period start, used by the prototype UI for generation of random data - will be removed once back-end connectivity is implemented."
+			   "documentation", "Billing period start."
 		   });
 		addAnnotation
 		  (statementEClass,
@@ -1632,25 +1728,25 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		  (getStatement_OpeningBalance(),
 		   source,
 		   new String[] {
-			   "documentation", "Opening balance, used by the prototype UI, not needed by the auto-updater component."
+			   "documentation", "Opening balance."
 		   });
 		addAnnotation
 		  (getStatement_OpeningDate(),
 		   source,
 		   new String[] {
-			   "documentation", "Opening date, used by the prototype UI, not needed by the auto-updater component."
+			   "documentation", "Opening date."
 		   });
 		addAnnotation
 		  (getStatement_ClosingBalance(),
 		   source,
 		   new String[] {
-			   "documentation", "Closing balance, used by the prototype UI, not needed by the auto-updater component."
+			   "documentation", "Closing balance."
 		   });
 		addAnnotation
 		  (getStatement_ClosingDate(),
 		   source,
 		   new String[] {
-			   "documentation", "Closing date, used by the prototype UI, not needed by the auto-updater component."
+			   "documentation", "Closing date."
 		   });
 		addAnnotation
 		  (transactionEClass,

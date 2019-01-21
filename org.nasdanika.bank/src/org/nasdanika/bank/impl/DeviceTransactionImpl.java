@@ -47,6 +47,7 @@ public class DeviceTransactionImpl extends TransactionImpl<Device> implements De
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PointOfSale getPointOfSale() {
 		return (PointOfSale)eGet(BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, true);
 	}
@@ -56,6 +57,7 @@ public class DeviceTransactionImpl extends TransactionImpl<Device> implements De
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPointOfSale(PointOfSale newPointOfSale) {
 		eSet(BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, newPointOfSale);
 	}

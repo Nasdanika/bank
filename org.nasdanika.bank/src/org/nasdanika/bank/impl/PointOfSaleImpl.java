@@ -59,6 +59,7 @@ public class PointOfSaleImpl extends CDOObjectImpl implements PointOfSale {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return (String)eGet(BankPackage.Literals.POINT_OF_SALE__ID, true);
 	}
@@ -68,6 +69,7 @@ public class PointOfSaleImpl extends CDOObjectImpl implements PointOfSale {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		eSet(BankPackage.Literals.POINT_OF_SALE__ID, newId);
 	}
@@ -77,6 +79,7 @@ public class PointOfSaleImpl extends CDOObjectImpl implements PointOfSale {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PostalAddress getLocation() {
 		return (PostalAddress)eGet(BankPackage.Literals.POINT_OF_SALE__LOCATION, true);
 	}
@@ -86,6 +89,7 @@ public class PointOfSaleImpl extends CDOObjectImpl implements PointOfSale {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(PostalAddress newLocation) {
 		eSet(BankPackage.Literals.POINT_OF_SALE__LOCATION, newLocation);
 	}

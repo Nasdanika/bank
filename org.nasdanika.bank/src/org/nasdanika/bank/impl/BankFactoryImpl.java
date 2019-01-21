@@ -87,6 +87,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EMail createEMail() {
 		EMailImpl eMail = new EMailImpl();
 		return eMail;
@@ -97,6 +98,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Phone createPhone() {
 		PhoneImpl phone = new PhoneImpl();
 		return phone;
@@ -107,6 +109,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PostalAddress createPostalAddress() {
 		PostalAddressImpl postalAddress = new PostalAddressImpl();
 		return postalAddress;
@@ -117,6 +120,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebAddress createWebAddress() {
 		WebAddressImpl webAddress = new WebAddressImpl();
 		return webAddress;
@@ -127,6 +131,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bank createBank() {
 		BankImpl bank = new BankImpl();
 		return bank;
@@ -137,6 +142,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Customer createCustomer() {
 		CustomerImpl customer = new CustomerImpl();
 		return customer;
@@ -147,6 +153,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement createStatement() {
 		StatementImpl statement = new StatementImpl();
 		return statement;
@@ -157,6 +164,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Product createProduct() {
 		ProductImpl product = new ProductImpl();
 		return product;
@@ -167,6 +175,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Merchant createMerchant() {
 		MerchantImpl merchant = new MerchantImpl();
 		return merchant;
@@ -177,6 +186,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PointOfSale createPointOfSale() {
 		PointOfSaleImpl pointOfSale = new PointOfSaleImpl();
 		return pointOfSale;
@@ -187,6 +197,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MobilePhone createMobilePhone() {
 		MobilePhoneImpl mobilePhone = new MobilePhoneImpl();
 		return mobilePhone;
@@ -197,6 +208,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Card createCard() {
 		CardImpl card = new CardImpl();
 		return card;
@@ -207,6 +219,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceTransaction createDeviceTransaction() {
 		DeviceTransactionImpl deviceTransaction = new DeviceTransactionImpl();
 		return deviceTransaction;
@@ -217,6 +230,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CustomerAccount createCustomerAccount() {
 		CustomerAccountImpl customerAccount = new CustomerAccountImpl();
 		return customerAccount;
@@ -227,6 +241,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InternalAccount createInternalAccount() {
 		InternalAccountImpl internalAccount = new InternalAccountImpl();
 		return internalAccount;
@@ -237,6 +252,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Banker createBanker() {
 		BankerImpl banker = new BankerImpl();
 		return banker;
@@ -247,6 +263,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BankerTransaction createBankerTransaction() {
 		BankerTransactionImpl bankerTransaction = new BankerTransactionImpl();
 		return bankerTransaction;
@@ -257,6 +274,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Token createToken() {
 		TokenImpl token = new TokenImpl();
 		return token;
@@ -267,6 +285,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TokenTransaction createTokenTransaction() {
 		TokenTransactionImpl tokenTransaction = new TokenTransactionImpl();
 		return tokenTransaction;
@@ -277,6 +296,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OnlineSession createOnlineSession() {
 		OnlineSessionImpl onlineSession = new OnlineSessionImpl();
 		return onlineSession;
@@ -287,6 +307,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OnlineTransaction createOnlineTransaction() {
 		OnlineTransactionImpl onlineTransaction = new OnlineTransactionImpl();
 		return onlineTransaction;
@@ -297,6 +318,7 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BankPackage getBankPackage() {
 		return (BankPackage)getEPackage();
 	}

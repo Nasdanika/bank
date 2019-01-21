@@ -59,6 +59,7 @@ public class WebAddressImpl extends CDOObjectImpl implements WebAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__NAME, true);
 	}
@@ -68,6 +69,7 @@ public class WebAddressImpl extends CDOObjectImpl implements WebAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__NAME, newName);
 	}
@@ -77,6 +79,7 @@ public class WebAddressImpl extends CDOObjectImpl implements WebAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return (String)eGet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, true);
 	}
@@ -86,6 +89,7 @@ public class WebAddressImpl extends CDOObjectImpl implements WebAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		eSet(BankPackage.Literals.CONTACT_METHOD__DESCRIPTION, newDescription);
 	}
@@ -95,6 +99,7 @@ public class WebAddressImpl extends CDOObjectImpl implements WebAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUrl() {
 		return (String)eGet(BankPackage.Literals.WEB_ADDRESS__URL, true);
 	}
@@ -104,6 +109,7 @@ public class WebAddressImpl extends CDOObjectImpl implements WebAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(String newUrl) {
 		eSet(BankPackage.Literals.WEB_ADDRESS__URL, newUrl);
 	}
