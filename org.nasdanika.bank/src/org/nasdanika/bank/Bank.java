@@ -27,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getBank()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='a'"
+ *        annotation="org.nasdanika.html icon='fas fa-university'"
  * @generated
  */
 public interface Bank extends Party {

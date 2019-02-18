@@ -1588,6 +1588,8 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		createGenModelAnnotations();
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// org.nasdanika.html
+		createOrgAnnotations();
 	}
 
 	/**
@@ -1973,6 +1975,22 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		   source,
 		   new String[] {
 			   "constraints", "a"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>org.nasdanika.html</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createOrgAnnotations() {
+		String source = "org.nasdanika.html";
+		addAnnotation
+		  (bankEClass,
+		   source,
+		   new String[] {
+			   "icon", "fas fa-university"
 		   });
 	}
 
