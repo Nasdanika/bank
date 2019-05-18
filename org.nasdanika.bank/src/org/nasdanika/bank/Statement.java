@@ -4,9 +4,8 @@ package org.nasdanika.bank;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,10 +30,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getStatement()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Statement extends CDOObject {
+public interface Statement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Debits</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.bank.Transaction}<code>&lt;?&gt;</code>.

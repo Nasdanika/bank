@@ -4,7 +4,7 @@ package org.nasdanika.bank;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,10 +30,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.nasdanika.bank.BankPackage#getTransaction()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface Transaction<T extends TransactionInitiator> extends CDOObject {
+public interface Transaction<T extends TransactionInitiator> extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Debit</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.nasdanika.bank.Statement#getDebits <em>Debits</em>}'.

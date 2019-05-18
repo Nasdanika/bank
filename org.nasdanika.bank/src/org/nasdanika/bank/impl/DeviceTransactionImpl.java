@@ -49,7 +49,16 @@ public class DeviceTransactionImpl extends TransactionImpl<Device> implements De
 	 */
 	@Override
 	public PointOfSale getPointOfSale() {
-		return (PointOfSale)eGet(BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, true);
+		return (PointOfSale)eDynamicGet(BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE, BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PointOfSale basicGetPointOfSale() {
+		return (PointOfSale)eDynamicGet(BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE, BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, false, true);
 	}
 
 	/**
@@ -59,7 +68,66 @@ public class DeviceTransactionImpl extends TransactionImpl<Device> implements De
 	 */
 	@Override
 	public void setPointOfSale(PointOfSale newPointOfSale) {
-		eSet(BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, newPointOfSale);
+		eDynamicSet(BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE, BankPackage.Literals.DEVICE_TRANSACTION__POINT_OF_SALE, newPointOfSale);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE:
+				if (resolve) return getPointOfSale();
+				return basicGetPointOfSale();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE:
+				setPointOfSale((PointOfSale)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE:
+				setPointOfSale((PointOfSale)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BankPackage.DEVICE_TRANSACTION__POINT_OF_SALE:
+				return basicGetPointOfSale() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //DeviceTransactionImpl

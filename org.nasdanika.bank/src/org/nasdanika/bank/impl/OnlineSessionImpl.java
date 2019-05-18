@@ -26,6 +26,34 @@ import org.nasdanika.bank.OnlineSession;
  */
 public class OnlineSessionImpl extends TransactionInitiatorImpl implements OnlineSession {
 	/**
+	 * The default value of the '{@link #getInternetAddress() <em>Internet Address</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInternetAddress()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INTERNET_ADDRESS_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getStart() <em>Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStart()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date START_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getEnd() <em>End</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnd()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date END_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -51,7 +79,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 */
 	@Override
 	public String getInternetAddress() {
-		return (String)eGet(BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS, true);
+		return (String)eDynamicGet(BankPackage.ONLINE_SESSION__INTERNET_ADDRESS, BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS, true, true);
 	}
 
 	/**
@@ -61,7 +89,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 */
 	@Override
 	public void setInternetAddress(String newInternetAddress) {
-		eSet(BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS, newInternetAddress);
+		eDynamicSet(BankPackage.ONLINE_SESSION__INTERNET_ADDRESS, BankPackage.Literals.ONLINE_SESSION__INTERNET_ADDRESS, newInternetAddress);
 	}
 
 	/**
@@ -71,7 +99,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 */
 	@Override
 	public Date getStart() {
-		return (Date)eGet(BankPackage.Literals.ONLINE_SESSION__START, true);
+		return (Date)eDynamicGet(BankPackage.ONLINE_SESSION__START, BankPackage.Literals.ONLINE_SESSION__START, true, true);
 	}
 
 	/**
@@ -81,7 +109,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 */
 	@Override
 	public void setStart(Date newStart) {
-		eSet(BankPackage.Literals.ONLINE_SESSION__START, newStart);
+		eDynamicSet(BankPackage.ONLINE_SESSION__START, BankPackage.Literals.ONLINE_SESSION__START, newStart);
 	}
 
 	/**
@@ -91,7 +119,7 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 */
 	@Override
 	public Date getEnd() {
-		return (Date)eGet(BankPackage.Literals.ONLINE_SESSION__END, true);
+		return (Date)eDynamicGet(BankPackage.ONLINE_SESSION__END, BankPackage.Literals.ONLINE_SESSION__END, true, true);
 	}
 
 	/**
@@ -101,7 +129,85 @@ public class OnlineSessionImpl extends TransactionInitiatorImpl implements Onlin
 	 */
 	@Override
 	public void setEnd(Date newEnd) {
-		eSet(BankPackage.Literals.ONLINE_SESSION__END, newEnd);
+		eDynamicSet(BankPackage.ONLINE_SESSION__END, BankPackage.Literals.ONLINE_SESSION__END, newEnd);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BankPackage.ONLINE_SESSION__INTERNET_ADDRESS:
+				return getInternetAddress();
+			case BankPackage.ONLINE_SESSION__START:
+				return getStart();
+			case BankPackage.ONLINE_SESSION__END:
+				return getEnd();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BankPackage.ONLINE_SESSION__INTERNET_ADDRESS:
+				setInternetAddress((String)newValue);
+				return;
+			case BankPackage.ONLINE_SESSION__START:
+				setStart((Date)newValue);
+				return;
+			case BankPackage.ONLINE_SESSION__END:
+				setEnd((Date)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BankPackage.ONLINE_SESSION__INTERNET_ADDRESS:
+				setInternetAddress(INTERNET_ADDRESS_EDEFAULT);
+				return;
+			case BankPackage.ONLINE_SESSION__START:
+				setStart(START_EDEFAULT);
+				return;
+			case BankPackage.ONLINE_SESSION__END:
+				setEnd(END_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BankPackage.ONLINE_SESSION__INTERNET_ADDRESS:
+				return INTERNET_ADDRESS_EDEFAULT == null ? getInternetAddress() != null : !INTERNET_ADDRESS_EDEFAULT.equals(getInternetAddress());
+			case BankPackage.ONLINE_SESSION__START:
+				return START_EDEFAULT == null ? getStart() != null : !START_EDEFAULT.equals(getStart());
+			case BankPackage.ONLINE_SESSION__END:
+				return END_EDEFAULT == null ? getEnd() != null : !END_EDEFAULT.equals(getEnd());
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //OnlineSessionImpl

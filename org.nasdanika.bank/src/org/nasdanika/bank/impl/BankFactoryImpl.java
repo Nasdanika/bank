@@ -56,27 +56,27 @@ public class BankFactoryImpl extends EFactoryImpl implements BankFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case BankPackage.EMAIL: return (EObject)createEMail();
-			case BankPackage.PHONE: return (EObject)createPhone();
-			case BankPackage.POSTAL_ADDRESS: return (EObject)createPostalAddress();
-			case BankPackage.WEB_ADDRESS: return (EObject)createWebAddress();
-			case BankPackage.BANK: return (EObject)createBank();
-			case BankPackage.CUSTOMER: return (EObject)createCustomer();
-			case BankPackage.STATEMENT: return (EObject)createStatement();
-			case BankPackage.PRODUCT: return (EObject)createProduct();
-			case BankPackage.MERCHANT: return (EObject)createMerchant();
-			case BankPackage.POINT_OF_SALE: return (EObject)createPointOfSale();
-			case BankPackage.MOBILE_PHONE: return (EObject)createMobilePhone();
-			case BankPackage.CARD: return (EObject)createCard();
-			case BankPackage.DEVICE_TRANSACTION: return (EObject)createDeviceTransaction();
-			case BankPackage.CUSTOMER_ACCOUNT: return (EObject)createCustomerAccount();
-			case BankPackage.INTERNAL_ACCOUNT: return (EObject)createInternalAccount();
-			case BankPackage.BANKER: return (EObject)createBanker();
-			case BankPackage.BANKER_TRANSACTION: return (EObject)createBankerTransaction();
-			case BankPackage.TOKEN: return (EObject)createToken();
-			case BankPackage.TOKEN_TRANSACTION: return (EObject)createTokenTransaction();
-			case BankPackage.ONLINE_SESSION: return (EObject)createOnlineSession();
-			case BankPackage.ONLINE_TRANSACTION: return (EObject)createOnlineTransaction();
+			case BankPackage.EMAIL: return createEMail();
+			case BankPackage.PHONE: return createPhone();
+			case BankPackage.POSTAL_ADDRESS: return createPostalAddress();
+			case BankPackage.WEB_ADDRESS: return createWebAddress();
+			case BankPackage.BANK: return createBank();
+			case BankPackage.CUSTOMER: return createCustomer();
+			case BankPackage.STATEMENT: return createStatement();
+			case BankPackage.PRODUCT: return createProduct();
+			case BankPackage.MERCHANT: return createMerchant();
+			case BankPackage.POINT_OF_SALE: return createPointOfSale();
+			case BankPackage.MOBILE_PHONE: return createMobilePhone();
+			case BankPackage.CARD: return createCard();
+			case BankPackage.DEVICE_TRANSACTION: return createDeviceTransaction();
+			case BankPackage.CUSTOMER_ACCOUNT: return createCustomerAccount();
+			case BankPackage.INTERNAL_ACCOUNT: return createInternalAccount();
+			case BankPackage.BANKER: return createBanker();
+			case BankPackage.BANKER_TRANSACTION: return createBankerTransaction();
+			case BankPackage.TOKEN: return createToken();
+			case BankPackage.TOKEN_TRANSACTION: return createTokenTransaction();
+			case BankPackage.ONLINE_SESSION: return createOnlineSession();
+			case BankPackage.ONLINE_TRANSACTION: return createOnlineTransaction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

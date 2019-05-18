@@ -7,8 +7,6 @@ import java.util.Map;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -152,7 +150,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateParty(Party party, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)party, diagnostics, context);
+		return validate_EveryDefaultConstraint(party, diagnostics, context);
 	}
 
 	/**
@@ -161,7 +159,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateContactMethod(ContactMethod contactMethod, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)contactMethod, diagnostics, context);
+		return validate_EveryDefaultConstraint(contactMethod, diagnostics, context);
 	}
 
 	/**
@@ -170,7 +168,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateEMail(EMail eMail, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)eMail, diagnostics, context);
+		return validate_EveryDefaultConstraint(eMail, diagnostics, context);
 	}
 
 	/**
@@ -179,7 +177,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatePhone(Phone phone, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)phone, diagnostics, context);
+		return validate_EveryDefaultConstraint(phone, diagnostics, context);
 	}
 
 	/**
@@ -188,7 +186,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatePostalAddress(PostalAddress postalAddress, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)postalAddress, diagnostics, context);
+		return validate_EveryDefaultConstraint(postalAddress, diagnostics, context);
 	}
 
 	/**
@@ -197,7 +195,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateWebAddress(WebAddress webAddress, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)webAddress, diagnostics, context);
+		return validate_EveryDefaultConstraint(webAddress, diagnostics, context);
 	}
 
 	/**
@@ -206,15 +204,15 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateBank(Bank bank, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment((EObject)bank, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)bank, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)bank, diagnostics, context);
+		if (!validate_NoCircularContainment(bank, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(bank, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(bank, diagnostics, context);
 		if (result || diagnostics != null) result &= validateBank_a(bank, diagnostics, context);
 		return result;
 	}
@@ -253,7 +251,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCustomer(Customer customer, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)customer, diagnostics, context);
+		return validate_EveryDefaultConstraint(customer, diagnostics, context);
 	}
 
 	/**
@@ -262,7 +260,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAccount(Account account, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)account, diagnostics, context);
+		return validate_EveryDefaultConstraint(account, diagnostics, context);
 	}
 
 	/**
@@ -271,7 +269,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateStatement(Statement statement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)statement, diagnostics, context);
+		return validate_EveryDefaultConstraint(statement, diagnostics, context);
 	}
 
 	/**
@@ -280,7 +278,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTransaction(Transaction<?> transaction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)transaction, diagnostics, context);
+		return validate_EveryDefaultConstraint(transaction, diagnostics, context);
 	}
 
 	/**
@@ -289,7 +287,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTransactionInitiator(TransactionInitiator transactionInitiator, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)transactionInitiator, diagnostics, context);
+		return validate_EveryDefaultConstraint(transactionInitiator, diagnostics, context);
 	}
 
 	/**
@@ -298,7 +296,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateProduct(Product product, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)product, diagnostics, context);
+		return validate_EveryDefaultConstraint(product, diagnostics, context);
 	}
 
 	/**
@@ -307,7 +305,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateMerchant(Merchant merchant, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)merchant, diagnostics, context);
+		return validate_EveryDefaultConstraint(merchant, diagnostics, context);
 	}
 
 	/**
@@ -316,7 +314,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatePointOfSale(PointOfSale pointOfSale, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)pointOfSale, diagnostics, context);
+		return validate_EveryDefaultConstraint(pointOfSale, diagnostics, context);
 	}
 
 	/**
@@ -325,7 +323,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateDevice(Device device, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)device, diagnostics, context);
+		return validate_EveryDefaultConstraint(device, diagnostics, context);
 	}
 
 	/**
@@ -334,7 +332,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateMobilePhone(MobilePhone mobilePhone, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)mobilePhone, diagnostics, context);
+		return validate_EveryDefaultConstraint(mobilePhone, diagnostics, context);
 	}
 
 	/**
@@ -343,7 +341,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCard(Card card, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)card, diagnostics, context);
+		return validate_EveryDefaultConstraint(card, diagnostics, context);
 	}
 
 	/**
@@ -352,7 +350,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateDeviceTransaction(DeviceTransaction deviceTransaction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)deviceTransaction, diagnostics, context);
+		return validate_EveryDefaultConstraint(deviceTransaction, diagnostics, context);
 	}
 
 	/**
@@ -361,7 +359,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCustomerAccount(CustomerAccount customerAccount, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)customerAccount, diagnostics, context);
+		return validate_EveryDefaultConstraint(customerAccount, diagnostics, context);
 	}
 
 	/**
@@ -370,7 +368,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateInternalAccount(InternalAccount internalAccount, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)internalAccount, diagnostics, context);
+		return validate_EveryDefaultConstraint(internalAccount, diagnostics, context);
 	}
 
 	/**
@@ -379,7 +377,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateBanker(Banker banker, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)banker, diagnostics, context);
+		return validate_EveryDefaultConstraint(banker, diagnostics, context);
 	}
 
 	/**
@@ -388,7 +386,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateBankerTransaction(BankerTransaction bankerTransaction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)bankerTransaction, diagnostics, context);
+		return validate_EveryDefaultConstraint(bankerTransaction, diagnostics, context);
 	}
 
 	/**
@@ -397,7 +395,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateToken(Token token, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)token, diagnostics, context);
+		return validate_EveryDefaultConstraint(token, diagnostics, context);
 	}
 
 	/**
@@ -406,7 +404,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTokenTransaction(TokenTransaction tokenTransaction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)tokenTransaction, diagnostics, context);
+		return validate_EveryDefaultConstraint(tokenTransaction, diagnostics, context);
 	}
 
 	/**
@@ -415,7 +413,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateOnlineSession(OnlineSession onlineSession, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)onlineSession, diagnostics, context);
+		return validate_EveryDefaultConstraint(onlineSession, diagnostics, context);
 	}
 
 	/**
@@ -424,7 +422,7 @@ public class BankValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateOnlineTransaction(OnlineTransaction onlineTransaction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)onlineTransaction, diagnostics, context);
+		return validate_EveryDefaultConstraint(onlineTransaction, diagnostics, context);
 	}
 
 	/**

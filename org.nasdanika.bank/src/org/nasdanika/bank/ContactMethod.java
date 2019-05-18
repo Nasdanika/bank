@@ -2,7 +2,7 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.nasdanika.bank.BankPackage#getContactMethod()
  * @model interface="true" abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface ContactMethod extends CDOObject {
+public interface ContactMethod extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

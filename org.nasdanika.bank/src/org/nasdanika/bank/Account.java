@@ -3,9 +3,8 @@
 package org.nasdanika.bank;
 
 import java.math.BigDecimal;
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,10 +28,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.nasdanika.bank.BankPackage#getAccount()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface Account extends CDOObject {
+public interface Account extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.bank.Statement}.

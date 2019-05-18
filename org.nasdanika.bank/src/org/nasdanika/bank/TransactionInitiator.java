@@ -2,7 +2,7 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,8 +12,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.nasdanika.bank.BankPackage#getTransactionInitiator()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface TransactionInitiator extends CDOObject {
+public interface TransactionInitiator extends EObject {
 } // TransactionInitiator

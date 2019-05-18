@@ -4,8 +4,7 @@ package org.nasdanika.bank.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.nasdanika.bank.BankPackage;
 import org.nasdanika.bank.TransactionInitiator;
 
@@ -16,7 +15,7 @@ import org.nasdanika.bank.TransactionInitiator;
  *
  * @generated
  */
-public abstract class TransactionInitiatorImpl extends CDOObjectImpl implements TransactionInitiator {
+public abstract class TransactionInitiatorImpl extends MinimalEObjectImpl.Container implements TransactionInitiator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

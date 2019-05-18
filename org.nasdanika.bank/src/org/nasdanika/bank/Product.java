@@ -2,7 +2,7 @@
  */
 package org.nasdanika.bank;
 
-import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.nasdanika.bank.BankPackage#getProduct()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Product extends CDOObject {
+public interface Product extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
