@@ -9,13 +9,13 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated bank -->
       <category
-            id="org.nasdanika"
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
             id="org.nasdanika.bank.presentation.BankModelWizardID"
             name="%_UI_BankModelWizard_label"
             class="org.nasdanika.bank.presentation.BankModelWizard"
-            category="org.nasdanika"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/BankModelFile.gif">
          <description>%_UI_BankModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

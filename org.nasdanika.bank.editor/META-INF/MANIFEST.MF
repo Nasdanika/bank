@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.nasdanika.bank.editor;singleton:=true
 Automatic-Module-Name: org.nasdanika.bank.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.nasdanika.bank.presentation.bankEditorPlugin$Implementation
+Bundle-Activator: org.nasdanika.bank.presentation.BankEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.nasdanika.bank.Account;
@@ -33,7 +34,7 @@ import org.nasdanika.bank.BankPackage;
  * @generated
  */
 public class AccountItemProvider 
-	extends CDOItemProviderAdapterEx
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -188,17 +189,6 @@ public class AccountItemProvider
 	}
 
 	/**
-	 * This returns Account.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Account"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,7 +253,7 @@ public class AccountItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return bankEditPlugin.INSTANCE;
+		return BankEditPlugin.INSTANCE;
 	}
 
 }

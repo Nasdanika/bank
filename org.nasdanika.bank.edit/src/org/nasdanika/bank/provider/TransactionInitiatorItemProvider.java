@@ -17,6 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.bank.TransactionInitiator} object.
@@ -25,7 +26,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class TransactionInitiatorItemProvider 
-	extends CDOItemProviderAdapterEx
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -102,7 +103,7 @@ public class TransactionInitiatorItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return bankEditPlugin.INSTANCE;
+		return BankEditPlugin.INSTANCE;
 	}
 
 }

@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.nasdanika.bank.BankFactory;
@@ -34,7 +35,7 @@ import org.nasdanika.bank.Party;
  * @generated
  */
 public class PartyItemProvider 
-	extends CDOItemProviderAdapterEx
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -196,7 +197,7 @@ public class PartyItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return bankEditPlugin.INSTANCE;
+		return BankEditPlugin.INSTANCE;
 	}
 
 }

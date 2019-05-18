@@ -326,6 +326,7 @@ public class BankEditor
 	 */
 	protected IPartListener partListener =
 		new IPartListener() {
+			@Override
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
@@ -344,15 +345,19 @@ public class BankEditor
 					handleActivate();
 				}
 			}
+			@Override
 			public void partBroughtToTop(IWorkbenchPart p) {
 				// Ignore.
 			}
+			@Override
 			public void partClosed(IWorkbenchPart p) {
 				// Ignore.
 			}
+			@Override
 			public void partDeactivated(IWorkbenchPart p) {
 				// Ignore.
 			}
+			@Override
 			public void partOpened(IWorkbenchPart p) {
 				// Ignore.
 			}
@@ -438,6 +443,7 @@ public class BankEditor
 					dispatching = true;
 					getSite().getShell().getDisplay().asyncExec
 						(new Runnable() {
+							 @Override
 							 public void run() {
 								 dispatching = false;
 								 updateProblemIndication();
@@ -467,6 +473,7 @@ public class BankEditor
 	 */
 	protected IResourceChangeListener resourceChangeListener =
 		new IResourceChangeListener() {
+			@Override
 			public void resourceChanged(IResourceChangeEvent event) {
 				IResourceDelta delta = event.getDelta();
 				try {
@@ -475,6 +482,7 @@ public class BankEditor
 						protected Collection<Resource> changedResources = new ArrayList<Resource>();
 						protected Collection<Resource> removedResources = new ArrayList<Resource>();
 
+						@Override
 						public boolean visit(IResourceDelta delta) {
 							if (delta.getResource().getType() == IResource.FILE) {
 								if (delta.getKind() == IResourceDelta.REMOVED ||
@@ -510,6 +518,7 @@ public class BankEditor
 					if (!visitor.getRemovedResources().isEmpty()) {
 						getSite().getShell().getDisplay().asyncExec
 							(new Runnable() {
+								 @Override
 								 public void run() {
 									 removedResources.addAll(visitor.getRemovedResources());
 									 if (!isDirty()) {
@@ -522,6 +531,7 @@ public class BankEditor
 					if (!visitor.getChangedResources().isEmpty()) {
 						getSite().getShell().getDisplay().asyncExec
 							(new Runnable() {
+								 @Override
 								 public void run() {
 									 changedResources.addAll(visitor.getChangedResources());
 									 if (getSite().getPage().getActiveEditor() == BankEditor.this) {
@@ -532,7 +542,7 @@ public class BankEditor
 					}
 				}
 				catch (CoreException exception) {
-					bankEditorPlugin.INSTANCE.log(exception);
+					BankEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -649,7 +659,7 @@ public class BankEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					bankEditorPlugin.INSTANCE.log(exception);
+					BankEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -658,7 +668,7 @@ public class BankEditor
 					markerHelper.updateMarkers(diagnostic);
 				}
 				catch (CoreException exception) {
-					bankEditorPlugin.INSTANCE.log(exception);
+					BankEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -712,9 +722,11 @@ public class BankEditor
 		//
 		commandStack.addCommandStackListener
 			(new CommandStackListener() {
+				 @Override
 				 public void commandStackChanged(final EventObject event) {
 					 getContainer().getDisplay().asyncExec
 						 (new Runnable() {
+							  @Override
 							  public void run() {
 								  firePropertyChange(IEditorPart.PROP_DIRTY);
 
@@ -767,6 +779,7 @@ public class BankEditor
 		if (theSelection != null && !theSelection.isEmpty()) {
 			Runnable runnable =
 				new Runnable() {
+					@Override
 					public void run() {
 						// Try to select the items in the current content viewer of the editor.
 						//
@@ -787,6 +800,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EditingDomain getEditingDomain() {
 		return editingDomain;
 	}
@@ -883,6 +897,7 @@ public class BankEditor
 					new ISelectionChangedListener() {
 						// This just notifies those things that are affected by the section.
 						//
+						@Override
 						public void selectionChanged(SelectionChangedEvent selectionChangedEvent) {
 							setSelection(selectionChangedEvent.getSelection());
 						}
@@ -917,6 +932,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Viewer getViewer() {
 		return currentViewer;
 	}
@@ -1382,6 +1398,7 @@ public class BankEditor
 				(new ISelectionChangedListener() {
 					 // This ensures that we handle selections correctly.
 					 //
+					 @Override
 					 public void selectionChanged(SelectionChangedEvent event) {
 						 handleContentOutlineSelection(event.getSelection());
 					 }
@@ -1527,7 +1544,7 @@ public class BankEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			bankEditorPlugin.INSTANCE.log(exception);
+			BankEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1606,6 +1623,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void gotoMarker(IMarker marker) {
 		List<?> targetObjects = markerHelper.getTargetObjects(editingDomain, marker);
 		if (!targetObjects.isEmpty()) {
@@ -1650,6 +1668,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void addSelectionChangedListener(ISelectionChangedListener listener) {
 		selectionChangedListeners.add(listener);
 	}
@@ -1660,6 +1679,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void removeSelectionChangedListener(ISelectionChangedListener listener) {
 		selectionChangedListeners.remove(listener);
 	}
@@ -1670,6 +1690,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ISelection getSelection() {
 		return editorSelection;
 	}
@@ -1681,6 +1702,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(ISelection selection) {
 		editorSelection = selection;
 
@@ -1731,7 +1753,7 @@ public class BankEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return bankEditorPlugin.INSTANCE.getString(key);
+		return BankEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1741,7 +1763,7 @@ public class BankEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return bankEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return BankEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**
@@ -1750,6 +1772,7 @@ public class BankEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void menuAboutToShow(IMenuManager menuManager) {
 		((IMenuListener)getEditorSite().getActionBarContributor()).menuAboutToShow(menuManager);
 	}

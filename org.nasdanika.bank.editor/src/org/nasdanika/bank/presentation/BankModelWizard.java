@@ -71,9 +71,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import org.nasdanika.bank.BankFactory;
 import org.nasdanika.bank.BankPackage;
-import org.nasdanika.bank.provider.bankEditPlugin;
-
-
+import org.nasdanika.bank.provider.BankEditPlugin;
 import org.eclipse.core.runtime.Path;
 
 import org.eclipse.jface.viewers.ISelection;
@@ -99,7 +97,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(bankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(BankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -108,7 +106,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		bankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		BankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -172,11 +170,12 @@ public class BankModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(bankEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(bankEditorPlugin.INSTANCE.getImage("full/wizban/NewBank")));
+		setWindowTitle(BankEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(BankEditorPlugin.INSTANCE.getImage("full/wizban/NewBank")));
 	}
 
 	/**
@@ -259,7 +258,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							bankEditorPlugin.INSTANCE.log(exception);
+							BankEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -278,6 +277,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 				final ISelection targetSelection = new StructuredSelection(modelFile);
 				getShell().getDisplay().asyncExec
 					(new Runnable() {
+						 @Override
 						 public void run() {
 							 ((ISetSelectionTarget)activePart).selectReveal(targetSelection);
 						 }
@@ -292,14 +292,14 @@ public class BankModelWizard extends Wizard implements INewWizard {
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), bankEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				MessageDialog.openError(workbenchWindow.getShell(), BankEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			bankEditorPlugin.INSTANCE.log(exception);
+			BankEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -333,7 +333,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(bankEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(BankEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -394,6 +394,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
+		@Override
 		public void createControl(Composite parent) {
 			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
@@ -410,7 +411,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(bankEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+				containerLabel.setText(BankEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -436,7 +437,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(bankEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+				encodingLabel.setText(BankEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -468,6 +469,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 		 */
 		protected ModifyListener validator =
 			new ModifyListener() {
+				@Override
 				public void modifyText(ModifyEvent e) {
 					setPageComplete(validatePage());
 				}
@@ -535,10 +537,10 @@ public class BankModelWizard extends Wizard implements INewWizard {
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return bankEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return BankEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
-				bankEditorPlugin.INSTANCE.log(mre);
+				BankEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -551,7 +553,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(bankEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(BankEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -570,9 +572,9 @@ public class BankModelWizard extends Wizard implements INewWizard {
 		// Create a page, set the title, and the initial model file name.
 		//
 		newFileCreationPage = new BankModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(bankEditorPlugin.INSTANCE.getString("_UI_BankModelWizard_label"));
-		newFileCreationPage.setDescription(bankEditorPlugin.INSTANCE.getString("_UI_BankModelWizard_description"));
-		newFileCreationPage.setFileName(bankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage.setTitle(BankEditorPlugin.INSTANCE.getString("_UI_BankModelWizard_label"));
+		newFileCreationPage.setDescription(BankEditorPlugin.INSTANCE.getString("_UI_BankModelWizard_description"));
+		newFileCreationPage.setFileName(BankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +600,7 @@ public class BankModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = bankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = BankEditorPlugin.INSTANCE.getString("_UI_BankEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -609,8 +611,8 @@ public class BankModelWizard extends Wizard implements INewWizard {
 			}
 		}
 		initialObjectCreationPage = new BankModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(bankEditorPlugin.INSTANCE.getString("_UI_BankModelWizard_label"));
-		initialObjectCreationPage.setDescription(bankEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage.setTitle(BankEditorPlugin.INSTANCE.getString("_UI_BankModelWizard_label"));
+		initialObjectCreationPage.setDescription(BankEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 
