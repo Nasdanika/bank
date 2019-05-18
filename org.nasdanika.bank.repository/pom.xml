@@ -12,7 +12,7 @@
 		<relativePath>../org.nasdanika.bank.parent</relativePath>
 	</parent>
 	<properties>
-		<siteDir>bank/${project.version}</siteDir>
+		<siteDir>bank/${project.version}/${env.CIRCLE_BRANCH}</siteDir>
 	</properties>
 	
 	<build>
