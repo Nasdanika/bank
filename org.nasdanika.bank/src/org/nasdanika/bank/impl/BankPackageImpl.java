@@ -1584,10 +1584,382 @@ public class BankPackageImpl extends EPackageImpl implements BankPackage {
 		createResource(eNS_URI);
 
 		// Create annotations
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
 		// org.nasdanika.html
 		createOrgAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "documentation", "A domain model of a Bank which offers customer debit and credit accounts with linked cards. While a domain model of a real bank would be much more complex and a domain model of a bounded context for a micro-service or a group of micro-services might be simpler this model is \r\nof \"moderate\" complexity so it is not so hard to grasp, it demonstrates the value of model documentation to communicate common understanding accross the oranization (ubiquitous language), and it can be used to generate bounded contexts.\r\n\r\n\r\nPlease keep in mind that this is just a demo, so the model may not be completely valid from the banking/finansial point of view."
+		   });
+		addAnnotation
+		  (getParty_ContactMethods(),
+		   source,
+		   new String[] {
+			   "documentation", "Party can have zero or more contact methods."
+		   });
+		addAnnotation
+		  (contactMethodEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Contact method interface."
+		   });
+		addAnnotation
+		  (bankEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Bank is the root of the domain model. Bank has customers and bankers - employees performing banking operations. Bank tracks merchants its customers interact with in order to provide customers information about their spending habits."
+		   });
+		addAnnotation
+		  (getBank_Merchants(),
+		   source,
+		   new String[] {
+			   "documentation", "Bank tracks merchants and points of sale used by customers. It also tracks token transactions. "
+		   });
+		addAnnotation
+		  (getBank_Products(),
+		   source,
+		   new String[] {
+			   "documentation", "Customer accounts belong to banking products which define their configuration such as fees and rates."
+		   });
+		addAnnotation
+		  (getBank_Accounts(),
+		   source,
+		   new String[] {
+			   "documentation", "The bank holds customer and own (internal) accounts."
+		   });
+		addAnnotation
+		  (getBank_Customers(),
+		   source,
+		   new String[] {
+			   "documentation", "Bank customers."
+		   });
+		addAnnotation
+		  (getBank_Bankers(),
+		   source,
+		   new String[] {
+			   "documentation", "Bank employees."
+		   });
+		addAnnotation
+		  (getBank_Transactions(),
+		   source,
+		   new String[] {
+			   "documentation", "Bank transactions"
+		   });
+		addAnnotation
+		  (customerEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getCustomer_Accounts(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (accountEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getAccount_Statements(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getAccount_Number(),
+		   source,
+		   new String[] {
+			   "documentation", "Account number."
+		   });
+		addAnnotation
+		  (getAccount_Balance(),
+		   source,
+		   new String[] {
+			   "documentation", "Account balance."
+		   });
+		addAnnotation
+		  (getAccount_Description(),
+		   source,
+		   new String[] {
+			   "documentation", "Account description, currently not used."
+		   });
+		addAnnotation
+		  (getAccount_PeriodStart(),
+		   source,
+		   new String[] {
+			   "documentation", "Billing period start."
+		   });
+		addAnnotation
+		  (statementEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getStatement_Debits(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getStatement_Credits(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getStatement_OpeningBalance(),
+		   source,
+		   new String[] {
+			   "documentation", "Opening balance."
+		   });
+		addAnnotation
+		  (getStatement_OpeningDate(),
+		   source,
+		   new String[] {
+			   "documentation", "Opening date."
+		   });
+		addAnnotation
+		  (getStatement_ClosingBalance(),
+		   source,
+		   new String[] {
+			   "documentation", "Closing balance."
+		   });
+		addAnnotation
+		  (getStatement_ClosingDate(),
+		   source,
+		   new String[] {
+			   "documentation", "Closing date."
+		   });
+		addAnnotation
+		  (transactionEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getTransaction_Debit(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getTransaction_Credit(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getTransaction_Amount(),
+		   source,
+		   new String[] {
+			   "documentation", "Amount"
+		   });
+		addAnnotation
+		  (getTransaction_Date(),
+		   source,
+		   new String[] {
+			   "documentation", "Date"
+		   });
+		addAnnotation
+		  (getTransaction_Comment(),
+		   source,
+		   new String[] {
+			   "documentation", "Additional information"
+		   });
+		addAnnotation
+		  (getTransaction_Id(),
+		   source,
+		   new String[] {
+			   "documentation", "Unique transaction ID."
+		   });
+		addAnnotation
+		  (productEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (merchantEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getMerchant_PointsOfSale(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (pointOfSaleEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (deviceEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Device is a generic term for a card and other means to initiate a transaction on an account."
+		   });
+		addAnnotation
+		  (getDevice_Tokens(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (mobilePhoneEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (cardEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getCard_Virtual(),
+		   source,
+		   new String[] {
+			   "documentation", "If true, the card is virtual, i.e. doesn\'t have physical representation."
+		   });
+		addAnnotation
+		  (getCard_Id(),
+		   source,
+		   new String[] {
+			   "documentation", "Unique ID."
+		   });
+		addAnnotation
+		  (getCard_Issued(),
+		   source,
+		   new String[] {
+			   "documentation", "Issue date."
+		   });
+		addAnnotation
+		  (getCard_Activated(),
+		   source,
+		   new String[] {
+			   "documentation", "Activation date."
+		   });
+		addAnnotation
+		  (getCard_Deactivated(),
+		   source,
+		   new String[] {
+			   "documentation", "Deactivation date."
+		   });
+		addAnnotation
+		  (getCard_Expires(),
+		   source,
+		   new String[] {
+			   "documentation", "Expiration date."
+		   });
+		addAnnotation
+		  (getCard_LockedTo(),
+		   source,
+		   new String[] {
+			   "documentation", "Party (payee) to which this device is locked to. E.g. a virtual card can be locked to a particular merchant."
+		   });
+		addAnnotation
+		  (getCard_Replaces(),
+		   source,
+		   new String[] {
+			   "documentation", "Reference to a card which this one replaces, e.g. a new card replaces an old damaged/lost/stolen/expired card. Or a virtual card replaces a physical card (at a specific merchant)."
+		   });
+		addAnnotation
+		  (deviceTransactionEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getDeviceTransaction_PointOfSale(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (customerAccountEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getCustomerAccount_Devices(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getCustomerAccount_Product(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getCustomerAccount_Owners(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (internalAccountEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (bankerEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (bankerTransactionEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (tokenEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (getToken_Merchant(),
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
+		addAnnotation
+		  (tokenTransactionEClass,
+		   source,
+		   new String[] {
+			   "documentation", "TODO"
+		   });
 	}
 
 	/**
