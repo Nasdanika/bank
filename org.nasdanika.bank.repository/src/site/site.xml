@@ -12,7 +12,7 @@
  
    <menu name="Main">
       <item name="Overview" href="index.html" />
-      <item name="Model Documentation" href="modeldoc/index.html" />
+      <item name="Model Documentation" href="../html/tests/dumps/ecore/index.html" />
       <!-- <item name="User Stories" href="storydoc/index.html" /> -->
       <item name="Project information" href="project-info.html" />      
    </menu>

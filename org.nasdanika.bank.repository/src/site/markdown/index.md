@@ -4,7 +4,7 @@ Nasdanika bank is a simple enough ECore bank domain model to use for demonstrati
 
 ## Resources
 
-* [Model documentation](modeldoc/index.html)
+* [Model documentation](../html/tests/dumps/ecore/index.html)
 * JavaDoc
     * [Model](apidocs/model)
     * [Edit](apidocs/model)
