@@ -14,7 +14,7 @@ Nasdanika bank is a simple enough ECore bank domain model to use for demonstrati
 
 ## P2 Repository
 
-* ``https://www.nasdanika.org/products/bank/1.0.0-SNAPSHOT/repository``
+* ``https://www.nasdanika.org/home/products/bank/repository``
 * [Archived](org.nasdanika.bank.repository-1.0.0-SNAPSHOT.zip)
 
 ## How to use
