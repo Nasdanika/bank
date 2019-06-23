@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.nasdanika.bank.BankPackage#getAccount()
  * @model abstract="true"
+ *        annotation="urn:org.nasdanika documentation_ru='\u0421\u0447\u0451\u0442.' label_ru='\u0421\u0447\u0451\u0442'"
  * @generated
  */
 public interface Account extends EObject {

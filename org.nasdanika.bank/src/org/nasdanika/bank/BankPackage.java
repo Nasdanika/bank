@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-model-doc -->
  * @see org.nasdanika.bank.BankFactory
  * @model kind="package"
+ *        annotation="urn:org.nasdanika documentation_ru='\u0414\u043e\u043c\u0435\u043d\u043d\u0430\u044f \u043c\u043e\u0434\u0435\u043b\u044c \u0431\u0430\u043d\u043a\u0430... \n\nwhich offers customer debit and credit accounts with linked cards. While a domain model of a real bank would be much more complex and a domain model of a bounded context for a micro-service or a group of micro-services might be simpler this model is \nof \"moderate\" complexity so it is not so hard to grasp, it demonstrates the value of model documentation to communicate common understanding accross the oranization (ubiquitous language), and it can be used to generate bounded contexts.\n\n\nPlease keep in mind that this is just a demo, so the model may not be completely valid from the banking/finansial point of view.' label_ru='\u0411\u0430\u043d\u043a'"
  * @generated
  */
 public interface BankPackage extends EPackage {
